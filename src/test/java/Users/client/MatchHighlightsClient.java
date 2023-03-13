@@ -8,24 +8,26 @@ import java.util.Properties;
 
 import static io.restassured.RestAssured.given;
 
-public class UsersClient {
-    public    String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
-    public   Properties properties;
+public class MatchHighlightsClient {
+    public   String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
+    public Properties properties;
 
-    public  Response getUser(String uid) {
+    public Response getHighlights() {
         properties= FileUtility.loadProperties(propertyPath);
         String bearerToken=properties.getProperty("bearerToken");
+        String id=properties.getProperty("matchId");
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
-                .queryParam("UserId",uid)
+                .pathParam("matchId",id)
                 .log().uri()
                 .when()
-                .get(properties.getProperty("basepathuser"));
+                .get(properties.getProperty("basepath_highlights")+"/{matchId}"+"/highlights/1");
         response
                 .then()
                 .contentType(ContentType.JSON)
                 .log().body();
-        return response;
 
+        return response;
     }
 }
+

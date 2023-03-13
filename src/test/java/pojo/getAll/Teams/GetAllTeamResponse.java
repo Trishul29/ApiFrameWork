@@ -1,4 +1,4 @@
-package pojo.getAll;
+package pojo.getAll.Teams;
 
 import lombok.Getter;
 import lombok.Setter;

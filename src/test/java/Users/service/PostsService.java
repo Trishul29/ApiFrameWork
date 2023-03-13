@@ -1,7 +1,7 @@
 package Users.service;
 
 import Users.client.PostsClient;
-import pojo.getAll.GetAllPostResponse;
+import pojo.getAll.posts.GetAllPostResponse;
 import io.restassured.response.Response;
 
 

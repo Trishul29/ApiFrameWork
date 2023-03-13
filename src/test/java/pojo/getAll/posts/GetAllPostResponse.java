@@ -1,4 +1,4 @@
-package pojo.getAll;
+package pojo.getAll.posts;
 
 import lombok.Getter;
 import lombok.Setter;

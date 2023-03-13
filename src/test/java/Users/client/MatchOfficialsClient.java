@@ -8,19 +8,21 @@ import java.util.Properties;
 
 import static io.restassured.RestAssured.given;
 
-public class UsersClient {
-    public    String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
-    public   Properties properties;
+public class MatchOfficialsClient {
+    public   String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
+    public Properties properties;
 
-    public  Response getUser(String uid) {
+    public Response getAllRecommended() {
         properties= FileUtility.loadProperties(propertyPath);
         String bearerToken=properties.getProperty("bearerToken");
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
-                .queryParam("UserId",uid)
+                .queryParam("city",properties.getProperty("city"))
+                .queryParam("role",properties.getProperty("role"))
+                .queryParam("pageNo",1)
                 .log().uri()
                 .when()
-                .get(properties.getProperty("basepathuser"));
+                .get(properties.getProperty("basepath_recommended"));
         response
                 .then()
                 .contentType(ContentType.JSON)

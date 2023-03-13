@@ -10,10 +10,10 @@ import static io.restassured.RestAssured.given;
 
 public class TeamsClient {
 
-    public  static  String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
-    public  static Properties properties;
+    public   String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
+    public   Properties properties;
 
-    public static Response getTeam(String id) {
+    public  Response getTeam(String id) {
 
         properties= FileUtility.loadProperties(propertyPath);
         String bearerToken=properties.getProperty("bearerToken");
@@ -33,7 +33,7 @@ public class TeamsClient {
 
     }
 
-    public static Response getTeams() {
+    public  Response getTeams() {
 
         properties= FileUtility.loadProperties(propertyPath);
         String bearerToken=properties.getProperty("bearerToken");

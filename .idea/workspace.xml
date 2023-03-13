@@ -5,36 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spec.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/FileUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Users/client/MatchesClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Users/client/PostsClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Users/client/TeamsClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Users/client/UsersClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Users/service/MatchesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Users/service/PostsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Users/service/TeamsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Users/service/UsersService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/get/GetTeamResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/get/GetUserResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/GetAllPostResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/GetAllTeamResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/positivetests/GetAllMatchesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/positivetests/GetAllPostsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/positivetests/GetTeamByIdTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/positivetests/GetUserByIdTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Users/client/MatchHighlightsClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Users/client/MatchOfficialsClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Users/client/TournamentsClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Users/service/MatchHighlightsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Users/service/MatchOfficialsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Users/service/TournamentsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/get/GetHighlightResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/recommendedusers/GetRecommendedUsersResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/tournaments/GetAllTournamentsResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/positivetests/GetAllTournamentsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/positivetests/GetMatchHighlightsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/positivetests/GetRecommendedUsersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spec.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spec.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Users/client/TeamsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/client/TeamsClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Users/client/UsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/client/UsersClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Users/service/PostsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/service/PostsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Users/service/TeamsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/service/TeamsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/GetUserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/GetUserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/GetAllPostResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/posts/GetAllPostResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/GetAllTeamResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/Teams/GetAllTeamResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/positivetests/GetAllMatchesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/positivetests/GetAllMatchesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/positivetests/GetAllPostsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/positivetests/GetAllPostsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/positivetests/GetTeamByIdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/positivetests/GetTeamByIdTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,11 +42,23 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2Mwsv9SKDlqI7ba7YyV79EkFXjl" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -59,6 +67,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "/Users/testvagrant/Downloads/IdeaProjects/MyySportsAPIAutoamtion/src/test/java"
   }
 }]]></component>
@@ -71,8 +80,8 @@
       <recent name="util" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GetAllMatchesTest">
-    <configuration name="GetAllMatchesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.GetMatchHighlightsTest.test_MatchHighLightResponse">
+    <configuration name="GetAllTournamentsTest.shouldGetAllTournamentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -85,7 +94,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;positivetests.GetAllMatchesTest&quot;" />
+            <option value="&quot;positivetests.GetAllTournamentsTest.shouldGetAllTournamentTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -95,7 +104,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GetAllMatchesTest.shouldGetAllMatches" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GetMatchHighlightsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -108,7 +117,76 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;positivetests.GetAllMatchesTest.shouldGetAllMatches&quot;" />
+            <option value="&quot;positivetests.GetMatchHighlightsTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GetMatchHighlightsTest.test_MatchHighLightResponse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;positivetests.GetMatchHighlightsTest.test_MatchHighLightResponse&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GetRecommendedUsersTest.shouldGetRecommendedUsers" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;positivetests.GetRecommendedUsersTest.shouldGetRecommendedUsers&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GetTeamByIdTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;positivetests.GetTeamByIdTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -120,8 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.GetAllMatchesTest" />
-        <item itemvalue="Gradle.GetAllMatchesTest.shouldGetAllMatches" />
+        <item itemvalue="Gradle.GetMatchHighlightsTest.test_MatchHighLightResponse" />
+        <item itemvalue="Gradle.GetMatchHighlightsTest" />
+        <item itemvalue="Gradle.GetAllTournamentsTest.shouldGetAllTournamentTest" />
+        <item itemvalue="Gradle.GetRecommendedUsersTest.shouldGetRecommendedUsers" />
+        <item itemvalue="Gradle.GetTeamByIdTest" />
       </list>
     </recent_temporary>
   </component>
@@ -146,5 +227,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/positivetests/GetRecommendedUsersTest.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

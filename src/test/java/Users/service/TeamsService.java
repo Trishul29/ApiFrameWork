@@ -1,7 +1,7 @@
 package Users.service;
 import Users.client.TeamsClient;
 import pojo.get.GetTeamResponse;
-import pojo.getAll.GetAllTeamResponse;
+import pojo.getAll.Teams.GetAllTeamResponse;
 import io.restassured.response.Response;
 public class TeamsService {
 

@@ -1,7 +1,7 @@
 package positivetests;
 
 import Users.service.TeamsService;
-import pojo.getAll.GetAllTeamResponse;
+import pojo.getAll.Teams.GetAllTeamResponse;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -19,7 +19,7 @@ public class GetAllMatchesTest {
     }
 
     @Test
-    public void shouldGetAllMatches()
+    public void shouldGetAllTeams()
     {
         GetAllTeamResponse getAllTeamResponse = teamsService.getAllTeam();
         assertEquals(getAllTeamResponse.getStatusCode(),200);

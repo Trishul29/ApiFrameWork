@@ -8,19 +8,24 @@ import java.util.Properties;
 
 import static io.restassured.RestAssured.given;
 
-public class UsersClient {
-    public    String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
-    public   Properties properties;
+public class TournamentsClient {
+    public   String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
+    public Properties properties;
 
-    public  Response getUser(String uid) {
+    public Response getAllTournaments() {
         properties= FileUtility.loadProperties(propertyPath);
         String bearerToken=properties.getProperty("bearerToken");
+        String path=properties.getProperty("gameType");
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
-                .queryParam("UserId",uid)
+                .queryParam("type",properties.getProperty("type"))
+
+                .pathParam("gameType",path)
+                .queryParam("page",1)
                 .log().uri()
                 .when()
-                .get(properties.getProperty("basepathuser"));
+             .get(properties.getProperty("basepath_tournaments")+"/{gameType}"+"/tournament");
+
         response
                 .then()
                 .contentType(ContentType.JSON)
@@ -29,3 +34,4 @@ public class UsersClient {
 
     }
 }
+

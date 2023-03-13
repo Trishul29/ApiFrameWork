@@ -1,7 +1,7 @@
 package positivetests;
 
 import Users.service.PostsService;
-import pojo.getAll.GetAllPostResponse;
+import pojo.getAll.posts.GetAllPostResponse;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
