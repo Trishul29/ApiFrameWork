@@ -1,4 +1,4 @@
-package positivetests;
+package Monitor_Tests;
 
 import Users.service.TeamsService;
 import pojo.getAll.Teams.GetAllTeamResponse;
@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class GetAllMatchesTest {
+public class GetAllTeamsTest {
     private TeamsService teamsService;
 
     @BeforeClass

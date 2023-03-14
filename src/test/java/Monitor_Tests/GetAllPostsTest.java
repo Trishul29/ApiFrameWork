@@ -1,4 +1,4 @@
-package positivetests;
+package Monitor_Tests;
 
 import Users.service.PostsService;
 import pojo.getAll.posts.GetAllPostResponse;

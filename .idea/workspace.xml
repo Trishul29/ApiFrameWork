@@ -4,33 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Users/client/MatchHighlightsClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Users/client/MatchOfficialsClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Users/client/TournamentsClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Users/service/MatchHighlightsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Users/service/MatchOfficialsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Users/service/TournamentsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/get/GetHighlightResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/recommendedusers/GetRecommendedUsersResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/tournaments/GetAllTournamentsResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/positivetests/GetAllTournamentsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/positivetests/GetMatchHighlightsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/positivetests/GetRecommendedUsersTest.java" afterDir="false" />
+    <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="Three testCases Added recommendedusers ,getalltournaments,getallhighlights">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Monitor_Tests/GetAllMatchesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Monitor_Tests/GetLeaderBoardTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Users/client/LeaderBoardClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Users/service/LeaderBoardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/plain_json_response/Docs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/plain_json_response/GetAllMatchesResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/leaderboard/GetAllPlayerLeaderBoardResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spec.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spec.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Users/client/TeamsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/client/TeamsClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Users/client/UsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/client/UsersClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Users/service/PostsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/service/PostsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Users/service/TeamsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/service/TeamsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/GetUserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/GetUserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/GetAllPostResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/posts/GetAllPostResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/GetAllTeamResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/Teams/GetAllTeamResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/positivetests/GetAllMatchesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/positivetests/GetAllMatchesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/positivetests/GetAllPostsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/positivetests/GetAllPostsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/positivetests/GetTeamByIdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/positivetests/GetTeamByIdTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Users/client/MatchesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/client/MatchesClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Users/service/MatchHighlightsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Users/service/MatchOfficialsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/service/MatchOfficialsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/GetHighlightResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/plain_json_response/GetHighlightResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/positivetests/GetAllMatchesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Monitor_Tests/GetAllTeamsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/positivetests/GetAllPostsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Monitor_Tests/GetAllPostsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/positivetests/GetAllTournamentsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Monitor_Tests/GetAllTournamentsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/positivetests/GetMatchHighlightsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Monitor_Tests/GetMatchHighlightsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/positivetests/GetRecommendedUsersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Monitor_Tests/GetRecommendedUsersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/positivetests/GetTeamByIdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Monitor_Tests/GetTeamByIdTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/positivetests/GetUserByIdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Monitor_Tests/GetUserByIdTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +38,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -68,7 +75,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/testvagrant/Downloads/IdeaProjects/MyySportsAPIAutoamtion/src/test/java"
+    "last_opened_file_path": "/Users/testvagrant/Downloads/IdeaProjects/MyySportsAPIAutoamtion/src/test/java",
+    "settings.editor.selected.configurable": "Groovy compiler"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -80,129 +88,103 @@
       <recent name="util" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GetMatchHighlightsTest.test_MatchHighLightResponse">
-    <configuration name="GetAllTournamentsTest.shouldGetAllTournamentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;positivetests.GetAllTournamentsTest.shouldGetAllTournamentTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+  <component name="RunManager" selected="TestNG.GetAllPostsTest.shouldGetAllPosts">
+    <configuration name="GetAllMatchesTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Monitor_Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Monitor_Tests" />
+      <option name="MAIN_CLASS_NAME" value="Monitor_Tests.GetAllMatchesTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="GetMatchHighlightsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;positivetests.GetMatchHighlightsTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="GetAllMatchesTest.shouldGetAllMatches" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Monitor_Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Monitor_Tests" />
+      <option name="MAIN_CLASS_NAME" value="Monitor_Tests.GetAllMatchesTest" />
+      <option name="METHOD_NAME" value="shouldGetAllMatches" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="GetMatchHighlightsTest.test_MatchHighLightResponse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;positivetests.GetMatchHighlightsTest.test_MatchHighLightResponse&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="GetAllPostsTest.shouldGetAllPosts" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Monitor_Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Monitor_Tests" />
+      <option name="MAIN_CLASS_NAME" value="Monitor_Tests.GetAllPostsTest" />
+      <option name="METHOD_NAME" value="shouldGetAllPosts" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="GetRecommendedUsersTest.shouldGetRecommendedUsers" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;positivetests.GetRecommendedUsersTest.shouldGetRecommendedUsers&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="GetAllTournamentsTest.shouldGetAllTournamentTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Monitor_Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Monitor_Tests" />
+      <option name="MAIN_CLASS_NAME" value="Monitor_Tests.GetAllTournamentsTest" />
+      <option name="METHOD_NAME" value="shouldGetAllTournamentTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="GetTeamByIdTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;positivetests.GetTeamByIdTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="GetUserByIdTest.shouldGetUserById" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Monitor_Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Monitor_Tests" />
+      <option name="MAIN_CLASS_NAME" value="Monitor_Tests.GetUserByIdTest" />
+      <option name="METHOD_NAME" value="shouldGetUserById" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.GetMatchHighlightsTest.test_MatchHighLightResponse" />
-        <item itemvalue="Gradle.GetMatchHighlightsTest" />
-        <item itemvalue="Gradle.GetAllTournamentsTest.shouldGetAllTournamentTest" />
-        <item itemvalue="Gradle.GetRecommendedUsersTest.shouldGetRecommendedUsers" />
-        <item itemvalue="Gradle.GetTeamByIdTest" />
+        <item itemvalue="TestNG.GetAllPostsTest.shouldGetAllPosts" />
+        <item itemvalue="TestNG.GetUserByIdTest.shouldGetUserById" />
+        <item itemvalue="TestNG.GetAllTournamentsTest.shouldGetAllTournamentTest" />
+        <item itemvalue="TestNG.GetAllMatchesTest.shouldGetAllMatches" />
+        <item itemvalue="TestNG.GetAllMatchesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -215,6 +197,14 @@
       <option name="presentableId" value="Default" />
       <updated>1678690206459</updated>
     </task>
+    <task id="LOCAL-00001" summary="Three testCases Added recommendedusers ,getalltournaments,getallhighlights">
+      <created>1678717569155</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678717569155</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,15 +218,12 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/positivetests/GetRecommendedUsersTest.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Three testCases Added recommendedusers ,getalltournaments,getallhighlights" />
+    <option name="LAST_COMMIT_MESSAGE" value="Three testCases Added recommendedusers ,getalltournaments,getallhighlights" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

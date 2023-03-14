@@ -8,24 +8,28 @@ import java.util.Properties;
 
 import static io.restassured.RestAssured.given;
 
-public class MatchesClient {
+public class LeaderBoardClient {
     public   String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
     public Properties properties;
 
-    public Response getAllMatches() {
+    public Response getBoard() {
         properties= FileUtility.loadProperties(propertyPath);
         String bearerToken=properties.getProperty("bearerToken");
+       // String id=properties.getProperty("matchId");
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
-                .queryParams("page",1,"type",properties.getProperty("type_matches"))
+                .queryParam("matchType",properties.getProperty("matchType"))
+                .queryParam("dateType",properties.getProperty("dateType"))
+                .queryParam("leaderBoardType",properties.getProperty("leaderBoardType"))
+                .queryParam("page",1)
                 .log().uri()
                 .when()
-                .get(properties.getProperty("basepath_all_matches"));
+                .get(properties.getProperty("basepath_leaderboard"));
         response
                 .then()
                 .contentType(ContentType.JSON)
                 .log().body();
 
         return response;
-}
+    }
 }

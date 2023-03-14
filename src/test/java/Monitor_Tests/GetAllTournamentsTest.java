@@ -1,11 +1,8 @@
-package positivetests;
+package Monitor_Tests;
 
-import Users.service.MatchOfficialsService;
 import Users.service.TournamentsService;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-import pojo.getAll.recommendedusers.GetRecommendedUsersResponse;
 import pojo.getAll.tournaments.GetAllTournamentsResponse;
 import util.FileUtility;
 

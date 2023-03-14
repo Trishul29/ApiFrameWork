@@ -1,4 +1,4 @@
-package positivetests;
+package Monitor_Tests;
 import Users.service.UsersService;
 import pojo.get.GetUserResponse;
 import org.testng.annotations.BeforeClass;

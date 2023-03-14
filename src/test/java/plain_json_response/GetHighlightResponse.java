@@ -1,4 +1,4 @@
-package pojo.get;
+package plain_json_response;
 
 import Users.client.MatchHighlightsClient;
 import Users.service.MatchOfficialsService;
@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter
 public class GetHighlightResponse {
     @Setter
-            int statuCode;
+            int statusCode;
     MatchHighlightsClient matchHighlightsClient=new MatchHighlightsClient();
 
     Response response = matchHighlightsClient.getHighlights();
