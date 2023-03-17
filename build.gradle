@@ -1,10 +1,8 @@
+
 plugins {
     id 'java'
-    id "io.qameta.allure" version "2.11.2"
-}
-java {
-    sourceCompatibility = 11
-    targetCompatibility = 11
+    id 'io.qameta.allure' version '2.11.0'
+
 }
 
 group 'org.example'
@@ -12,57 +10,44 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-    gradlePluginPortal()
+
 }
 
 dependencies {
+
+
     testImplementation group: 'org.testng', name: 'testng', version: '7.7.1'
-    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.3.0'
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.14.1'
-    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
-    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
-    implementation group: 'io.qameta.allure', name: 'allure-gradle', version: '2.8.1'
-    implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.21.0'
-// https://mvnrepository.com/artifact/io.qameta.allure/allure-java-commons
-    implementation group: 'io.qameta.allure', name: 'allure-java-commons', version: '2.21.0'
-// https://mvnrepository.com/artifact/io.qameta.allure/allure-okhttp3
-    implementation group: 'io.qameta.allure', name: 'allure-okhttp3', version: '2.21.0'
-// https://mvnrepository.com/artifact/io.qameta.allure/allure-rest-assured
-    implementation group: 'io.qameta.allure', name: 'allure-rest-assured', version: '2.21.0'
+  testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.3.0'
+   implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.14.1'
+   implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+  testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+    implementation 'io.qameta.allure:allure-testng:2.19.0'
 
 }
 
-allure {
-    version = '2.21.0'
-    autoconfigure = true
-    aspectjweaver = true
+
+
+
+
+java {
+    sourceCompatibility = 11
+    targetCompatibility = 11
 }
 
-task createReportDir() {
-    doLast {
-        def file = new File(project.projectDir as File, '/allure-report/ui')
-        if (!file.exists()) {
-            file.mkdirs();
-        }
+
+
+
+tasks.named('test') {
+
+    useTestNG() {
+
+        useDefaultListeners = true
+
+
     }
-}
 
 
-task runApiTests(type: Test) {
-    outputs.upToDateWhen { false }
-    useTestNG {
-        parallel = "methods"
-        threadCount Integer.parseInt(System.getProperty("sessions", "4"))
-        includeGroups System.getProperty("tags", "api")
-        testLogging.showStandardStreams = true
-        useDefaultListeners true
-        outputDirectory = file("$buildDir/" + System.getProperty('tags', 'NONE'))
+    test {
+        useTestNG()
     }
-}
-
-test {
-    useTestNG()
-}
-configurations {
-    testCompile
 }

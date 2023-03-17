@@ -75,4 +75,9 @@ public class GetRecommendedUsersResponse {
         private double[] coordinates;
     }
 
+    public void assertRecommendedUsers()
+    {
+
+    }
+
 }

@@ -78,5 +78,9 @@ public class GetAllPlayerLeaderBoardResponse {
         private String _id;
 
     }
+    public void assertGetAllPlayerLeaderBoardResponse()
+    {
+
+    }
 
 }

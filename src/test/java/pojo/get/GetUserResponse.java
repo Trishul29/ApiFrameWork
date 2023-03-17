@@ -107,4 +107,10 @@ public class GetUserResponse {
 
         private String battingHand;
     }
+
+    public void assertGetUserResponse()
+    {
+
+
+    }
 }

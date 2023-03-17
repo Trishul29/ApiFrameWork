@@ -1,13 +1,9 @@
-package Monitor_Tests;
+package Tests_Monitor;
 
 import Users.service.LeaderBoardService;
-import Users.service.MatchOfficialsService;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pojo.getAll.leaderboard.GetAllPlayerLeaderBoardResponse;
-import util.FileUtility;
-
-import java.util.Properties;
 
 import static org.testng.Assert.*;
 

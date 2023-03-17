@@ -1,18 +1,25 @@
-package pojo.get;
+package pojo.create.team;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
+import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
+
 @Getter
-public class GetTeamResponse {
+public class
+CreateTeamResponse {
     @Setter
     int statusCode;
-    public Object data;
+    @Setter
+    long responseTime;
+    private Data data;
 
-    private Object success;
+    private String success;
 
-    private Object error;
+    private String error;
+
 
     @Getter
     public static class Data
@@ -22,8 +29,6 @@ public class GetTeamResponse {
         private String manager;
 
         private String isVerified;
-
-        private String followStatus;
 
         private String link;
 
@@ -39,15 +44,17 @@ public class GetTeamResponse {
 
         private String teamPrimaryColor;
 
-        private String followers;
+        private String createdAt;
+
+        private String __v;
 
         private String name;
 
         private String logo;
 
-        private String postCount;
-
         private Location location;
+
+        private String _id;
 
         private String id;
 
@@ -55,6 +62,7 @@ public class GetTeamResponse {
 
         private String[] managers;
 
+        private String updatedAt;
     }
     @Getter
     public static class Location
@@ -63,10 +71,24 @@ public class GetTeamResponse {
 
         private String placeId;
 
+        private String[] coordinates;
+
         private String lat;
 @JsonProperty("long")
-        private String lon;
+        private String _long;
     }
-    public void assertGetTeamResponse()
-    {}
+
+    public void assertTeamDetails(CreateTeamRequestBody createTeamRequestBody)
+    {
+
+        assertEquals(this.getStatusCode(),200);
+        assertEquals(this.getSuccess(),"true");
+        assertTrue(this.getResponseTime()<3);
+        assertNotNull(this.getData().get_id());
+        assertEquals(this.getData().getName(),createTeamRequestBody.getName());
+        assertEquals(this.getData().getShortName(),createTeamRequestBody.getShortName());
+
+
+
+    }
 }

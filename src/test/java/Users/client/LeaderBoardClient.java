@@ -15,6 +15,7 @@ public class LeaderBoardClient {
     public Response getBoard() {
         properties= FileUtility.loadProperties(propertyPath);
         String bearerToken=properties.getProperty("bearerToken");
+
        // String id=properties.getProperty("matchId");
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)

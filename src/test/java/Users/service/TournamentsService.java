@@ -1,9 +1,6 @@
 package Users.service;
-
-import Users.client.MatchOfficialsClient;
 import Users.client.TournamentsClient;
 import io.restassured.response.Response;
-import pojo.getAll.recommendedusers.GetRecommendedUsersResponse;
 import pojo.getAll.tournaments.GetAllTournamentsResponse;
 
 import java.util.concurrent.TimeUnit;

@@ -95,5 +95,10 @@ public class GetAllTournamentsResponse {
         private String status;
     }
 
+    public void assertGetAllTournamentsResponse()
+    {
+
+    }
+
 
 }

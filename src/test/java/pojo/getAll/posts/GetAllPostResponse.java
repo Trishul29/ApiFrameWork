@@ -114,5 +114,8 @@ public class GetAllPostResponse {
 
     }
 
+    public void assertGetAllPost()
+    {}
+
 
 }

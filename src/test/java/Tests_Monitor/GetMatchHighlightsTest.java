@@ -1,4 +1,4 @@
-package Monitor_Tests;
+package Tests_Monitor;
 
 
 import org.testng.annotations.BeforeClass;

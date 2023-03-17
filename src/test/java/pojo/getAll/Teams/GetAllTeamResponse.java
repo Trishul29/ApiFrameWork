@@ -67,4 +67,9 @@ public class GetAllTeamResponse {
 
    }
 
+   public void assertGetAllTeamResponse()
+   {
+
+   }
+
 }
