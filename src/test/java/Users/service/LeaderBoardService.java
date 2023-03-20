@@ -16,7 +16,6 @@ public class LeaderBoardService {
         GetAllPlayerLeaderBoardResponse getAllPlayerLeaderBoardResponse = response.as(GetAllPlayerLeaderBoardResponse.class);
         getAllPlayerLeaderBoardResponse.setStatusCode(statusCode);
         getAllPlayerLeaderBoardResponse.setResponseTime(responseTime);
-
         return getAllPlayerLeaderBoardResponse;
     }
 }

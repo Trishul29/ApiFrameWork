@@ -25,7 +25,8 @@ public static class Location
     private  String placeId;
     private  double latitude;
     private  double longitude;
-    private  String address;  public Location(String placeId, double latitude, double longitude, String address) {
+    private  String address;
+    public Location(String placeId, double latitude, double longitude, String address) {
     this.placeId = placeId;
     this.latitude = latitude;
     this.longitude = longitude;
@@ -79,6 +80,7 @@ public static class Location
             return this;
         }
 
+
         public CreateTeamRequestBody  build() {
             CreateTeamRequestBody    createTeamRequestBody = new CreateTeamRequestBody(this);
 
@@ -87,6 +89,8 @@ public static class Location
         }
 
 
-    }}
+    }
+}
+
 
 

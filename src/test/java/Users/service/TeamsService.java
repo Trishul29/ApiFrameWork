@@ -35,8 +35,6 @@ public CreateTeamResponse createTeam(CreateTeamRequestBody createTeamRequestBody
     CreateTeamResponse createTeamResponse=response.as(CreateTeamResponse.class);
     createTeamResponse.setStatusCode(statusCode);
     createTeamResponse.setResponseTime(responseTime);
-
-
     return createTeamResponse;
 }
 

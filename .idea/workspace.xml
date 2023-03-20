@@ -4,41 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="Two  testCases Added for leaderboard ,GetAllmatches and functionality added for reporting using allure report">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Test_post_request/CreateTeamTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/CreateBearerToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Users/client/BearerTokenGeneratorClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Users/service/BearerTokenGeneratorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/create/bearertoken/CreateBearerTokenRequestBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/create/bearertoken/CreateBearerTokenResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/create/team/CreateTeamRequestBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/create/team/CreateTeamResponse.java" afterDir="false" />
+    <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="Added Test Case for CreateTeamTest, made changes in build.gradle by adding allure dependancy">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Test_post_request/CreateMatchTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/create/match/CreateMatchRequestBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/create/match/CreateMatchResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spec.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spec.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Monitor_Tests/GetAllMatchesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetAllMatchesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Monitor_Tests/GetAllPostsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetAllPostsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Monitor_Tests/GetAllTeamsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetAllTeamsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Monitor_Tests/GetAllTournamentsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetAllTournamentsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Monitor_Tests/GetLeaderBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetLeaderBoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Monitor_Tests/GetMatchHighlightsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetMatchHighlightsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Monitor_Tests/GetRecommendedUsersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetRecommendedUsersTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Monitor_Tests/GetTeamByIdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetTeamByIdTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Monitor_Tests/GetUserByIdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetUserByIdTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Users/client/LeaderBoardClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/client/LeaderBoardClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Users/client/TeamsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/client/TeamsClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetAllPostsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetAllPostsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Users/client/MatchesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/client/MatchesClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Users/service/LeaderBoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/service/LeaderBoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Users/service/MatchesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/service/MatchesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Users/service/TeamsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/service/TeamsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Users/service/TournamentsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Users/service/TournamentsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/plain_json_response/GetAllMatchesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/plain_json_response/GetAllMatchesResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/GetTeamResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/GetTeamResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/GetUserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/GetUserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/Teams/GetAllTeamResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/Teams/GetAllTeamResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/leaderboard/GetAllPlayerLeaderBoardResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/leaderboard/GetAllPlayerLeaderBoardResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/posts/GetAllPostResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/posts/GetAllPostResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/recommendedusers/GetRecommendedUsersResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/recommendedusers/GetRecommendedUsersResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/tournaments/GetAllTournamentsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/tournaments/GetAllTournamentsResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/allure.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/team/CreateTeamRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/team/CreateTeamRequestBody.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +46,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/test/java/pojo/create/match/CreateMatchRequestBody.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -102,7 +82,25 @@
       <recent name="util" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GetAllPostsTest.shouldGetAllPosts">
+  <component name="RunManager" selected="TestNG.GetAllMatchesTest.shouldGetAllMatches">
+    <configuration name="CreateMatchTest.shouldCreateMatch" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test_post_request.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test_post_request" />
+      <option name="MAIN_CLASS_NAME" value="Test_post_request.CreateMatchTest" />
+      <option name="METHOD_NAME" value="shouldCreateMatch" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CreateTeamTest.shouldCreateTeam" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyySportsAPIAutoamtion.test" />
       <extension name="coverage">
@@ -111,7 +109,7 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="post_request_test" />
+      <option name="PACKAGE_NAME" value="Test_post_request" />
       <option name="MAIN_CLASS_NAME" value="Test_post_request.CreateTeamTest" />
       <option name="METHOD_NAME" value="shouldCreateTeam" />
       <option name="TEST_OBJECT" value="METHOD" />
@@ -157,24 +155,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetAllTeamsTest.shouldGetAllTeams" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MyySportsAPIAutoamtion.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests_Monitor.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests_Monitor" />
-      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetAllTeamsTest" />
-      <option name="METHOD_NAME" value="shouldGetAllTeams" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GetTeamByIdTest.shouldGetTeamById" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyySportsAPIAutoamtion.test" />
       <extension name="coverage">
@@ -195,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GetAllMatchesTest.shouldGetAllMatches" />
+        <item itemvalue="TestNG.CreateMatchTest.shouldCreateMatch" />
+        <item itemvalue="TestNG.CreateTeamTest.shouldCreateTeam" />
         <item itemvalue="TestNG.GetAllPostsTest.shouldGetAllPosts" />
         <item itemvalue="TestNG.GetTeamByIdTest.shouldGetTeamById" />
-        <item itemvalue="TestNG.GetAllTeamsTest.shouldGetAllTeams" />
-        <item itemvalue="TestNG.CreateTeamTest.shouldCreateTeam" />
-        <item itemvalue="TestNG.GetAllMatchesTest.shouldGetAllMatches" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678804526131</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added Test Case for CreateTeamTest, made changes in build.gradle by adding allure dependancy">
+      <created>1679076257149</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679076257149</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,7 +231,8 @@
     <MESSAGE value="Three testCases Added recommendedusers ,getalltournaments,getallhighlights" />
     <MESSAGE value="Two  testCases Added for leaderboard ,GetAllmatches" />
     <MESSAGE value="Two  testCases Added for leaderboard ,GetAllmatches and functionality added for reporting using allure report" />
-    <option name="LAST_COMMIT_MESSAGE" value="Two  testCases Added for leaderboard ,GetAllmatches and functionality added for reporting using allure report" />
+    <MESSAGE value="Added Test Case for CreateTeamTest, made changes in build.gradle by adding allure dependancy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Test Case for CreateTeamTest, made changes in build.gradle by adding allure dependancy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -253,11 +241,6 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="6" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Users/service/TeamsService.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
