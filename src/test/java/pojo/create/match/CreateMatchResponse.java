@@ -27,11 +27,12 @@ public class CreateMatchResponse {
 
     public void assertMatchDetails(CreateMatchRequestBody createMatchRequestBody)
     {
+        assertTrue(this.success);
         assertEquals(this.getStatusCode(),200);
         assertEquals(this.getData().getMessage(),"Match created successfully");
         assertNotNull(this.getData().getMatchId());
         assertTrue(this.responseTime<4);
-        assertEquals(this.success,true);
+
 
 
     }

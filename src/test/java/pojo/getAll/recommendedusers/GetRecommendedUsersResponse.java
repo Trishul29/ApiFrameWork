@@ -1,10 +1,7 @@
 package pojo.getAll.recommendedusers;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
-
-import javax.lang.model.type.NullType;
 
 @Getter
 public class GetRecommendedUsersResponse {

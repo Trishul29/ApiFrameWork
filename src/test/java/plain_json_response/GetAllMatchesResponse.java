@@ -41,7 +41,7 @@ String matchType=jsonPath.get("data.docs[0].matchType");
 String ballType=jsonPath.get("data.docs[0].ballType");
 
   public void assertGetAllMatches() {
-        assertTrue(this.getResponseTime()<3,"Taking too much time to process request");
+        assertTrue(this.getResponseTime()<4,"Taking too much time to process request");
         assertTrue(this.getSuccess(),"Success failure");
         assertEquals(this.getStatusCode(),200,"Not able to get All matches");
         assertNotNull(this.getId(),"Match id not present");

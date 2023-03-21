@@ -1,8 +1,6 @@
 package pojo.getAll.Teams;
-
 import lombok.Getter;
 import lombok.Setter;
-
 import javax.lang.model.type.NullType;
 
 @Getter

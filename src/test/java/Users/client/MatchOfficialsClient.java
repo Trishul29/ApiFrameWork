@@ -3,9 +3,7 @@ package Users.client;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import util.FileUtility;
-
 import java.util.Properties;
-
 import static io.restassured.RestAssured.given;
 
 public class MatchOfficialsClient {

@@ -1,12 +1,9 @@
 package Test_post_request;
-
 import Users.service.TeamsService;
 import org.testng.annotations.Test;
 import pojo.create.team.CreateTeamRequestBody;
 import pojo.create.team.CreateTeamResponse;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
 
 public class CreateTeamTest {
 @Test

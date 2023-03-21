@@ -2,16 +2,12 @@ package pojo.create.team;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.testng.annotations.Test;
-
-import java.util.UUID;
 @Getter
 public class CreateTeamRequestBody {
     private String name;
     private String shortName;
     private String description;
     private String logo;
-
     private String banner;
     private String teamPrimaryColor;
     private String  teamSecondaryColor;
@@ -26,13 +22,13 @@ public static class Location
     private  double latitude;
     private  double longitude;
     private  String address;
-    public Location(String placeId, double latitude, double longitude, String address) {
+    public Location(String placeId, double latitude, double longitude, String address)
+    {
     this.placeId = placeId;
     this.latitude = latitude;
     this.longitude = longitude;
     this.address = address;
-}
-
+  }
 }
 
     public CreateTeamRequestBody(Builder builder) {
@@ -45,18 +41,12 @@ public static class Location
         this.teamSecondaryColor=builder.teamSecondaryColor;
         this.teamCity=builder.teamCity;
         this.location=builder.location;
-
-
-    }
-
-
-    public static class Builder {
+}
+public static class Builder {
         private String name;
-
         private String shortName;
         private String description;
         private String logo;
-
         private String banner;
         private String teamPrimaryColor;
         private String  teamSecondaryColor;

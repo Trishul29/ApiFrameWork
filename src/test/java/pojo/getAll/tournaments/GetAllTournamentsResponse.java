@@ -1,8 +1,6 @@
 package pojo.getAll.tournaments;
-
 import lombok.Getter;
 import lombok.Setter;
-
 @Getter
 public class GetAllTournamentsResponse {
     @Setter

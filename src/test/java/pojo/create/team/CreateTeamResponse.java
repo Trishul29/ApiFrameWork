@@ -15,12 +15,8 @@ CreateTeamResponse {
     @Setter
     long responseTime;
     private Data data;
-
     private String success;
-
     private String error;
-
-
     @Getter
     public static class Data
     {

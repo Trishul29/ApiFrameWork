@@ -1,23 +1,18 @@
 package Test_post_request;
-
 import Users.service.MatchesService;
-import Users.service.TeamsService;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pojo.create.match.CreateMatchRequestBody;
 import pojo.create.match.CreateMatchResponse;
-import pojo.create.team.CreateTeamRequestBody;
-import pojo.create.team.CreateTeamResponse;
 
 public class CreateMatchTest {
 private   CreateMatchRequestBody.RosterDetails[] rosterDetails;
-    private   CreateMatchRequestBody.RosterDetails[] rosterDetails1;
+private   CreateMatchRequestBody.RosterDetails[] rosterDetails1;
     @BeforeMethod
     public  void beforeTest()
     {
 
-      rosterDetails = new CreateMatchRequestBody.RosterDetails[3];
+        rosterDetails = new CreateMatchRequestBody.RosterDetails[3];
         rosterDetails[0] = new CreateMatchRequestBody.RosterDetails(true, true, true, "62fc3bdc33e526a27a29187f");
         rosterDetails[1] = new CreateMatchRequestBody.RosterDetails(false, true, false, "63a0001d75e9ab0280d66736");
         rosterDetails[2] = new CreateMatchRequestBody.RosterDetails(true, true, false, "628db1876f6ad608f35cf9d3");

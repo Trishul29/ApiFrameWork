@@ -3,9 +3,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import plain_json_response.GetAllMatchesResponse;
 
-
-import static org.testng.Assert.*;
-
 public class GetAllMatchesTest {
    GetAllMatchesResponse getAllMatchesResponse;
 
@@ -20,8 +17,6 @@ public class GetAllMatchesTest {
         getAllMatchesResponse.assertGetAllMatches();
 
     }
-
-
 
 
 }

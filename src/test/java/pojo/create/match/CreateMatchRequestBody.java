@@ -189,13 +189,7 @@ public class CreateMatchRequestBody {
 
         return this;
         }
-//        public Builder setAddress(String country, String city, String placeId)
-//        {
-//            Address address = new Address(country, city, placeId);
-//
-//            this.matchVenue.setAddress(address);
-//            return this;
-//        }
+
         public Builder setGroundName(String placeId, String name)
         {
            GroundName groundName=new GroundName( placeId, name);
@@ -224,19 +218,7 @@ public class CreateMatchRequestBody {
             this.teamTwo = new TeamTwo(teamId, invite,rosterDetails1);
             return this;
         }
-//        public Builder setRosterDetails1(String isWicketKeeper, String isCaptain, String isSubstitute, String playerId)
-//        {
-//            RosterDetails rosterDetails=new RosterDetails(isWicketKeeper,isCaptain,isSubstitute,playerId);
-//            this.teamOne.setRosterDetails(rosterDetails);
-//            return this;
-//        }
-//        public Builder setRosterDetails2(String isWicketKeeper, String isCaptain, String isSubstitute, String playerId)
-//        {
-//            RosterDetails rosterDetails=new RosterDetails(isWicketKeeper,isCaptain,isSubstitute,playerId);
-//            this.teamTwo.setRosterDetails(rosterDetails);
-//            return this;
-//
-//        }
+
         public CreateMatchRequestBody  build() {
           CreateMatchRequestBody    createMatchRequestBody = new CreateMatchRequestBody(this);
 

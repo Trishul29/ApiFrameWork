@@ -2,9 +2,9 @@ package pojo.getAll.posts;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.apache.commons.lang3.ObjectUtils;
-
 import javax.lang.model.type.NullType;
+
+import static org.testng.Assert.assertEquals;
 
 @Getter
 public class GetAllPostResponse {
@@ -115,7 +115,10 @@ public class GetAllPostResponse {
     }
 
     public void assertGetAllPost()
-    {}
+    {
+        assertEquals(this.getStatusCode(),200);
+        assertEquals(this.getSuccess(),"true");
+    }
 
 
 }

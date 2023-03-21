@@ -1,10 +1,7 @@
 package Tests_Monitor;
-
-
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import plain_json_response.GetHighlightResponse;
-
 import static org.testng.Assert.assertNotNull;
 
 public class GetMatchHighlightsTest {

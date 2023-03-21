@@ -1,11 +1,8 @@
 package Users.client;
-
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import util.FileUtility;
-
 import java.util.Properties;
-
 import static io.restassured.RestAssured.given;
 
 public class LeaderBoardClient {
@@ -15,8 +12,6 @@ public class LeaderBoardClient {
     public Response getBoard() {
         properties= FileUtility.loadProperties(propertyPath);
         String bearerToken=properties.getProperty("bearerToken");
-
-       // String id=properties.getProperty("matchId");
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
                 .queryParam("matchType",properties.getProperty("matchType"))

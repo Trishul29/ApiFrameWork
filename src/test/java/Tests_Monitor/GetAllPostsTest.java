@@ -1,5 +1,4 @@
 package Tests_Monitor;
-
 import Users.service.PostsService;
 import io.qameta.allure.Step;
 import pojo.getAll.posts.GetAllPostResponse;
@@ -24,10 +23,7 @@ postsService=new PostsService();
     public void shouldGetAllPosts()
     {
         GetAllPostResponse getAllPostsResponse = postsService.getAllPost();
-        assertEquals(getAllPostsResponse.getStatusCode(),200);
-        assertEquals(getAllPostsResponse.getSuccess(),"true");
-
-
+        getAllPostsResponse.assertGetAllPost();
     }
 
 }

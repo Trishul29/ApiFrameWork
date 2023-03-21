@@ -16,10 +16,7 @@ public Response getToken(CreateBearerTokenRequestBody body)
     properties= FileUtility.loadProperties(propertyPath);
 
     Response response=given()
-                //.header("Accept", "application/json")
-                .header("Content-Type", "application/json")
-           // .contentType(ContentType.JSON)
-          //  .accept(ContentType.JSON)
+            .header("Content-Type", "application/json")
             .queryParam("key",properties.getProperty("firebase_key"))
             .body(body)
             .log().uri()
@@ -28,7 +25,6 @@ public Response getToken(CreateBearerTokenRequestBody body)
             .post("https://identitytoolkit.googleapis.com/v1/accounts:/signInWithPassword");
     response
             .then()
-            //.contentType(ContentType.ANY)
             .log().all(true);
 
 return response;

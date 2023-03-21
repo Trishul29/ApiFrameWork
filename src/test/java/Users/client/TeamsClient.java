@@ -1,12 +1,9 @@
 package Users.client;
-
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import pojo.create.team.CreateTeamRequestBody;
 import util.FileUtility;
-
 import java.util.Properties;
-
 import static io.restassured.RestAssured.given;
 
 public class TeamsClient {
@@ -60,7 +57,8 @@ public class TeamsClient {
 
     {
         properties= FileUtility.loadProperties(propertyPath);
-       bearerToken=properties.getProperty("bearerToken");
+        bearerToken=properties.getProperty("bearerToken");
+
         Response response=given()
                 .contentType(ContentType.JSON)
                 .header("Authorization","Bearer "+bearerToken)

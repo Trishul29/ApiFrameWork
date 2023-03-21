@@ -1,13 +1,9 @@
 package Users.client;
-
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import pojo.create.match.CreateMatchRequestBody;
-import pojo.create.team.CreateTeamRequestBody;
 import util.FileUtility;
-
 import java.util.Properties;
-
 import static io.restassured.RestAssured.given;
 
 public class MatchesClient {

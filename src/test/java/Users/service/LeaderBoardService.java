@@ -3,8 +3,6 @@ package Users.service;
 import Users.client.LeaderBoardClient;
 import io.restassured.response.Response;
 import pojo.getAll.leaderboard.GetAllPlayerLeaderBoardResponse;
-import pojo.getAll.tournaments.GetAllTournamentsResponse;
-
 import java.util.concurrent.TimeUnit;
 
 public class LeaderBoardService {

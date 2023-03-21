@@ -1,26 +1,24 @@
 package Users.client;
-import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
+import pojo.create.post.CreatePostRequestBody;
+import pojo.create.post.CreateReplyPostRequestBody;
 import util.FileUtility;
-
 import java.util.Properties;
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.request;
-
 public class PostsClient {
-  public  static  String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
-    public  static Properties properties;
+  public    String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
+    public  Properties properties;
+    String bearerToken;
 
-    public static Response getAll(String Path) {
+    public  Response getAll(String Path) {
 
         properties=FileUtility.loadProperties(propertyPath);
-   String bearerToken=properties.getProperty("bearerToken");
+ bearerToken=properties.getProperty("bearerToken");
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
                 .queryParam("page",1)
-                .log().uri()
+                .log().all(true)
                 .when()
                 .get(Path);
         response
@@ -30,4 +28,43 @@ public class PostsClient {
         return response;
 
     }
+
+    public Response createPost(CreatePostRequestBody requestBody)
+    {
+
+        properties= FileUtility.loadProperties(propertyPath);
+        bearerToken=properties.getProperty("bearerToken");
+        Response response=given()
+                .contentType(ContentType.JSON)
+                .header("Authorization","Bearer "+bearerToken)
+                .body(requestBody)
+                .log().all(true)
+                .when()
+                .post(properties.getProperty("basepath_create_post"));
+        response
+                .then()
+                .contentType(ContentType.JSON)
+                .log().body(true);
+        return response;
+    }
+
+
+    public Response createReplyPost(CreateReplyPostRequestBody requestBody)
+    {
+        properties= FileUtility.loadProperties(propertyPath);
+        bearerToken=properties.getProperty("bearerToken");
+        Response response=given()
+                .contentType(ContentType.JSON)
+                .header("Authorization","Bearer "+bearerToken)
+                .body(requestBody)
+                .log().all(true)
+                .when()
+                .post(properties.getProperty("basepath_create_post"));
+        response
+                .then()
+                .contentType(ContentType.JSON)
+                .log().body(true);
+        return response;
+    }
+
 }
