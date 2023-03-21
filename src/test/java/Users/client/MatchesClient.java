@@ -45,4 +45,22 @@ public class MatchesClient {
                 .log().body(true);
         return response;
     }
+
+    public Response getMatchInfo()
+    {
+        properties= FileUtility.loadProperties(propertyPath);
+        bearerToken=properties.getProperty("bearerToken");
+        Response response = given()
+                .header("Authorization","Bearer "+bearerToken)
+                .pathParam("MatchId",properties.getProperty("matchid"))
+                .log().all(true)
+                .when()
+                .get(properties.getProperty("basepath_get_matchinfo")+"/{MatchId}");
+        response
+                .then()
+                .contentType(ContentType.JSON)
+                .log().body(true);
+
+        return response;
+    }
 }
