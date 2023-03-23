@@ -3,6 +3,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import plain_json_response.GetHighlightResponse;
 import static org.testng.Assert.assertNotNull;
+import static org.testng.Assert.assertTrue;
 
 public class GetMatchHighlightsTest {
 
@@ -17,15 +18,7 @@ public class GetMatchHighlightsTest {
     @Test
     public void shouldGetMatchHighLight() {
 
-
-        assertNotNull(getHighlightResponse.getId(),"Highlights not created");
-        assertNotNull(getHighlightResponse.getTeamOneId(),"");
-        assertNotNull(getHighlightResponse.getTeamTwoId(),"");
-        assertNotNull(getHighlightResponse.getInning(),"");
-        assertNotNull(getHighlightResponse.getTitle(),"");
-        assertNotNull(getHighlightResponse.getScore(),"");
-        assertNotNull(getHighlightResponse.getOvers(),"");
-        assertNotNull(getHighlightResponse.getFinalScore(),"");
+getHighlightResponse.assertGetHighlight();
 
     }
 

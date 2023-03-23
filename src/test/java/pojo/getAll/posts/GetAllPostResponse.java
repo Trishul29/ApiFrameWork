@@ -5,11 +5,14 @@ import lombok.Setter;
 import javax.lang.model.type.NullType;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 @Getter
 public class GetAllPostResponse {
     @Setter
     int statusCode;
+    @Setter
+    long responseTime;
 
     private Data data;
 
@@ -116,6 +119,7 @@ public class GetAllPostResponse {
 
     public void assertGetAllPost()
     {
+        assertTrue(this.getResponseTime()<=2,"Taking to much time to process Request");
         assertEquals(this.getStatusCode(),200);
         assertEquals(this.getSuccess(),"true");
     }

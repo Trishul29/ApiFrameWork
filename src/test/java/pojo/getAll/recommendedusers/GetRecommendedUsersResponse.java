@@ -3,10 +3,15 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
 @Getter
 public class GetRecommendedUsersResponse {
     @Setter
     int statusCode;
+    @Setter
+    long responseTime;
     private Data data;
 
     private String success;
@@ -74,7 +79,9 @@ public class GetRecommendedUsersResponse {
 
     public void assertRecommendedUsers()
     {
-
+        assertTrue(this.getResponseTime()<=2,"Taking too much time to process Request");
+        assertEquals(this.getStatusCode(),200,"Not able to get Recommended Users");
+        assertEquals(this.getSuccess(),"true","Success Return False ");
     }
 
 }

@@ -1,7 +1,7 @@
-package Users.service;
+package modules.service;
 
-import Users.client.UsersClient;
-import pojo.get.GetUserResponse;
+import modules.client.UsersClient;
+import pojo.get.user.GetUserResponse;
 import io.restassured.response.Response;
 
 public class UsersService {

@@ -1,5 +1,5 @@
-package Test_post_request;
-import Users.service.PostsService;
+package Test_create_request;
+import modules.service.PostsService;
 import io.qameta.allure.Step;
 import org.testng.annotations.Test;
 import pojo.create.post.CreatePostRequestBody;

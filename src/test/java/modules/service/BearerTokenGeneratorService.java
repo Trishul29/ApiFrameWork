@@ -1,5 +1,5 @@
-package Users.service;
-import Users.client.BearerTokenGeneratorClient;
+package modules.service;
+import modules.client.BearerTokenGeneratorClient;
 import io.restassured.response.Response;
 import pojo.create.bearertoken.CreateBearerTokenRequestBody;
 import pojo.create.bearertoken.CreateBearerTokenResponse;

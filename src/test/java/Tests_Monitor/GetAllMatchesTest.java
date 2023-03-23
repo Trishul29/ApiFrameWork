@@ -1,4 +1,5 @@
 package Tests_Monitor;
+import io.qameta.allure.Step;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import plain_json_response.GetAllMatchesResponse;
@@ -12,9 +13,10 @@ public class GetAllMatchesTest {
       getAllMatchesResponse=new GetAllMatchesResponse();
     }
 @Test
-    public  void shouldGetAllMatches()
+@Step("{0}")
+public  void shouldGetAllMatches()
     {
-        getAllMatchesResponse.assertGetAllMatches();
+        getAllMatchesResponse.assertGetAllMatch();
 
     }
 

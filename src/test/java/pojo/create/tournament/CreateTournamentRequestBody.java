@@ -40,9 +40,9 @@ public class CreateTournamentRequestBody {
 
      public Builder()
      {
-         this.gameType=1;
+         this.gameType=0;
          this.matchType=0;
-         this.name="Fifa2022";
+         this.name="Cricket2022";
          this.totalOvers=0;
          this.edition="season1";
          this.description="some description";

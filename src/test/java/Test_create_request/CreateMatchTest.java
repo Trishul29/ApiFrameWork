@@ -1,5 +1,5 @@
-package Test_post_request;
-import Users.service.MatchesService;
+package Test_create_request;
+import modules.service.MatchesService;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pojo.create.match.CreateMatchRequestBody;
@@ -32,8 +32,6 @@ private   CreateMatchRequestBody.RosterDetails[] rosterDetails1;
                 .setTeamOne("639fffad75e9ab0280d666f0",false,rosterDetails)
                 .setTeamTwo("63931a341017665e80fe1722",false,rosterDetails1)
                 .build();
-
-
 
        CreateMatchResponse createMatchResponse = new MatchesService().createMatch(createMatchRequestBody);
        createMatchResponse.assertMatchDetails(createMatchRequestBody);

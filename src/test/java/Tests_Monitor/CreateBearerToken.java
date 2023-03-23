@@ -1,10 +1,5 @@
 package Tests_Monitor;
 
-import Users.service.BearerTokenGeneratorService;
-import org.testng.annotations.Test;
-import pojo.create.bearertoken.CreateBearerTokenRequestBody;
-import pojo.create.bearertoken.CreateBearerTokenResponse;
-
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 

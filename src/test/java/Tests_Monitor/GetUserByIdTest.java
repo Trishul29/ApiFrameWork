@@ -1,11 +1,12 @@
 package Tests_Monitor;
-import Users.service.UsersService;
-import pojo.get.GetUserResponse;
+import modules.service.UsersService;
+import pojo.get.user.GetUserResponse;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import util.FileUtility;
 import java.util.Properties;
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class GetUserByIdTest {
     private UsersService usersService;
@@ -23,7 +24,7 @@ public class GetUserByIdTest {
     {
         String userId=properties.getProperty("userid");
     GetUserResponse getUserResponse=usersService.getUserById(userId);
-        assertEquals(getUserResponse.getStatusCode(),200);
-        assertEquals(getUserResponse.getSuccess(),"true");
+    getUserResponse.assertGetUserResponse();
+
     }
 }

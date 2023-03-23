@@ -1,10 +1,11 @@
-package Users.client;
+package modules.client;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import pojo.create.team.CreateTeamRequestBody;
 import util.FileUtility;
 import java.util.Properties;
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.lessThan;
 
 public class TeamsClient {
 
@@ -53,7 +54,7 @@ public class TeamsClient {
 
     }
 
-    public Response CreateTeamCLient(CreateTeamRequestBody requestBody)
+    public Response CreateTeamClient(CreateTeamRequestBody requestBody)
 
     {
         properties= FileUtility.loadProperties(propertyPath);

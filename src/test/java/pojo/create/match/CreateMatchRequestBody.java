@@ -1,9 +1,7 @@
 package pojo.create.match;
 
-import Users.client.MatchesClient;
 import lombok.Getter;
 import lombok.Setter;
-import pojo.create.team.CreateTeamRequestBody;
 
 @Getter
 public class CreateMatchRequestBody {

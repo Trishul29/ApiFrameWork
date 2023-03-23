@@ -3,15 +3,20 @@ import lombok.Getter;
 import lombok.Setter;
 import javax.lang.model.type.NullType;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
 @Getter
 public class GetAllTeamResponse {
    @Setter
    int statusCode;
+   @Setter
+   long responseTime;
    private Data data;
 
    private String success;
 
-   private NullType error;
+   private String error;
    @Getter
    public static class Data{
       private String hasPrevPage;
@@ -50,6 +55,7 @@ public class GetAllTeamResponse {
       private String description;
 
       private String matchCount;
+      private String playerCount;
 
       private String isActive;
 
@@ -67,7 +73,9 @@ public class GetAllTeamResponse {
 
    public void assertGetAllTeamResponse()
    {
-
+      assertTrue(this.getResponseTime()<=2,"Taking too much time to process Request");
+      assertEquals(this.getStatusCode(),200);
+      assertEquals(this.getSuccess(),"true");
    }
 
 }

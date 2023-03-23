@@ -3,6 +3,8 @@ package pojo.getAll.leaderboard;
 import lombok.Getter;
 import lombok.Setter;
 
+import static org.testng.Assert.*;
+
 @Getter
 public class GetAllPlayerLeaderBoardResponse {
     @Setter
@@ -14,6 +16,7 @@ public class GetAllPlayerLeaderBoardResponse {
     private String success;
 
     private String error;
+    
 
     @Getter
     public static class  Data{
@@ -78,8 +81,23 @@ public class GetAllPlayerLeaderBoardResponse {
         private String _id;
 
     }
-    public void assertGetAllPlayerLeaderBoardResponse()
-    {
+
+    
+        public void assertLeaderBoardResponse() {
+
+        assertTrue(this.getResponseTime()<3,"Taking too much time to process Request");
+        assertEquals(this.getSuccess(),"true","Not able to Fetch Response");
+        assertEquals(this.getStatusCode(),200,"Request Unsuccessfull");
+        assertTrue(this.getResponseTime()<=2);
+        assertNotNull(this.getData().getDocs()[0].getUser().getFirstName());
+        assertNotNull(this.getData().getDocs()[0].getMatches());
+        assertNotNull(this.getData().getDocs()[0].getRuns());
+        assertNotNull(this.getData().getDocs()[0].getStrikeRate());
+
+        for(int i=0; i< this.getData().getDocs().length;i++)
+        {
+            assertNotNull(this.getData().getDocs()[i].getUser().get_id());
+        }
 
     }
 

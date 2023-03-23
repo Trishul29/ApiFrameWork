@@ -1,17 +1,22 @@
-package pojo.get;
+package pojo.get.user;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.lang.model.type.NullType;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
 @Getter
 public class GetUserResponse {
     @Setter
     int statusCode;
+    @Setter
+    long responseTime;
     private Data data;
     private String success;
-    private NullType error;
+    private String error;
 
     @Getter
     @JsonIgnoreProperties(ignoreUnknown = true, value = {"fUid"})
@@ -55,6 +60,7 @@ public class GetUserResponse {
         private String city;
         private String placeId;
         private String state;
+        private double[] coordinates;
     }
     @Getter
     public static class BowlingDetails
@@ -74,6 +80,8 @@ public class GetUserResponse {
     public void assertGetUserResponse()
     {
 
-
+        assertTrue(this.getResponseTime()<=2,"Taking too much time to process Request");
+        assertEquals(this.getStatusCode(),200);
+        assertEquals(this.getSuccess(),"true");
     }
 }

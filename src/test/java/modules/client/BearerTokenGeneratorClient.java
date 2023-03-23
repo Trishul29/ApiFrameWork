@@ -1,4 +1,4 @@
-package Users.client;
+package modules.client;
 
 import io.restassured.response.Response;
 import pojo.create.bearertoken.CreateBearerTokenRequestBody;

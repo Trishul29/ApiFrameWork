@@ -1,6 +1,6 @@
 package Tests_Monitor;
 
-import Users.service.MatchOfficialsService;
+import modules.service.MatchOfficialsService;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pojo.getAll.recommendedusers.GetRecommendedUsersResponse;
@@ -9,6 +9,7 @@ import util.FileUtility;
 import java.util.Properties;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class GetRecommendedUsersTest {
     private MatchOfficialsService matchOfficialsService;
@@ -26,8 +27,7 @@ public class GetRecommendedUsersTest {
     {
       //  String =properties.getProperty("teamid");
        GetRecommendedUsersResponse getRecommendedUsersResponse=matchOfficialsService.getRecommendedUsers();
-        assertEquals(getRecommendedUsersResponse.getStatusCode(),200,"Not able to get Recommended Users");
-        assertEquals(getRecommendedUsersResponse.getSuccess(),"true","Success Return False ");
+      getRecommendedUsersResponse.assertRecommendedUsers();
 
 
     }

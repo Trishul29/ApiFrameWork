@@ -1,4 +1,4 @@
-package pojo.get;
+package pojo.get.Match;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,6 +10,7 @@ import static org.testng.Assert.*;
 public class GetMatchInfoResponse {
     @Setter
     int statusCode;
+
     @Setter
     long responseTime;
     private Data data;
@@ -121,7 +122,7 @@ public class GetMatchInfoResponse {
     {
         assertTrue(this.success);
        assertEquals(this.getStatusCode(),200);
-       assertTrue(this.getResponseTime()<=3,"Request taking more than 3 Seconds");
+       assertTrue(this.getResponseTime()<=2,"Request taking more than 3 Seconds");
       if(this.getData().getMatchStatus().equals("end"))
       {
         assertNotNull(this.getData().getWinningTeam().name,"Team name not Available");

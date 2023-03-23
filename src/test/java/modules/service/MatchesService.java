@@ -1,10 +1,10 @@
-package Users.service;
+package modules.service;
 
-import Users.client.MatchesClient;
+import modules.client.MatchesClient;
 import io.restassured.response.Response;
 import pojo.create.match.CreateMatchRequestBody;
 import pojo.create.match.CreateMatchResponse;
-import pojo.get.GetMatchInfoResponse;
+import pojo.get.Match.GetMatchInfoResponse;
 
 import java.util.concurrent.TimeUnit;
 

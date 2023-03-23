@@ -1,6 +1,6 @@
-package Users.service;
+package modules.service;
 
-import Users.client.PostsClient;
+import modules.client.PostsClient;
 import pojo.create.post.CreatePostRequestBody;
 import pojo.create.post.CreatePostResponse;
 import pojo.create.post.CreateReplyPostRequestBody;
@@ -16,10 +16,12 @@ public class PostsService {
 
     public  GetAllPostResponse getAllPost() {
 
-            Response response = new PostsClient().getAll("https://dev-scoring.platform.myysports.com/api/v3.0/post");
-            int statusCode = response.statusCode();
-            GetAllPostResponse getAllPostResponse = response.as(GetAllPostResponse.class);
-            getAllPostResponse.setStatusCode(statusCode);
+        Response response = new PostsClient().getAll("https://dev-scoring.platform.myysports.com/api/v3.0/post");
+        int statusCode = response.statusCode();
+        long responseTime= response.timeIn(TimeUnit.SECONDS);
+        GetAllPostResponse getAllPostResponse = response.as(GetAllPostResponse.class);
+        getAllPostResponse.setResponseTime(responseTime);
+        getAllPostResponse.setStatusCode(statusCode);
 return getAllPostResponse;
     }
 

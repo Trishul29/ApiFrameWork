@@ -1,9 +1,11 @@
-package Users.service;
+package modules.service;
 
-import Users.client.LeaderBoardClient;
+import modules.client.LeaderBoardClient;
 import io.restassured.response.Response;
 import pojo.getAll.leaderboard.GetAllPlayerLeaderBoardResponse;
 import java.util.concurrent.TimeUnit;
+
+import static org.testng.Assert.assertNotNull;
 
 public class LeaderBoardService {
     public GetAllPlayerLeaderBoardResponse getLeaderBoard()
@@ -16,4 +18,6 @@ public class LeaderBoardService {
         getAllPlayerLeaderBoardResponse.setResponseTime(responseTime);
         return getAllPlayerLeaderBoardResponse;
     }
+
+
 }

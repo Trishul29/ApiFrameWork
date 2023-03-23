@@ -1,5 +1,5 @@
-package Users.service;
-import Users.client.TournamentsClient;
+package modules.service;
+import modules.client.TournamentsClient;
 import io.restassured.response.Response;
 import pojo.create.tournament.CreateTournamentRequestBody;
 import pojo.create.tournament.CreateTournamentResponse;
@@ -12,8 +12,8 @@ public class TournamentsService {
     {
         Response response= new TournamentsClient().getAllTournaments();
         int statusCode=response.statusCode();
-     long responseTime=  response.timeIn(TimeUnit.SECONDS);
-    GetAllTournamentsResponse getAllTournamentsResponse = response.as(GetAllTournamentsResponse.class);
+        long responseTime=  response.timeIn(TimeUnit.SECONDS);
+        GetAllTournamentsResponse getAllTournamentsResponse = response.as(GetAllTournamentsResponse.class);
         getAllTournamentsResponse.setStatusCode(statusCode);
         getAllTournamentsResponse.setResponseTime(responseTime);
 

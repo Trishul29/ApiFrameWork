@@ -1,5 +1,5 @@
-package Test_post_request;
-import Users.service.TournamentsService;
+package Test_create_request;
+import modules.service.TournamentsService;
 import io.qameta.allure.Step;
 import org.testng.annotations.Test;
 import pojo.create.tournament.CreateTournamentRequestBody;

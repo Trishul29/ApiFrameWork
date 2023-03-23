@@ -1,34 +1,39 @@
-package Users.client;
+package modules.client;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import pojo.create.match.CreateMatchRequestBody;
+import pojo.create.tournament.CreateTournamentRequestBody;
 import util.FileUtility;
 import java.util.Properties;
 import static io.restassured.RestAssured.given;
 
-public class MatchesClient {
+public class TournamentsClient {
     public   String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
     public Properties properties;
     String bearerToken;
 
-    public Response getAllMatches() {
+    public Response getAllTournaments() {
         properties= FileUtility.loadProperties(propertyPath);
-     bearerToken=properties.getProperty("bearerToken");
+        bearerToken=properties.getProperty("bearerToken");
+        String path=properties.getProperty("gameType");
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
-                .queryParams("page",1,"type",properties.getProperty("type_matches"))
+                .queryParam("type",properties.getProperty("type"))
+
+                .pathParam("gameType",path)
+                .queryParam("page",1)
                 .log().uri()
                 .when()
-                .get(properties.getProperty("basepath_all_matches"));
+                .get(properties.getProperty("basepath_tournaments")+"/{gameType}"+"/tournament");
+
         response
                 .then()
                 .contentType(ContentType.JSON)
                 .log().body();
-
         return response;
-}
-    public Response CreateMatchClient(CreateMatchRequestBody requestBody)
 
+    }
+
+    public Response createTournament(CreateTournamentRequestBody requestBody)
     {
         properties= FileUtility.loadProperties(propertyPath);
         bearerToken=properties.getProperty("bearerToken");
@@ -38,29 +43,12 @@ public class MatchesClient {
                 .body(requestBody)
                 .log().all(true)
                 .when()
-                .post("https://dev-scoring.platform.myysports.com/api/match");
+                .post(properties.getProperty("basepath_create_tournament"));
         response
                 .then()
                 .contentType(ContentType.JSON)
                 .log().body(true);
-        return response;
-    }
-
-    public Response getMatchInfo()
-    {
-        properties= FileUtility.loadProperties(propertyPath);
-        bearerToken=properties.getProperty("bearerToken");
-        Response response = given()
-                .header("Authorization","Bearer "+bearerToken)
-                .pathParam("MatchId",properties.getProperty("matchid"))
-                .log().all(true)
-                .when()
-                .get(properties.getProperty("basepath_get_matchinfo")+"/{MatchId}");
-        response
-                .then()
-                .contentType(ContentType.JSON)
-                .log().body(true);
-
         return response;
     }
 }
+

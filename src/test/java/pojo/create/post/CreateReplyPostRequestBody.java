@@ -30,10 +30,10 @@ public class CreateReplyPostRequestBody {
 
 
         public Builder() {
-            this.author = "62e3a26140e6ba08298a7285";
-            this.parentPost = "633410bcc3bd2c4771dc81fd";
+            this.author = "63233ba5dcd2d913bf2a9b83";
+            this.parentPost = "641c059e8a216dafd130be3c";
             this.resourceName = "UserSports";
-            this.content = "My User Post";
+            this.content = "My User reply Post";
         }
 
         public CreateReplyPostRequestBody build( )

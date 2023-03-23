@@ -1,5 +1,5 @@
-package Test_post_request;
-import Users.service.TeamsService;
+package Test_create_request;
+import modules.service.TeamsService;
 import org.testng.annotations.Test;
 import pojo.create.team.CreateTeamRequestBody;
 import pojo.create.team.CreateTeamResponse;

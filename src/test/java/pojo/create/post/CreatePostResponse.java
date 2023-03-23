@@ -21,7 +21,7 @@ public class CreatePostResponse {
 
         assertEquals(this.getSuccess(),"true");
         assertEquals(this.getStatusCode(),200);
-        assertTrue(this.getResponseTime()<4);
+        assertTrue(this.getResponseTime()<=3);
         assertEquals(this.getData(),"Your post has been published successfully");
     }
 
