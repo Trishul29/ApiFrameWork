@@ -1,5 +1,6 @@
 package modules.service;
 
+import io.qameta.allure.Allure;
 import modules.client.MatchesClient;
 import io.restassured.response.Response;
 import pojo.create.match.CreateMatchRequestBody;
@@ -18,6 +19,8 @@ public class MatchesService {
         CreateMatchResponse createMatchResponse=response.as(CreateMatchResponse.class);
         createMatchResponse.setStatusCode(statusCode);
         createMatchResponse.setResponseTime(responseTime);
+        String response_in_mili_seconds=Long.toString(responseTime);
+        Allure.step("Response time:"+response_in_mili_seconds+"MiliSeconds");
 
        return createMatchResponse;
     }
@@ -27,10 +30,12 @@ public class MatchesService {
     {
         Response response=new MatchesClient().getMatchInfo();
         int statusCode=response.getStatusCode();
-        long responseTime= response.timeIn(TimeUnit.SECONDS);
+        long responseTime= response.timeIn(TimeUnit.MILLISECONDS);
         GetMatchInfoResponse getMatchInfoResponse=response.as(GetMatchInfoResponse.class);
         getMatchInfoResponse.setStatusCode(statusCode);
         getMatchInfoResponse.setResponseTime(responseTime);
+        String response_in_mili_seconds=Long.toString(responseTime);
+        Allure.step("Response time:"+response_in_mili_seconds+"MiliSeconds");
 
         return getMatchInfoResponse;
     }

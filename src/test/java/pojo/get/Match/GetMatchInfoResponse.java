@@ -122,7 +122,7 @@ public class GetMatchInfoResponse {
     {
         assertTrue(this.success);
        assertEquals(this.getStatusCode(),200);
-       assertTrue(this.getResponseTime()<=2,"Request taking more than 3 Seconds");
+       assertTrue(this.getResponseTime()<=2000,"Request taking more than 3 Seconds");
       if(this.getData().getMatchStatus().equals("end"))
       {
         assertNotNull(this.getData().getWinningTeam().name,"Team name not Available");

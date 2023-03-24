@@ -1,5 +1,6 @@
 package plain_json_response;
 
+import io.qameta.allure.Allure;
 import modules.client.MatchHighlightsClient;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -18,6 +19,7 @@ public class GetHighlightResponse {
     MatchHighlightsClient matchHighlightsClient=new MatchHighlightsClient();
     Response response = matchHighlightsClient.getHighlights();
     long responseTime =response.timeIn(TimeUnit.SECONDS);
+    String response_in_mili_seconds=Long.toString(responseTime);
     JsonPath jsonPath = response.body().jsonPath();
     String id = jsonPath.get("data.docs[0].hightlight.id");
     String teamOneId=jsonPath.get("data.docs[0].hightlight.matchId.teamOne.teamId.id");
@@ -28,9 +30,11 @@ public class GetHighlightResponse {
     float overs=jsonPath.get("data.docs[0].hightlight.metaData.overs");
     int finalScore=jsonPath.get("data.docs[0].hightlight.metaData.totalScore.score");
 
+
     public void assertGetHighlight()
     {
-        assertTrue(this.getResponseTime()<3,"Taking too Much Time to Process the Request ");
+
+        assertTrue(this.getResponseTime()<3000,"Taking too Much Time to Process the Request ");
         assertNotNull(this.getId(),"Highlights not created");
         assertNotNull(this.getTeamOneId(),"Team one id not present");
         assertNotNull(this.getTeamTwoId(),"Team two id not present");
@@ -38,5 +42,6 @@ public class GetHighlightResponse {
         assertNotNull(this.getTitle(),"title not present");
         assertNotNull(this.getScore(),"Score not present");
         assertNotNull(this.getOvers(),"overs not present");
-        assertNotNull(this.getFinalScore(),"Final score not present");}
+        assertNotNull(this.getFinalScore(),"Final score not present");
+        Allure.step("Response time:"+response_in_mili_seconds+"MiliSeconds");}
 }

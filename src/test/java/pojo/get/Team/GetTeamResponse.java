@@ -52,7 +52,7 @@ public class GetTeamResponse {
         private String lon;
     }
     public void assertGetTeamResponse()
-    { assertTrue(this.getResponseTime()<=2,"Taking too much time to process Request");
+    { assertTrue(this.getResponseTime()<=2000,"Taking too much time to process Request");
         assertEquals(this.getStatusCode(),200,"");
         assertEquals(this.getSuccess(),true);
     }

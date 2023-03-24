@@ -31,7 +31,7 @@ public class CreateMatchResponse {
         assertEquals(this.getStatusCode(),200);
         assertEquals(this.getData().getMessage(),"Match created successfully");
         assertNotNull(this.getData().getMatchId());
-        assertTrue(this.responseTime<=3);
+        assertTrue(this.responseTime<=3000);
 
 
 

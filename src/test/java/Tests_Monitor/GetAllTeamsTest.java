@@ -13,9 +13,7 @@ public class GetAllTeamsTest {
     @BeforeClass
     public void beforeClass()
     {
-
        teamsService=new TeamsService();
-
     }
 
     @Test

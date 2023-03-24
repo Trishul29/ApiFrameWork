@@ -15,18 +15,23 @@ public class TeamsService {
 
     public GetTeamResponse getTeamById(String id) {
         Response response = new TeamsClient().getTeam(id);
+        long responseTime= response.timeIn(TimeUnit.MILLISECONDS);
         int statusCode = response.statusCode();
         GetTeamResponse getTeamResponse= response.as(GetTeamResponse.class);
         getTeamResponse.setStatusCode(statusCode);
+        String response_in_mili_seconds=Long.toString(responseTime);
+        Allure.step("Response time in MiliSecond:"+response_in_mili_seconds);
         return getTeamResponse;
     }
     public GetAllTeamResponse getAllTeam() {
         Response response = new TeamsClient().getTeams();
         int statusCode = response.statusCode();
-        long responseTime= response.timeIn(TimeUnit.SECONDS);
+        long responseTime= response.timeIn(TimeUnit.MILLISECONDS);
         GetAllTeamResponse getAllTeamResponse= response.as(GetAllTeamResponse.class);
         getAllTeamResponse.setStatusCode(statusCode);
         getAllTeamResponse.setResponseTime(responseTime);
+        String response_in_mili_seconds=Long.toString(responseTime);
+        Allure.step("Response time in MiliSecond:"+response_in_mili_seconds);
         return getAllTeamResponse;
     }
 
@@ -35,10 +40,12 @@ public CreateTeamResponse createTeam(CreateTeamRequestBody createTeamRequestBody
 
     Response response=new TeamsClient().CreateTeamClient(createTeamRequestBody);
     int statusCode=response.getStatusCode();
-    long responseTime= response.timeIn(TimeUnit.SECONDS);
+    long responseTime= response.timeIn(TimeUnit.MILLISECONDS);
     CreateTeamResponse createTeamResponse=response.as(CreateTeamResponse.class);
     createTeamResponse.setStatusCode(statusCode);
     createTeamResponse.setResponseTime(responseTime);
+    String response_in_mili_seconds=Long.toString(responseTime);
+    Allure.step("Response time:"+response_in_mili_seconds+"MiliSeconds");
     return createTeamResponse;
 }
 

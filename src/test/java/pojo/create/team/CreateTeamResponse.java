@@ -79,7 +79,7 @@ CreateTeamResponse {
 
         assertEquals(this.getStatusCode(),200);
         assertEquals(this.getSuccess(),"true");
-        assertTrue(this.getResponseTime()<=3);
+        assertTrue(this.getResponseTime()<=3000);
         assertNotNull(this.getData().get_id());
         assertEquals(this.getData().getName(),createTeamRequestBody.getName());
         assertEquals(this.getData().getShortName(),createTeamRequestBody.getShortName());

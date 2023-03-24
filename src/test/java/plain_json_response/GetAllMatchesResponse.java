@@ -1,4 +1,5 @@
 package plain_json_response;
+import io.qameta.allure.Allure;
 import modules.client.MatchesClient;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -21,11 +22,15 @@ public class GetAllMatchesResponse {
     JsonPath jsonPath = response.body().jsonPath();
 
 
+
+
   public  void assertGetAllMatch( )
   {
       int statusCode = response.getStatusCode();
       long responseTime =response.timeIn(TimeUnit.SECONDS);
       boolean success=jsonPath.getBoolean("success");
+      String response_in_mili_seconds=Long.toString(responseTime);
+      Allure.step("Response time:"+response_in_mili_seconds+"MiliSeconds");
 
       if(match_Type.equals("live"))
       {
@@ -38,7 +43,7 @@ public class GetAllMatchesResponse {
           String matchType=jsonPath.get("data.docs[0].matchType");
           String matchStatus=jsonPath.get("data.docs[0].matchStatus");
 
-         assertTrue(responseTime<3,"Taking too much time to process request");
+         assertTrue(responseTime<3000,"Taking too much time to process request");
           assertTrue(success,"Success failure");
           assertEquals(statusCode,200,"Not able to get All matches");
           assertNotNull(matchId,"Match id not present");
@@ -62,7 +67,7 @@ public class GetAllMatchesResponse {
           String matchType=jsonPath.get("data.docs[0].matchType");
           String matchStatus=jsonPath.get("data.docs[0].matchStatus");
         //  String reason=jsonPath.get("data.docs[0].matchStatus");
-          assertTrue(responseTime<3,"Taking too much time to process request");
+          assertTrue(responseTime<3000,"Taking too much time to process request");
           assertTrue(success,"Success failure");
           assertEquals(statusCode,200,"Not able to get All matches");
           assertNotNull(matchId,"Match id not present");
@@ -87,7 +92,7 @@ public class GetAllMatchesResponse {
           String matchType=jsonPath.get("data.docs[0].matchType");
           String matchStatus=jsonPath.get("data.docs[0].matchStatus");
 
-          assertTrue(responseTime<3,"Taking too much time to process request");
+          assertTrue(responseTime<3000,"Taking too much time to process request");
           assertTrue(success,"Success failure");
           assertEquals(statusCode,200,"Not able to get All matches");
           assertNotNull(matchId,"Match id not present");

@@ -1,6 +1,7 @@
 package Tests_Monitor;
 import io.qameta.allure.Step;
 import modules.service.TournamentsService;
+import org.apache.commons.lang3.time.StopWatch;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pojo.getAll.tournaments.GetAllTournamentsResponse;
@@ -23,7 +24,9 @@ public class GetAllTournamentsTest {
 
     public void shouldGetAllTournamentTest()
     {
+
        GetAllTournamentsResponse getAllTournamentsResponse=tournamentsService.getAllTournaments();
+
        getAllTournamentsResponse.assertGetAllTournamentsResponse();
 
 

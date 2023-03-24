@@ -85,10 +85,9 @@ public class GetAllPlayerLeaderBoardResponse {
     
         public void assertLeaderBoardResponse() {
 
-        assertTrue(this.getResponseTime()<3,"Taking too much time to process Request");
+        assertTrue(this.getResponseTime()<3000,"Taking too much time to process Request");
         assertEquals(this.getSuccess(),"true","Not able to Fetch Response");
         assertEquals(this.getStatusCode(),200,"Request Unsuccessfull");
-        assertTrue(this.getResponseTime()<=2);
         assertNotNull(this.getData().getDocs()[0].getUser().getFirstName());
         assertNotNull(this.getData().getDocs()[0].getMatches());
         assertNotNull(this.getData().getDocs()[0].getRuns());

@@ -29,7 +29,7 @@ public class CreateTournamentResponse {
     {
         assertEquals(this.getSuccess(),"true");
         assertEquals(this.getStatusCode(),200);
-        assertTrue(this.getResponseTime()<=3);
+        assertTrue(this.getResponseTime()<=3000);
         assertNotNull(this.getData().getTournamentId());
         assertNotNull(this.getData().getLink());
 
