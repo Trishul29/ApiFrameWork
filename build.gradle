@@ -16,6 +16,7 @@ repositories {
 dependencies {
 
 
+    implementation 'com.github.jsurfer:jsurfer-jsonsimple:1.6.4'
     testImplementation group: 'org.testng', name: 'testng', version: '7.7.1'
     testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.3.0'
    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.14.1'
@@ -25,6 +26,7 @@ dependencies {
     implementation group: 'io.qameta.allure', name: 'allure-rest-assured', version: '2.20.1'
     // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
+    implementation 'org.json:json:20171018'
 
 
 }
@@ -50,6 +52,11 @@ tasks.named('test') {
     }
 
     test {
-        useTestNG()
+        useTestNG() {
+
+
+            beforeSuite {'Tests_Monitor.CreateBearerTokenUtilityTest'}
+
+            }
+        }
     }
-}

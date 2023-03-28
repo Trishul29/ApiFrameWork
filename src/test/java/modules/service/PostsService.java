@@ -17,7 +17,7 @@ public class PostsService {
 
     public  GetAllPostResponse getAllPost() {
 
-        Response response = new PostsClient().getAll("https://dev-scoring.platform.myysports.com/api/v3.0/post");
+        Response response = new PostsClient().getAll("https://staging-scoring.platform.myysports.com/api/v3.0/post");
         int statusCode = response.statusCode();
         long responseTime= response.timeIn(TimeUnit.MILLISECONDS);
         GetAllPostResponse getAllPostResponse = response.as(GetAllPostResponse.class);

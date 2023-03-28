@@ -45,7 +45,7 @@ public class TeamsClient {
                 .queryParam("page",1)
                 .log().uri()
                 .when()
-                .get("https://dev-scoring.platform.myysports.com/api/team");
+                .get(properties.getProperty("basepath_get_team"));
         response
                 .then()
                 .contentType(ContentType.JSON)
@@ -66,7 +66,7 @@ public class TeamsClient {
                 .body(requestBody)
                 .log().all(true)
                 .when()
-                .post("https://dev-scoring.platform.myysports.com/api/team");
+                .post(properties.getProperty("basepath_create_team"));
        response
                .then()
                .contentType(ContentType.JSON)
