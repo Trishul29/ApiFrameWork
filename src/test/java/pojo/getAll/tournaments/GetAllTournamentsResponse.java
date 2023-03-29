@@ -99,9 +99,9 @@ public class GetAllTournamentsResponse {
 
     public void assertGetAllTournamentsResponse()
     {
-        assertTrue(this.getResponseTime()<=2000,"Taking too much time to process Request");
+        assertTrue(this.getResponseTime()<=2000,"Response Taking More than 2 Seconds");
         assertEquals(this.getStatusCode(),200,"Not able to get Recommended Users");
-        assertEquals(this.getSuccess(),"true","Success Return False ");
+        assertEquals(this.getSuccess(),"true","Success Failure ");
         assertNotNull(this.getData().getDocs()[0].get_id(),"tournament not present");
         assertNotNull(this.getData().getDocs()[0].getGameType(),"Game type is not given");
         assertNotNull(this.getData().getDocs()[0].getName(),"Tournament name is not present");

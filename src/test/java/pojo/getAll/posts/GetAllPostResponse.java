@@ -119,9 +119,9 @@ public class GetAllPostResponse {
 
     public void assertGetAllPost()
     {
-        assertTrue(this.getResponseTime()<=2000,"Taking to much time to process Request");
+        assertTrue(this.getResponseTime()<=2000,"Response Taking More than 2 Seconds");
         assertEquals(this.getStatusCode(),200);
-        assertEquals(this.getSuccess(),"true");
+        assertEquals(this.getSuccess(),"true","Success Failure");
     }
 
 

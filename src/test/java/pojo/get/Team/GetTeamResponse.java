@@ -52,8 +52,10 @@ public class GetTeamResponse {
         private String lon;
     }
     public void assertGetTeamResponse()
-    { assertTrue(this.getResponseTime()<=2000,"Taking too much time to process Request");
+    {
+        assertEquals(this.getSuccess(),true,"Success Failure");
+        assertTrue(this.getResponseTime()<=2000,"Response Taking More than 2 Seconds");
         assertEquals(this.getStatusCode(),200,"");
-        assertEquals(this.getSuccess(),true);
+
     }
 }

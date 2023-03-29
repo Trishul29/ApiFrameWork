@@ -79,9 +79,9 @@ public class GetRecommendedUsersResponse {
 
     public void assertRecommendedUsers()
     {
-        assertTrue(this.getResponseTime()<=2000,"Taking too much time to process Request");
+        assertTrue(this.getResponseTime()<=2000,"Response Taking More than 2 Seconds");
         assertEquals(this.getStatusCode(),200,"Not able to get Recommended Users");
-        assertEquals(this.getSuccess(),"true","Success Return False ");
+        assertEquals(this.getSuccess(),"true","Success Failure ");
     }
 
 }

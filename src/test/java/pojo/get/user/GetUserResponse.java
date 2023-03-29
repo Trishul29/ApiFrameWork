@@ -1,4 +1,5 @@
 package pojo.get.user;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,8 +21,10 @@ public class GetUserResponse {
 
     @Getter
     @JsonIgnoreProperties(ignoreUnknown = true, value = {"fUid"})
+
     public static class Data
     {
+
         private String isPlayer;
         private String lastName;
         private String isBlock;
@@ -80,8 +83,8 @@ public class GetUserResponse {
     public void assertGetUserResponse()
     {
 
-        assertTrue(this.getResponseTime()<=2000,"Taking too much time to process Request");
+        assertTrue(this.getResponseTime()<=2000,"Response Taking More than 2 Seconds");
         assertEquals(this.getStatusCode(),200);
-        assertEquals(this.getSuccess(),"true");
+        assertEquals(this.getSuccess(),"true","Success Failure");
     }
 }

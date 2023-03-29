@@ -17,9 +17,9 @@ public class CreateReplyPostResponse {
     private String error;
     public void assertCreateReplyPostDetails(CreateReplyPostRequestBody createReplyPostRequestBody)
     {
-        assertEquals(this.getSuccess(),"true");
+        assertEquals(this.getSuccess(),"true","Success Failure");
         assertEquals(this.getStatusCode(),200);
-        assertTrue(this.getResponseTime()<=3000);
+        assertTrue(this.getResponseTime()<=3000,"Response Taking More than 3 Seconds");
         assertEquals(this.getData(),"Your post has been published successfully");
     }
 }

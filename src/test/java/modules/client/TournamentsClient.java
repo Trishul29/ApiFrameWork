@@ -4,6 +4,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.apache.commons.lang3.time.StopWatch;
 import pojo.create.tournament.CreateTournamentRequestBody;
+import pojo.update.EditTournamentRequestBody;
 import util.FileUtility;
 import java.util.Properties;
 import static io.restassured.RestAssured.given;
@@ -75,6 +76,25 @@ public class TournamentsClient {
                 .log().body();
         return response;
 
+    }
+
+    public Response editTournament(EditTournamentRequestBody requestBody)
+    {
+        properties= FileUtility.loadProperties(propertyPath);
+        bearerToken=properties.getProperty("bearerToken");
+        Response response=given()
+                .contentType(ContentType.JSON)
+                .header("Authorization","Bearer "+bearerToken)
+                .pathParam("tournament_id",properties.getProperty("id_edit_tournament"))
+                .body(requestBody)
+                .log().all(true)
+                .when()
+                .put(properties.getProperty("basepath_edit_tournament")+"/{tournament_id}");
+        response
+                .then()
+                .contentType(ContentType.JSON)
+                .log().body(true);
+        return response;
     }
 
 }

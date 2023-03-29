@@ -95,8 +95,8 @@ public class GetMatchCommentaryResponse {
         public void assertCommentaryDetails()
         {
 
-            assertTrue(this.success);
-            assertTrue(this.getResponseTime()<3000);
+            assertTrue(this.success,"Success Failure");
+            assertTrue(this.getResponseTime()<3000,"Response Taking More than 3 Seconds");
             assertEquals(this.getStatusCode(),200);
           //  assertEquals(this.);
 

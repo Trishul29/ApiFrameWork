@@ -6,6 +6,9 @@ import pojo.create.tournament.CreateTournamentRequestBody;
 import pojo.create.tournament.CreateTournamentResponse;
 import pojo.get.Tournaments.GetPointsOfTournamentResponse;
 import pojo.getAll.tournaments.GetAllTournamentsResponse;
+import pojo.update.EditTournamentRequestBody;
+import pojo.update.EditTournamentResponse;
+import util.AllureUtility;
 
 import java.util.concurrent.TimeUnit;
 
@@ -53,6 +56,19 @@ public class TournamentsService {
         String response_in_mili_seconds=Long.toString(responseTime);
         Allure.step("Response time:"+response_in_mili_seconds+"MiliSeconds");
         return getPointsOfTournamentResponse;
+    }
+
+    public EditTournamentResponse editTournament(EditTournamentRequestBody editTournamentRequestBody)
+    {
+
+        Response response = new TournamentsClient().editTournament(editTournamentRequestBody );
+        int statusCode=response.getStatusCode();
+        long responseTime= response.timeIn(TimeUnit.MILLISECONDS);
+        EditTournamentResponse editTournamentResponse=response.as(EditTournamentResponse.class);
+        editTournamentResponse.setStatusCode(statusCode);
+        editTournamentResponse.setResponseTime(responseTime);
+        new AllureUtility().getResponseTime(responseTime);
+        return  editTournamentResponse;
     }
 
 }

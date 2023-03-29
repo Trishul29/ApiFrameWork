@@ -31,32 +31,41 @@ dependencies {
 
 }
 
-
-
-
-
 java {
     sourceCompatibility = 11
     targetCompatibility = 11
 }
+allureReport {
+    version = '2.13.6'
+    reportDir = new File(project.projectDir as File, '/allure-report/ui')
+ //  resultsDirs = new File(project.projectDir as File, '/allure-report')
+    clean = true
 
-
-
-
-tasks.named('test') {
-
-    useTestNG() {
-
-        useDefaultListeners = true
-
-    }
-
-    test {
-        useTestNG() {
-
-
-            beforeSuite {'Tests_Monitor.CreateBearerTokenUtilityTest'}
-
-            }
+}
+task createReportDir() {
+    doLast {
+        def file = new File(project.projectDir as File, '/allure-report/ui')
+        if (!file.exists()) {
+            file.mkdirs();
         }
     }
+}
+
+task saveHistory(type: Copy) {
+    from new File(project.projectDir as File, '/allure-report/ui/history')
+    into new File(project.projectDir as File, '/allure-history')
+}
+
+test {
+    useTestNG() {
+
+
+        beforeSuite {'Tests_Monitor.CreateBearerTokenUtilityTest'}
+
+    }
+}
+
+
+tasks.test.dependsOn 'clean', 'createReportDir'
+tasks.build.mustRunAfter 'clean'
+tasks.test.finalizedBy('allureReport')

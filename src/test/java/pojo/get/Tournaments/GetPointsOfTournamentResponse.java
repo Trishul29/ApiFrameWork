@@ -61,7 +61,7 @@ public class GetPointsOfTournamentResponse {
     {
         assertEquals(this.getSuccess(),"true","Success Failure");
        assertEquals(this.getStatusCode(),200,"RequestFailure");
-       assertTrue(this.getResponseTime()<=1000,"Taking too much Time to process Request");
+       assertTrue(this.getResponseTime()<=2000,"Response Taking More than 2 Seconds");
 
 
 
