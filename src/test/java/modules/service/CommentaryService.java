@@ -1,11 +1,7 @@
 package modules.service;
-
-import io.qameta.allure.Allure;
 import io.restassured.response.Response;
 import modules.client.CommentaryClient;
-import modules.client.LeaderBoardClient;
 import pojo.get.Match.GetMatchCommentaryResponse;
-import pojo.getAll.leaderboard.GetAllPlayerLeaderBoardResponse;
 import util.AllureUtility;
 
 import java.util.concurrent.TimeUnit;

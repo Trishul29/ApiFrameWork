@@ -8,6 +8,8 @@ import pojo.create.post.CreateReplyPostRequestBody;
 import pojo.create.post.CreateReplyPostResponse;
 import pojo.getAll.posts.GetAllPostResponse;
 import io.restassured.response.Response;
+import util.AllureUtility;
+
 import java.util.concurrent.TimeUnit;
 
 
@@ -23,8 +25,7 @@ public class PostsService {
         GetAllPostResponse getAllPostResponse = response.as(GetAllPostResponse.class);
         getAllPostResponse.setResponseTime(responseTime);
         getAllPostResponse.setStatusCode(statusCode);
-        String response_in_mili_seconds=Long.toString(responseTime);
-        Allure.step("Response time:"+response_in_mili_seconds+"MiliSeconds");
+        new AllureUtility().getResponseTime(responseTime);
 return getAllPostResponse;
     }
 
@@ -37,8 +38,7 @@ return getAllPostResponse;
         CreatePostResponse  createPostResponse=response.as(CreatePostResponse.class);
         createPostResponse.setStatusCode(statusCode);
         createPostResponse.setResponseTime(responseTime);
-        String response_in_mili_seconds=Long.toString(responseTime);
-        Allure.step("Response time:"+response_in_mili_seconds+"MiliSeconds");
+        new AllureUtility().getResponseTime(responseTime);
         return createPostResponse;
     }
 
@@ -50,8 +50,7 @@ return getAllPostResponse;
         CreateReplyPostResponse  createReplyPostResponse=response.as(CreateReplyPostResponse.class);
         createReplyPostResponse.setStatusCode(statusCode);
         createReplyPostResponse.setResponseTime(responseTime);
-        String response_in_mili_seconds=Long.toString(responseTime);
-        Allure.step("Response time:"+response_in_mili_seconds+"MiliSeconds");
+        new AllureUtility().getResponseTime(responseTime);
         return createReplyPostResponse;
     }
 

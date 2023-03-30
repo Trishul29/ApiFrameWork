@@ -4,6 +4,8 @@ import io.qameta.allure.Allure;
 import modules.client.LeaderBoardClient;
 import io.restassured.response.Response;
 import pojo.getAll.leaderboard.GetAllPlayerLeaderBoardResponse;
+import util.AllureUtility;
+
 import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertNotNull;
@@ -17,8 +19,7 @@ public class LeaderBoardService {
         GetAllPlayerLeaderBoardResponse getAllPlayerLeaderBoardResponse = response.as(GetAllPlayerLeaderBoardResponse.class);
         getAllPlayerLeaderBoardResponse.setStatusCode(statusCode);
         getAllPlayerLeaderBoardResponse.setResponseTime(responseTime);
-        String response_in_mili_seconds=Long.toString(responseTime);
-        Allure.step("Response time:"+response_in_mili_seconds+"MiliSeconds");
+        new AllureUtility().getResponseTime(responseTime);
         return getAllPlayerLeaderBoardResponse;
     }
 

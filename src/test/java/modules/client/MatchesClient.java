@@ -69,4 +69,39 @@ public class MatchesClient {
 
         return response;
     }
+
+    public Response getOneMatchFootball()
+    {
+        properties= FileUtility.loadProperties(propertyPath);
+        bearerToken=properties.getProperty("bearerToken");
+        Response response = given()
+                .header("Authorization","Bearer "+bearerToken)
+                .pathParam("MatchId",properties.getProperty("matchid_football"))
+                .log().all(true)
+                .when()
+                .get(properties.getProperty("basepath_get_onematch_football")+"/{MatchId}");
+        response
+                .then()
+                .contentType(ContentType.JSON)
+                .log().body(true);
+
+        return response;
+    }
+
+    public Response getOneMatchStatFootball() {
+        properties= FileUtility.loadProperties(propertyPath);
+        bearerToken=properties.getProperty("bearerToken");
+        Response response = given()
+                .header("Authorization","Bearer "+bearerToken)
+                .pathParam("MatchId",properties.getProperty("matchid_football"))
+                .log().all(true)
+                .when()
+                .get(properties.getProperty("basepath_get_onematch_football")+"/{MatchId}"+"/stats");
+        response
+                .then()
+                .contentType(ContentType.JSON)
+                .log().body(true);
+
+        return response;
+    }
 }

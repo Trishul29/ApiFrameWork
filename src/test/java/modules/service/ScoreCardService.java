@@ -4,6 +4,7 @@ import io.qameta.allure.Allure;
 import io.restassured.response.Response;
 import modules.client.ScoreCardClient;
 import pojo.get.Match.GetMatchScoreCardResponse;
+import util.AllureUtility;
 
 import java.util.concurrent.TimeUnit;
 
@@ -17,8 +18,7 @@ public class ScoreCardService {
         long responseTime=  response.timeIn(TimeUnit.MILLISECONDS);
         getMatchScoreCardResponse.setStatusCode(statusCode);
         getMatchScoreCardResponse.setResponseTime(responseTime);
-        String response_in_mili_seconds=Long.toString(responseTime);
-        Allure.step("Response time:"+response_in_mili_seconds+" MiliSeconds");
+        new AllureUtility().getResponseTime(responseTime);
 
    return getMatchScoreCardResponse; }
 }

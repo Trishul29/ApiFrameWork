@@ -26,5 +26,23 @@ public class MatchHighlightsClient {
 
         return response;
     }
+
+    public Response getHighlightsFootball() {
+        properties= FileUtility.loadProperties(propertyPath);
+        String bearerToken=properties.getProperty("bearerToken");
+
+        Response response = given()
+                .header("Authorization","Bearer "+bearerToken)
+                .pathParam("matchId",properties.getProperty("matchid_football"))
+                .log().uri()
+                .when()
+                .get(properties.getProperty("basepath_highlights_football")+"/{matchId}"+"/highlights/1");
+        response
+                .then()
+                .contentType(ContentType.JSON)
+                .log().body();
+
+        return response;
+    }
 }
 

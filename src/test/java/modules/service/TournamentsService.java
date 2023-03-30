@@ -18,16 +18,10 @@ public class TournamentsService {
         Response response= new TournamentsClient().getAllTournaments();
         int statusCode=response.statusCode();
       long responseTime=  response.timeIn(TimeUnit.MILLISECONDS);
-
-      String response_in_mili_seconds=Long.toString(responseTime);
-
-      Allure.step("Response time:"+response_in_mili_seconds+"MiliSeconds");
-
-
-        GetAllTournamentsResponse getAllTournamentsResponse = response.as(GetAllTournamentsResponse.class);
+      GetAllTournamentsResponse getAllTournamentsResponse = response.as(GetAllTournamentsResponse.class);
         getAllTournamentsResponse.setStatusCode(statusCode);
         getAllTournamentsResponse.setResponseTime(responseTime);
-
+        new AllureUtility().getResponseTime(responseTime);
         return getAllTournamentsResponse;
     }
 
@@ -40,8 +34,7 @@ public class TournamentsService {
         CreateTournamentResponse createTournamentResponse=response.as(CreateTournamentResponse.class);
         createTournamentResponse.setStatusCode(statusCode);
         createTournamentResponse.setResponseTime(responseTime);
-        String response_in_mili_seconds=Long.toString(responseTime);
-        Allure.step("Response time:"+response_in_mili_seconds+"MiliSeconds");
+        new AllureUtility().getResponseTime(responseTime);
         return createTournamentResponse;
     }
 
@@ -53,8 +46,7 @@ public class TournamentsService {
         GetPointsOfTournamentResponse getPointsOfTournamentResponse  = response.as(GetPointsOfTournamentResponse.class);
         getPointsOfTournamentResponse.setStatusCode(statusCode);
         getPointsOfTournamentResponse.setResponseTime(responseTime);
-        String response_in_mili_seconds=Long.toString(responseTime);
-        Allure.step("Response time:"+response_in_mili_seconds+"MiliSeconds");
+        new AllureUtility().getResponseTime(responseTime);
         return getPointsOfTournamentResponse;
     }
 

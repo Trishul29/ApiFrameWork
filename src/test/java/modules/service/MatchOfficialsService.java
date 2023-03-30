@@ -3,6 +3,7 @@ import io.qameta.allure.Allure;
 import modules.client.MatchOfficialsClient;
 import io.restassured.response.Response;
 import pojo.getAll.recommendedusers.GetRecommendedUsersResponse;
+import util.AllureUtility;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,8 +16,7 @@ public class MatchOfficialsService {
         GetRecommendedUsersResponse getRecommendedUsersResponse = response.as(GetRecommendedUsersResponse.class);
         getRecommendedUsersResponse.setStatusCode(statusCode);
         getRecommendedUsersResponse.setResponseTime(responseTime);
-        String response_in_mili_seconds=Long.toString(responseTime);
-        Allure.step("Response time:"+response_in_mili_seconds+"MiliSeconds");
+        new AllureUtility().getResponseTime(responseTime);
 
         return getRecommendedUsersResponse;
     }

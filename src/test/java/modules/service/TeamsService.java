@@ -6,6 +6,8 @@ import pojo.create.team.CreateTeamResponse;
 import pojo.get.Team.GetTeamResponse;
 import pojo.getAll.Teams.GetAllTeamResponse;
 import io.restassured.response.Response;
+import util.AllureUtility;
+
 import java.util.concurrent.TimeUnit;
 
 import static org.testng.Reporter.log;
@@ -19,8 +21,7 @@ public class TeamsService {
         int statusCode = response.statusCode();
         GetTeamResponse getTeamResponse= response.as(GetTeamResponse.class);
         getTeamResponse.setStatusCode(statusCode);
-        String response_in_mili_seconds=Long.toString(responseTime);
-        Allure.step("Response time in MiliSecond:"+response_in_mili_seconds);
+        new AllureUtility().getResponseTime(responseTime);
         return getTeamResponse;
     }
     public GetAllTeamResponse getAllTeam() {
@@ -30,8 +31,7 @@ public class TeamsService {
         GetAllTeamResponse getAllTeamResponse= response.as(GetAllTeamResponse.class);
         getAllTeamResponse.setStatusCode(statusCode);
         getAllTeamResponse.setResponseTime(responseTime);
-        String response_in_mili_seconds=Long.toString(responseTime);
-        Allure.step("Response time in MiliSecond:"+response_in_mili_seconds);
+        new AllureUtility().getResponseTime(responseTime);
         return getAllTeamResponse;
     }
 
@@ -44,8 +44,7 @@ public CreateTeamResponse createTeam(CreateTeamRequestBody createTeamRequestBody
     CreateTeamResponse createTeamResponse=response.as(CreateTeamResponse.class);
     createTeamResponse.setStatusCode(statusCode);
     createTeamResponse.setResponseTime(responseTime);
-    String response_in_mili_seconds=Long.toString(responseTime);
-    Allure.step("Response time:"+response_in_mili_seconds+"MiliSeconds");
+    new AllureUtility().getResponseTime(responseTime);
     return createTeamResponse;
 }
 

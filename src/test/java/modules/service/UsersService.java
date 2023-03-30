@@ -4,6 +4,7 @@ import io.qameta.allure.Allure;
 import modules.client.UsersClient;
 import pojo.get.user.GetUserResponse;
 import io.restassured.response.Response;
+import util.AllureUtility;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,8 +16,7 @@ public class UsersService {
 
         GetUserResponse  getUserResponse= response.as(GetUserResponse.class);
         getUserResponse.setStatusCode(statusCode);
-        String response_in_mili_seconds=Long.toString(responseTime);
-        Allure.step("Response time:"+response_in_mili_seconds+"MiliSeconds");
+        new AllureUtility().getResponseTime(responseTime);
         return getUserResponse;
     }
 

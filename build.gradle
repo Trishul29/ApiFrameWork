@@ -53,7 +53,7 @@ task createReportDir() {
 
 task saveHistory(type: Copy) {
     from new File(project.projectDir as File, '/allure-report/ui/history')
-    into new File(project.projectDir as File, '/allure-history')
+    into new File(project.projectDir as File, '/allure-report/ui/history1')
 }
 
 test {
