@@ -7,11 +7,10 @@ import static io.restassured.RestAssured.given;
 
 public class MatchHighlightsClient {
     public   String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
-    public Properties properties;
-
+    public Properties properties= FileUtility.loadProperties(propertyPath);
+    String bearerToken=properties.getProperty("bearerToken");
     public Response getHighlights() {
-        properties= FileUtility.loadProperties(propertyPath);
-        String bearerToken=properties.getProperty("bearerToken");
+
         String id=properties.getProperty("matchId");
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
@@ -28,8 +27,7 @@ public class MatchHighlightsClient {
     }
 
     public Response getHighlightsFootball() {
-        properties= FileUtility.loadProperties(propertyPath);
-        String bearerToken=properties.getProperty("bearerToken");
+
 
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)

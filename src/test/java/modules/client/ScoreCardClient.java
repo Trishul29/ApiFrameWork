@@ -10,13 +10,12 @@ import static io.restassured.RestAssured.given;
 
 public class ScoreCardClient {
     public    String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
-    public Properties properties;
-    String bearerToken;
+    public Properties properties= FileUtility.loadProperties(propertyPath);
+    String bearerToken=properties.getProperty("bearerToken");
 
     public Response getScoreCard()
     {
-        properties= FileUtility.loadProperties(propertyPath);
-        bearerToken=properties.getProperty("bearerToken");
+
 
         Response response=given()
                 .header("Authorization","Bearer "+bearerToken)

@@ -7,11 +7,11 @@ import static io.restassured.RestAssured.given;
 
 public class UsersClient {
     public    String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
-    public   Properties properties;
+    public Properties properties= FileUtility.loadProperties(propertyPath);
+    String bearerToken=properties.getProperty("bearerToken");
 
     public  Response getUser(String uid) {
-        properties= FileUtility.loadProperties(propertyPath);
-        String bearerToken=properties.getProperty("bearerToken");
+
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
                 .queryParam("UserId",uid)

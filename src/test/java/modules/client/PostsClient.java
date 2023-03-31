@@ -8,16 +8,15 @@ import java.util.Properties;
 import static io.restassured.RestAssured.given;
 public class PostsClient {
   public    String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
-    public  Properties properties;
-    String bearerToken;
+    public Properties properties= FileUtility.loadProperties(propertyPath);
+    String bearerToken=properties.getProperty("bearerToken");
 
     public  Response getAll(String Path) {
 
-        properties=FileUtility.loadProperties(propertyPath);
- bearerToken=properties.getProperty("bearerToken");
+
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
-                .queryParam("page",1)
+                .queryParam("page",2)
                 .log().all(true)
                 .when()
                 .get(Path);
@@ -32,8 +31,7 @@ public class PostsClient {
     public Response createPost(CreatePostRequestBody requestBody)
     {
 
-        properties= FileUtility.loadProperties(propertyPath);
-        bearerToken=properties.getProperty("bearerToken");
+
         Response response=given()
                 .contentType(ContentType.JSON)
                 .header("Authorization","Bearer "+bearerToken)
@@ -51,8 +49,7 @@ public class PostsClient {
 
     public Response createReplyPost(CreateReplyPostRequestBody requestBody)
     {
-        properties= FileUtility.loadProperties(propertyPath);
-        bearerToken=properties.getProperty("bearerToken");
+
         Response response=given()
                 .contentType(ContentType.JSON)
                 .header("Authorization","Bearer "+bearerToken)

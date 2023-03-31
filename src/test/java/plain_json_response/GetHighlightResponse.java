@@ -17,7 +17,7 @@ import static org.testng.Assert.assertTrue;
 public class GetHighlightResponse {
     @Setter
     int statusCode;
-    MatchHighlightsClient matchHighlightsClient=new MatchHighlightsClient();
+    MatchHighlightsClient matchHighlightsClient;
     Response response = matchHighlightsClient.getHighlights();
     long responseTime =response.timeIn(TimeUnit.SECONDS);
 

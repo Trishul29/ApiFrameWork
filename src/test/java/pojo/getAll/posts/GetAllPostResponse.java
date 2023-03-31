@@ -18,7 +18,7 @@ public class GetAllPostResponse {
 
     private String success;
 
-    private NullType error;
+    private String error;
     @Getter
 
     public static class Data{
@@ -37,7 +37,7 @@ public class GetAllPostResponse {
 
         private String totalPages;
 
-        private NullType prevPage;
+        private String prevPage;
 
         private String page;
 

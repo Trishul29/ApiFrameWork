@@ -10,14 +10,10 @@ import static org.hamcrest.Matchers.lessThan;
 public class TeamsClient {
 
     public   String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
-    public   Properties properties;
-    String bearerToken;
-    //properties.getProperty("bearerToken");
-
+    public Properties properties= FileUtility.loadProperties(propertyPath);
+    String bearerToken=properties.getProperty("bearerToken");
     public  Response getTeam(String id) {
 
-    properties= FileUtility.loadProperties(propertyPath);
-        bearerToken=properties.getProperty("bearerToken");
 
 
         Response response = given()
@@ -36,10 +32,6 @@ public class TeamsClient {
 
     public  Response getTeams() {
 
-        properties= FileUtility.loadProperties(propertyPath);
-      bearerToken=properties.getProperty("bearerToken");
-
-
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
                 .queryParam("page",1)
@@ -57,9 +49,6 @@ public class TeamsClient {
     public Response CreateTeamClient(CreateTeamRequestBody requestBody)
 
     {
-        properties= FileUtility.loadProperties(propertyPath);
-        bearerToken=properties.getProperty("bearerToken");
-
         Response response=given()
                 .contentType(ContentType.JSON)
                 .header("Authorization","Bearer "+bearerToken)

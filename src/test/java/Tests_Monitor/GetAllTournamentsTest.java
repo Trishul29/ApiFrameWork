@@ -15,7 +15,6 @@ public class GetAllTournamentsTest {
     public void beforeClass()
     {
         tournamentsService=new TournamentsService();
-      //  properties = FileUtility.loadProperties(propertyPath);
     }
     @Test
     @Step("{0}")

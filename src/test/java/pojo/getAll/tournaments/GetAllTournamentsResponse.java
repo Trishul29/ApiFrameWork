@@ -54,6 +54,7 @@ public class GetAllTournamentsResponse {
         private String matchType;
 
         private String totalOvers;
+        private String createdBy;
 
         private String link;
 

@@ -13,12 +13,11 @@ import static org.hamcrest.StringDescription.asString;
 
 public class TournamentsClient {
     public   String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
-    public Properties properties;
-    String bearerToken;
+    public Properties properties= FileUtility.loadProperties(propertyPath);
+    String bearerToken=properties.getProperty("bearerToken");
 
     public Response getAllTournaments() {
-        properties= FileUtility.loadProperties(propertyPath);
-        bearerToken=properties.getProperty("bearerToken");
+
         String path=properties.getProperty("gameType");
 
         Response response = given()
@@ -43,8 +42,6 @@ public class TournamentsClient {
 
     public Response createTournament(CreateTournamentRequestBody requestBody)
     {
-        properties= FileUtility.loadProperties(propertyPath);
-        bearerToken=properties.getProperty("bearerToken");
         Response response=given()
                 .contentType(ContentType.JSON)
                 .header("Authorization","Bearer "+bearerToken)
@@ -60,8 +57,7 @@ public class TournamentsClient {
     }
 
     public Response getPoints() {
-        properties= FileUtility.loadProperties(propertyPath);
-        bearerToken=properties.getProperty("bearerToken");
+
         String id=properties.getProperty("id_tournament_point");
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
@@ -80,8 +76,6 @@ public class TournamentsClient {
 
     public Response editTournament(EditTournamentRequestBody requestBody)
     {
-        properties= FileUtility.loadProperties(propertyPath);
-        bearerToken=properties.getProperty("bearerToken");
         Response response=given()
                 .contentType(ContentType.JSON)
                 .header("Authorization","Bearer "+bearerToken)

@@ -23,7 +23,7 @@ public class GetHighlightFootballResponse {
   List Docs = jsonPath.getJsonObject("data.docs");
 
 
-    String highlight_id = jsonPath.getString("x.data.docs[0].hightlight.id");
+    String highlight_id = jsonPath.getString("data.docs[0].hightlight.id");
 
 
 

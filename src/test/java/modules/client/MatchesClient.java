@@ -9,15 +9,16 @@ import static io.restassured.RestAssured.given;
 
 public class MatchesClient {
     public   String propertyPath = System.getProperty("user.dir")+ "//src//main//java//spec.properties";
-    public Properties properties;
-    String bearerToken;
+
+
+    public Properties properties= FileUtility.loadProperties(propertyPath);
+ String   bearerToken=properties.getProperty("bearerToken");
 
 
 
 
     public Response getAllMatches() {
-        properties= FileUtility.loadProperties(propertyPath);
-     bearerToken=properties.getProperty("bearerToken");
+
      System.out.println(bearerToken);
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
@@ -35,9 +36,6 @@ public class MatchesClient {
     public Response CreateMatchClient(CreateMatchRequestBody requestBody)
 
     {
-        properties= FileUtility.loadProperties(propertyPath);
-        bearerToken=properties.getProperty("bearerToken");
-        System.out.println("token value is:"+bearerToken);
         Response response=given()
                 .contentType(ContentType.JSON)
                 .header("Authorization","Bearer "+bearerToken)
@@ -54,8 +52,7 @@ public class MatchesClient {
 
     public Response getMatchInfo()
     {
-        properties= FileUtility.loadProperties(propertyPath);
-        bearerToken=properties.getProperty("bearerToken");
+
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
                 .pathParam("MatchId",properties.getProperty("matchid"))
@@ -72,8 +69,7 @@ public class MatchesClient {
 
     public Response getOneMatchFootball()
     {
-        properties= FileUtility.loadProperties(propertyPath);
-        bearerToken=properties.getProperty("bearerToken");
+
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
                 .pathParam("MatchId",properties.getProperty("matchid_football"))
@@ -89,8 +85,7 @@ public class MatchesClient {
     }
 
     public Response getOneMatchStatFootball() {
-        properties= FileUtility.loadProperties(propertyPath);
-        bearerToken=properties.getProperty("bearerToken");
+
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
                 .pathParam("MatchId",properties.getProperty("matchid_football"))

@@ -9,17 +9,20 @@ import pojo.create.post.CreateReplyPostResponse;
 import pojo.getAll.posts.GetAllPostResponse;
 import io.restassured.response.Response;
 import util.AllureUtility;
+import util.FileUtility;
 
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 
 public class PostsService {
 
-
+    public    String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
+    Properties properties= FileUtility.loadProperties(propertyPath);
 
     public  GetAllPostResponse getAllPost() {
 
-        Response response = new PostsClient().getAll("https://staging-scoring.platform.myysports.com/api/v3.0/post");
+        Response response = new PostsClient().getAll(properties.getProperty("basepath_get_all_post"));
         int statusCode = response.statusCode();
         long responseTime= response.timeIn(TimeUnit.MILLISECONDS);
         GetAllPostResponse getAllPostResponse = response.as(GetAllPostResponse.class);
