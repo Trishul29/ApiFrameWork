@@ -1,13 +1,12 @@
 package modules.service;
-import io.qameta.allure.Allure;
 import modules.client.TournamentsClient;
 import io.restassured.response.Response;
 import pojo.create.tournament.CreateTournamentRequestBody;
 import pojo.create.tournament.CreateTournamentResponse;
 import pojo.get.Tournaments.GetPointsOfTournamentResponse;
 import pojo.getAll.tournaments.GetAllTournamentsResponse;
-import pojo.update.EditTournamentRequestBody;
-import pojo.update.EditTournamentResponse;
+import pojo.update.tournament.EditTournamentRequestBody;
+import pojo.update.tournament.EditTournamentResponse;
 import util.AllureUtility;
 
 import java.util.concurrent.TimeUnit;

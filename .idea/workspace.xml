@@ -4,34 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="Created service,client,pojo,test classes for EditTournamentTest,GlobalSearchTest">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetGooglePlaceDetailsByIdTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetGooglePlaceListTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/modules/client/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/modules/client/GooglePlaceClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/modules/service/GoolePlaceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/googleplace/GetGooglePlaceDetailsResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/googleplace/GetGooglePlaceListResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/token_utility/GetToken.java" afterDir="false" />
+    <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="Created service,client,pojo,test classes for &#10;GetGooglePlaceListTest,GetGooglePlaceDetails">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Update/EditMatchTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Update/GetEditMatchDetailsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Match/GetEditMatchDetailsResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/update/match/EditMatchRequestBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/update/match/EditMatchResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spec.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spec.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetAllTournamentsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetAllTournamentsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/CommentaryClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/CommentaryClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/LeaderBoardClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/LeaderBoardClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/MatchHighlightsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/MatchHighlightsClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/MatchOfficialsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/MatchOfficialsClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test_create_request/CreateMatchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_create/CreateMatchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test_create_request/CreatePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_create/CreatePostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test_create_request/CreateReplyPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_create/CreateReplyPostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test_create_request/CreateTeamTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_create/CreateTeamTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test_create_request/CreateTournamentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_create/CreateTournamentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Update/EditTournamentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Update/EditTournamentTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/MatchesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/MatchesClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/PostsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/PostsClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/ScoreCardClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/ScoreCardClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/SearchClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/SearchClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/TeamsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/TeamsClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/TournamentsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/TournamentsClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/UsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/UsersClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/service/PostsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/service/PostsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/plain_json_response/GetHighlightFootballResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/plain_json_response/GetHighlightFootballResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/plain_json_response/GetHighlightResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/plain_json_response/GetHighlightResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/posts/GetAllPostResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/posts/GetAllPostResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/tournaments/GetAllTournamentsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/tournaments/GetAllTournamentsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/service/MatchesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/service/MatchesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/service/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/service/SearchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/service/TournamentsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/service/TournamentsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/update/EditTournamentRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/update/tournament/EditTournamentRequestBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/update/EditTournamentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/update/tournament/EditTournamentResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,17 +105,56 @@
       <recent name="util" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GetGooglePlaceDetailsByIdTest.ShouldGetGooglePlaceDetails">
-    <configuration name="GetAllPostsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.GetEditMatchDetailsTest.shouldFetchEditMatchDetails">
+    <configuration name="MyySportsAPIAutoamtion [saveHistory]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="saveHistory" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="EditMatchTest.shouldEditMatch" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyySportsAPIAutoamtion.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Tests_Monitor.*" />
+          <option name="PATTERN" value="Tests_Update.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Tests_Monitor" />
-      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetAllPostsTest" />
+      <option name="PACKAGE_NAME" value="Tests_Update" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Update.EditMatchTest" />
+      <option name="METHOD_NAME" value="shouldEditMatch" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetEditMatchDetailsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests_Update.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests_Update" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Update.GetEditMatchDetailsTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -129,17 +162,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetAllPostsTest.shouldGetAllPosts" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetEditMatchDetailsTest.shouldFetchEditMatchDetails" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyySportsAPIAutoamtion.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Tests_Monitor.*" />
+          <option name="PATTERN" value="Tests_Update.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Tests_Monitor" />
-      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetAllPostsTest" />
-      <option name="METHOD_NAME" value="shouldGetAllPosts" />
+      <option name="PACKAGE_NAME" value="Tests_Update" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Update.GetEditMatchDetailsTest" />
+      <option name="METHOD_NAME" value="shouldFetchEditMatchDetails" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -165,49 +198,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetGooglePlaceListTest.shouldGetPlaceList" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MyySportsAPIAutoamtion.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests_Monitor.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests_Monitor" />
-      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetGooglePlaceListTest" />
-      <option name="METHOD_NAME" value="shouldGetPlaceList" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetToken.getBearerToken" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MyySportsAPIAutoamtion.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="token_utility.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="token_utility" />
-      <option name="MAIN_CLASS_NAME" value="token_utility.GetToken" />
-      <option name="METHOD_NAME" value="getBearerToken" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GetEditMatchDetailsTest.shouldFetchEditMatchDetails" />
+        <item itemvalue="TestNG.GetEditMatchDetailsTest" />
+        <item itemvalue="TestNG.EditMatchTest.shouldEditMatch" />
+        <item itemvalue="Gradle.MyySportsAPIAutoamtion [saveHistory]" />
         <item itemvalue="TestNG.GetGooglePlaceDetailsByIdTest.ShouldGetGooglePlaceDetails" />
-        <item itemvalue="TestNG.GetToken.getBearerToken" />
-        <item itemvalue="TestNG.GetGooglePlaceListTest.shouldGetPlaceList" />
-        <item itemvalue="TestNG.GetAllPostsTest.shouldGetAllPosts" />
-        <item itemvalue="TestNG.GetAllPostsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -290,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680090736677</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Created service,client,pojo,test classes for &#10;GetGooglePlaceListTest,GetGooglePlaceDetails">
+      <created>1680264032919</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680264032919</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -316,7 +320,8 @@
     <MESSAGE value="Added Test Case for GetPointsOfTournamentTest and refactored all Api to add Customize allure report for Response time" />
     <MESSAGE value="Added beforeSuit to generate bearerToken everytime we run test suit" />
     <MESSAGE value="Created service,client,pojo,test classes for EditTournamentTest,GlobalSearchTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created service,client,pojo,test classes for EditTournamentTest,GlobalSearchTest" />
+    <MESSAGE value="Created service,client,pojo,test classes for &#10;GetGooglePlaceListTest,GetGooglePlaceDetails" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created service,client,pojo,test classes for &#10;GetGooglePlaceListTest,GetGooglePlaceDetails" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

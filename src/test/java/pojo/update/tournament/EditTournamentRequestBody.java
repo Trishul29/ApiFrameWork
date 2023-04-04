@@ -1,8 +1,8 @@
-package pojo.update;
+package pojo.update.tournament;
 
 import lombok.Getter;
 import lombok.Setter;
-import pojo.create.tournament.CreateTournamentRequestBody;
+
 @Getter
 public class EditTournamentRequestBody {
     private int gameType;

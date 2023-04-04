@@ -1,4 +1,4 @@
-package Test_create_request;
+package Test_create;
 import modules.service.PostsService;
 import io.qameta.allure.Step;
 import org.testng.annotations.Test;

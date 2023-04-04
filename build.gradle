@@ -38,7 +38,7 @@ java {
 allureReport {
     version = '2.13.6'
     reportDir = new File(project.projectDir as File, '/allure-report/ui')
- //  resultsDirs = new File(project.projectDir as File, '/allure-report')
+ //   resultsDirs = new File(project.projectDir as File, '/allure-report')
     clean = true
 
 }
@@ -52,8 +52,8 @@ task createReportDir() {
 }
 
 task saveHistory(type: Copy) {
-    from new File(project.projectDir as File, '/allure-report/ui/history')
-    into new File(project.projectDir as File, '/allure-report/ui/history1')
+    from new File(project.projectDir as File, '/target/allure-results')
+    into new File(project.projectDir as File, '/allure-report/ui/history')
 }
 
 test {

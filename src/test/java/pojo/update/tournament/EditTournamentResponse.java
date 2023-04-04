@@ -1,7 +1,8 @@
-package pojo.update;
+package pojo.update.tournament;
 
 import lombok.Getter;
 import lombok.Setter;
+import pojo.update.tournament.EditTournamentRequestBody;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;

@@ -1,14 +1,11 @@
 package modules.client;
-import io.qameta.allure.Allure;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.apache.commons.lang3.time.StopWatch;
 import pojo.create.tournament.CreateTournamentRequestBody;
-import pojo.update.EditTournamentRequestBody;
+import pojo.update.tournament.EditTournamentRequestBody;
 import util.FileUtility;
 import java.util.Properties;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.StringDescription.asString;
 
 
 public class TournamentsClient {

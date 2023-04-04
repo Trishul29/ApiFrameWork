@@ -1,4 +1,4 @@
-package Test_create_request;
+package Test_create;
 import modules.service.TeamsService;
 import org.testng.annotations.Test;
 import pojo.create.team.CreateTeamRequestBody;

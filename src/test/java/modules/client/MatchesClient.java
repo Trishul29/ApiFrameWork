@@ -1,8 +1,8 @@
 package modules.client;
-import Tests_Monitor.CreateBearerTokenUtilityTest;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import pojo.create.match.CreateMatchRequestBody;
+import pojo.update.match.EditMatchRequestBody;
 import util.FileUtility;
 import java.util.Properties;
 import static io.restassured.RestAssured.given;
@@ -98,5 +98,44 @@ public class MatchesClient {
                 .log().body(true);
 
         return response;
+    }
+
+    public Response editMatch(EditMatchRequestBody editMatchRequestBody)
+    {
+
+        Response response=given()
+                .header("Authorization",bearerToken)
+                .pathParams("gameType","0","matchId",properties.getProperty("matchid_edit_match"))
+                .contentType(ContentType.JSON)
+                .body(editMatchRequestBody)
+                .log().all(true)
+                .log().body(true)
+                .when()
+                .put(properties.getProperty("basepath_edit_match")+"/{gameType}"+"/matches"+"/{matchId}");
+        response
+                .then()
+                .contentType(ContentType.JSON)
+                .log().body(true);
+        return response;
+
+    }
+
+    public Response GetEditMatchDetails( )
+    {
+
+        Response response=given()
+                .header("Authorization",bearerToken)
+                .pathParams("gameType","0","matchId",properties.getProperty("matchid_edit_match"))
+                .contentType(ContentType.JSON)
+                .log().all(true)
+                .log().body(true)
+                .when()
+                .get(properties.getProperty("basepath_edit_match")+"/{gameType}"+"/matches"+"/{matchId}"+"/editDetails");
+        response
+                .then()
+                .contentType(ContentType.JSON)
+                .log().body(true);
+        return response;
+
     }
 }

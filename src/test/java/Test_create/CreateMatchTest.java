@@ -1,5 +1,4 @@
-package Test_create_request;
-import io.qameta.allure.Feature;
+package Test_create;
 import modules.service.MatchesService;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

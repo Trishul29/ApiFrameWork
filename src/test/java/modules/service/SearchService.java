@@ -2,9 +2,7 @@ package modules.service;
 
 import io.restassured.response.Response;
 import modules.client.SearchClient;
-import modules.client.TournamentsClient;
 import pojo.getAll.globalsearch.GetGlobalSearchResponse;
-import pojo.update.EditTournamentResponse;
 import util.AllureUtility;
 
 import java.util.concurrent.TimeUnit;
