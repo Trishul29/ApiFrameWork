@@ -4,28 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="Created service,client,pojo,test classes for &#10;GetGooglePlaceListTest,GetGooglePlaceDetails">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Update/EditMatchTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Update/GetEditMatchDetailsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Match/GetEditMatchDetailsResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/update/match/EditMatchRequestBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/update/match/EditMatchResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spec.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spec.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Test_create_request/CreateMatchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_create/CreateMatchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Test_create_request/CreatePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_create/CreatePostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Test_create_request/CreateReplyPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_create/CreateReplyPostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Test_create_request/CreateTeamTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_create/CreateTeamTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Test_create_request/CreateTournamentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_create/CreateTournamentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Update/EditTournamentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Update/EditTournamentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/MatchesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/MatchesClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/TournamentsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/TournamentsClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/service/MatchesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/service/MatchesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/service/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/service/SearchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/service/TournamentsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/service/TournamentsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/update/EditTournamentRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/update/tournament/EditTournamentRequestBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/update/EditTournamentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/update/tournament/EditTournamentResponse.java" afterDir="false" />
+    <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="Created service,client,pojo,test classes for &#10;GetRecommendedMatchesTest,GetTournamentAggregatedStatTest">
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/matches/GetRecommendedMatchesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/matches/GetRecommendedMatchesResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,82 +85,8 @@
       <recent name="util" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GetEditMatchDetailsTest.shouldFetchEditMatchDetails">
-    <configuration name="MyySportsAPIAutoamtion [saveHistory]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="saveHistory" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="EditMatchTest.shouldEditMatch" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MyySportsAPIAutoamtion.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests_Update.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests_Update" />
-      <option name="MAIN_CLASS_NAME" value="Tests_Update.EditMatchTest" />
-      <option name="METHOD_NAME" value="shouldEditMatch" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetEditMatchDetailsTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MyySportsAPIAutoamtion.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests_Update.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests_Update" />
-      <option name="MAIN_CLASS_NAME" value="Tests_Update.GetEditMatchDetailsTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetEditMatchDetailsTest.shouldFetchEditMatchDetails" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MyySportsAPIAutoamtion.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests_Update.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests_Update" />
-      <option name="MAIN_CLASS_NAME" value="Tests_Update.GetEditMatchDetailsTest" />
-      <option name="METHOD_NAME" value="shouldFetchEditMatchDetails" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetGooglePlaceDetailsByIdTest.ShouldGetGooglePlaceDetails" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.GetRecommendedMatchesTest.shouldGetRecommendedMatches">
+    <configuration name="GetAllMatchesTest.shouldGetAllMatches" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyySportsAPIAutoamtion.test" />
       <extension name="coverage">
         <pattern>
@@ -189,8 +95,79 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests_Monitor" />
-      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetGooglePlaceDetailsByIdTest" />
-      <option name="METHOD_NAME" value="ShouldGetGooglePlaceDetails" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetAllMatchesTest" />
+      <option name="METHOD_NAME" value="shouldGetAllMatches" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetAllTournamentsTest.shouldGetAllTournamentTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests_Monitor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests_Monitor" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetAllTournamentsTest" />
+      <option name="METHOD_NAME" value="shouldGetAllTournamentTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetRecommendedMatchesTest.shouldGetRecommendedMatches" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests_Monitor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests_Monitor" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetRecommendedMatchesTest" />
+      <option name="METHOD_NAME" value="shouldGetRecommendedMatches" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetRecommendedUsersTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests_Monitor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests_Monitor" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetRecommendedUsersTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetToken.getBearerToken" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="token_utility.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="token_utility" />
+      <option name="MAIN_CLASS_NAME" value="token_utility.GetToken" />
+      <option name="METHOD_NAME" value="getBearerToken" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -200,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.GetEditMatchDetailsTest.shouldFetchEditMatchDetails" />
-        <item itemvalue="TestNG.GetEditMatchDetailsTest" />
-        <item itemvalue="TestNG.EditMatchTest.shouldEditMatch" />
-        <item itemvalue="Gradle.MyySportsAPIAutoamtion [saveHistory]" />
-        <item itemvalue="TestNG.GetGooglePlaceDetailsByIdTest.ShouldGetGooglePlaceDetails" />
+        <item itemvalue="TestNG.GetRecommendedMatchesTest.shouldGetRecommendedMatches" />
+        <item itemvalue="TestNG.GetToken.getBearerToken" />
+        <item itemvalue="TestNG.GetRecommendedUsersTest" />
+        <item itemvalue="TestNG.GetAllTournamentsTest.shouldGetAllTournamentTest" />
+        <item itemvalue="TestNG.GetAllMatchesTest.shouldGetAllMatches" />
       </list>
     </recent_temporary>
   </component>
@@ -294,7 +271,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680264032919</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Created service,client,pojo,test classes for &#10;EditMatchTest,GetEditMatchDetails">
+      <created>1680588814315</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1680588814315</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Created service,client,pojo,test classes for &#10;GetRecommendedMatchesTest,GetTournamentAggregatedStatTest">
+      <created>1680613034422</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1680613034422</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -321,7 +312,9 @@
     <MESSAGE value="Added beforeSuit to generate bearerToken everytime we run test suit" />
     <MESSAGE value="Created service,client,pojo,test classes for EditTournamentTest,GlobalSearchTest" />
     <MESSAGE value="Created service,client,pojo,test classes for &#10;GetGooglePlaceListTest,GetGooglePlaceDetails" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created service,client,pojo,test classes for &#10;GetGooglePlaceListTest,GetGooglePlaceDetails" />
+    <MESSAGE value="Created service,client,pojo,test classes for &#10;EditMatchTest,GetEditMatchDetails" />
+    <MESSAGE value="Created service,client,pojo,test classes for &#10;GetRecommendedMatchesTest,GetTournamentAggregatedStatTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created service,client,pojo,test classes for &#10;GetRecommendedMatchesTest,GetTournamentAggregatedStatTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

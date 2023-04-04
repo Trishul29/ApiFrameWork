@@ -23,21 +23,21 @@ public class GetAllTeamResponse {
 
       private Docs[] docs;
 
-      private String hasNextPage;
+      private boolean hasNextPage;
 
       private String pagingCounter;
 
-      private String nextPage;
+      private int nextPage;
 
-      private String limit;
+      private int limit;
 
       private String totalPages;
 
-      private NullType prevPage;
+      private int prevPage;
 
-      private String page;
+      private int page;
 
-      private String totalDocs;
+      private int totalDocs;
    }
    @Getter
    public static class Docs

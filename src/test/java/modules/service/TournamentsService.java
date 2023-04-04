@@ -1,9 +1,11 @@
 package modules.service;
+import Tests_Monitor.GetTournamentAggregatedStatTest;
 import modules.client.TournamentsClient;
 import io.restassured.response.Response;
 import pojo.create.tournament.CreateTournamentRequestBody;
 import pojo.create.tournament.CreateTournamentResponse;
 import pojo.get.Tournaments.GetPointsOfTournamentResponse;
+import pojo.get.Tournaments.GetTournamentAggregatedStatResponse;
 import pojo.getAll.tournaments.GetAllTournamentsResponse;
 import pojo.update.tournament.EditTournamentRequestBody;
 import pojo.update.tournament.EditTournamentResponse;
@@ -60,6 +62,19 @@ public class TournamentsService {
         editTournamentResponse.setResponseTime(responseTime);
         new AllureUtility().getResponseTime(responseTime);
         return  editTournamentResponse;
+    }
+
+    public GetTournamentAggregatedStatResponse getAggregateStats()
+    {
+   Response response= new TournamentsClient().getStats();
+   GetTournamentAggregatedStatResponse getTournamentAggregatedStatResponse=response.as(GetTournamentAggregatedStatResponse.class);
+        int statusCode=response.getStatusCode();
+        long responseTime= response.timeIn(TimeUnit.MILLISECONDS);
+        getTournamentAggregatedStatResponse.setStatusCode(statusCode);
+        getTournamentAggregatedStatResponse.setResponseTime(responseTime);
+        new AllureUtility().getResponseTime(responseTime);
+        return getTournamentAggregatedStatResponse;
+
     }
 
 }

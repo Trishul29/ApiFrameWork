@@ -19,7 +19,7 @@ public class MatchesClient {
 
     public Response getAllMatches() {
 
-     System.out.println(bearerToken);
+
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
                 .queryParams("page",1,"type",properties.getProperty("type_matches"))
@@ -131,6 +131,25 @@ public class MatchesClient {
                 .log().body(true)
                 .when()
                 .get(properties.getProperty("basepath_edit_match")+"/{gameType}"+"/matches"+"/{matchId}"+"/editDetails");
+        response
+                .then()
+                .contentType(ContentType.JSON)
+                .log().body(true);
+        return response;
+
+    }
+
+    public Response getRecommended( )
+    {
+
+        Response response=given()
+                .header("Authorization",bearerToken)
+                .queryParam("type",properties.getProperty("recommend_matches_type"))
+                .contentType(ContentType.JSON)
+                .log().all(true)
+                .log().body(true)
+                .when()
+                .get(properties.getProperty("base_uri_dev")+"/v4.0/0/matches/recommended");
         response
                 .then()
                 .contentType(ContentType.JSON)

@@ -6,6 +6,7 @@ import pojo.update.tournament.EditTournamentRequestBody;
 import util.FileUtility;
 import java.util.Properties;
 import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.when;
 
 
 public class TournamentsClient {
@@ -87,6 +88,23 @@ public class TournamentsClient {
                 .log().body(true);
         return response;
     }
+
+    public Response getStats()
+    {
+        Response response=given()
+                .header("Authorization",bearerToken)
+                .pathParams("gameType",properties.getProperty("gametype_aggregate_stat"),"tournamentId",properties.getProperty("tournament_id_aggregate_stat"))
+                .log().uri()
+                .when()
+                .get(properties.getProperty("base_uri_dev")+"/v3.0"+"/{gameType}"+"/tournament"+"/{tournamentId}"+"/tournament-aggregate-stats");
+        response
+                .then()
+                .log().body(true)
+                .contentType(ContentType.JSON);
+        return response;
+
+    }
+
 
 }
 

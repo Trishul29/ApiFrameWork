@@ -43,7 +43,7 @@ public class GetAllMatchesResponse {
           String matchType=jsonPath.get("data.docs[0].matchType");
           String matchStatus=jsonPath.get("data.docs[0].matchStatus");
 
-         assertTrue(responseTime<3000,"Taking too much time to process request");
+         assertTrue(responseTime<2000,"Taking too much time to process request");
           assertTrue(success,"Success failure");
           assertEquals(statusCode,200,"Not able to get All matches");
           assertNotNull(matchId,"Match id not present");
@@ -67,7 +67,7 @@ public class GetAllMatchesResponse {
           String matchType=jsonPath.get("data.docs[0].matchType");
           String matchStatus=jsonPath.get("data.docs[0].matchStatus");
         //  String reason=jsonPath.get("data.docs[0].matchStatus");
-          assertTrue(responseTime<3000,"Taking too much time to process request");
+          assertTrue(responseTime<2000,"Taking too much time to process request");
           assertTrue(success,"Success failure");
           assertEquals(statusCode,200,"Not able to get All matches");
           assertNotNull(matchId,"Match id not present");
@@ -92,7 +92,7 @@ public class GetAllMatchesResponse {
           String matchType=jsonPath.get("data.docs[0].matchType");
           String matchStatus=jsonPath.get("data.docs[0].matchStatus");
 
-          assertTrue(responseTime<3000,"Taking too much time to process request");
+          assertTrue(responseTime<2000,"Taking too much time to process request");
           assertTrue(success,"Success failure");
           assertEquals(statusCode,200,"Not able to get All matches");
           assertNotNull(matchId,"Match id not present");

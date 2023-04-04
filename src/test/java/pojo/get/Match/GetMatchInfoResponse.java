@@ -18,6 +18,8 @@ public class GetMatchInfoResponse {
     private boolean success;
 
     private String error;
+    private String balls;
+
     @Getter
     public static class Data
     {

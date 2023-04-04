@@ -8,6 +8,7 @@ import pojo.get.Match.GetEditMatchDetailsResponse;
 import pojo.get.Match.GetMatchInfoResponse;
 import pojo.get.Match.GetOneMatchStatFootballResponse;
 import pojo.get.Match.GetOneMatch_FootballResponse;
+import pojo.getAll.matches.GetRecommendedMatchesResponse;
 import pojo.update.match.EditMatchRequestBody;
 import pojo.update.match.EditMatchResponse;
 import util.AllureUtility;
@@ -99,6 +100,20 @@ public GetOneMatch_FootballResponse getOneMatchFootball()
         new AllureUtility().getResponseTime(responseTime);
 
         return getEditMatchDetailsResponse;
+
+    }
+    public GetRecommendedMatchesResponse getRecommendedMatches()
+    {
+
+        Response response=new MatchesClient().getRecommended();
+        int statusCode = response.getStatusCode();
+        long responseTime = response.timeIn(TimeUnit.MILLISECONDS);
+        GetRecommendedMatchesResponse getRecommendedMatchesResponse=response.as(GetRecommendedMatchesResponse.class);
+        getRecommendedMatchesResponse.setStatusCode(statusCode);
+        getRecommendedMatchesResponse.setResponseTime(responseTime);
+        new AllureUtility().getResponseTime(responseTime);
+
+        return getRecommendedMatchesResponse;
 
     }
 
