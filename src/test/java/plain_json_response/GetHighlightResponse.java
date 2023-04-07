@@ -1,13 +1,9 @@
 package plain_json_response;
-
-import io.qameta.allure.Allure;
 import modules.client.MatchHighlightsClient;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import lombok.Getter;
-import lombok.Setter;
 import util.AllureUtility;
-
 import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertNotNull;
@@ -15,11 +11,14 @@ import static org.testng.Assert.assertTrue;
 
 @Getter
 public class GetHighlightResponse {
-    @Setter
-    int statusCode;
-    MatchHighlightsClient matchHighlightsClient;
-    Response response = matchHighlightsClient.getHighlights();
+
+    MatchHighlightsClient matchHighlightsClient=new MatchHighlightsClient();
+    Response response =  matchHighlightsClient.getHighlights();
+
     long responseTime =response.timeIn(TimeUnit.SECONDS);
+int statusCode=response.getStatusCode();
+
+
 
     JsonPath jsonPath = response.body().jsonPath();
     String id = jsonPath.get("data.docs[0].hightlight.id");

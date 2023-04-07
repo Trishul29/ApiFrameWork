@@ -46,6 +46,9 @@ public class GetMatchInfoResponse {
         private String ballType;
 
         private MatchVenue matchVenue;
+        private String edition;
+        private String tournamentName;
+        private String round;
 
     }
     @Getter

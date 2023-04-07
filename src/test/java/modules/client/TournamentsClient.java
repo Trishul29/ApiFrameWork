@@ -14,16 +14,17 @@ public class TournamentsClient {
     public Properties properties= FileUtility.loadProperties(propertyPath);
     String bearerToken=properties.getProperty("bearerToken");
 
-    public Response getAllTournaments() {
+    public Response getAllTournaments(String filter) {
 
-        String path=properties.getProperty("gameType");
+       String gameType=properties.getProperty("gameType");
 
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
-                .queryParam("type",properties.getProperty("type"))
-
-                .pathParam("gameType",path)
+               // .queryParam("type",properties.getProperty("type"))
                 .queryParam("page",1)
+                .queryParam("filter",filter)
+          .pathParam("gameType",gameType)
+
                 .log().uri()
                 .when()
                 .get(properties.getProperty("basepath_tournaments")+"/{gameType}"+"/tournament");
@@ -49,6 +50,7 @@ public class TournamentsClient {
                 .post(properties.getProperty("basepath_create_tournament"));
         response
                 .then()
+
                 .contentType(ContentType.JSON)
                 .log().body(true);
         return response;
@@ -96,7 +98,7 @@ public class TournamentsClient {
                 .pathParams("gameType",properties.getProperty("gametype_aggregate_stat"),"tournamentId",properties.getProperty("tournament_id_aggregate_stat"))
                 .log().uri()
                 .when()
-                .get(properties.getProperty("base_uri_dev")+"/v3.0"+"/{gameType}"+"/tournament"+"/{tournamentId}"+"/tournament-aggregate-stats");
+                .get(properties.getProperty("base_uri")+"/v3.0"+"/{gameType}"+"/tournament"+"/{tournamentId}"+"/tournament-aggregate-stats");
         response
                 .then()
                 .log().body(true)

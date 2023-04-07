@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import pojo.create.tournament.CreateTournamentRequestBody;
 import pojo.create.tournament.CreateTournamentResponse;
 public class CreateTournamentTest {
-    @Test
+   @Test
     @Step("perform createTournament test")
     public void shouldCreateTournament()
 

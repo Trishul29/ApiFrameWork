@@ -11,21 +11,22 @@ public class MatchesClient {
     public   String propertyPath = System.getProperty("user.dir")+ "//src//main//java//spec.properties";
 
 
+
     public Properties properties= FileUtility.loadProperties(propertyPath);
  String   bearerToken=properties.getProperty("bearerToken");
 
 
 
 
-    public Response getAllMatches() {
+    public Response getAllMatches(String filter) {
 
 
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
-                .queryParams("page",1,"type",properties.getProperty("type_matches"))
+                .queryParams("page",1,"type",properties.getProperty("type_matches"),"filter",filter)
                 .log().uri()
                 .when()
-                .get(properties.getProperty("basepath_all_matches"));
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_all_matches"));
         response
                 .then()
                 .contentType(ContentType.JSON)
@@ -42,7 +43,7 @@ public class MatchesClient {
                 .body(requestBody)
                 .log().all(true)
                 .when()
-                .post("https://staging-scoring.platform.myysports.com/api/match");
+                .post(properties.getProperty("base_uri")+properties.getProperty("basepath_creatematch"));
         response
                 .then()
                 .contentType(ContentType.JSON)
@@ -58,7 +59,7 @@ public class MatchesClient {
                 .pathParam("MatchId",properties.getProperty("matchid"))
                 .log().all(true)
                 .when()
-                .get(properties.getProperty("basepath_get_matchinfo")+"/{MatchId}");
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_get_matchinfo")+"/{MatchId}");
         response
                 .then()
                 .contentType(ContentType.JSON)
@@ -75,7 +76,7 @@ public class MatchesClient {
                 .pathParam("MatchId",properties.getProperty("matchid_football"))
                 .log().all(true)
                 .when()
-                .get(properties.getProperty("basepath_get_onematch_football")+"/{MatchId}");
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_get_onematch_football")+"/{MatchId}");
         response
                 .then()
                 .contentType(ContentType.JSON)
@@ -91,7 +92,7 @@ public class MatchesClient {
                 .pathParam("MatchId",properties.getProperty("matchid_football"))
                 .log().all(true)
                 .when()
-                .get(properties.getProperty("basepath_get_onematch_football")+"/{MatchId}"+"/stats");
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_get_onematch_football")+"/{MatchId}"+"/stats");
         response
                 .then()
                 .contentType(ContentType.JSON)
@@ -111,7 +112,7 @@ public class MatchesClient {
                 .log().all(true)
                 .log().body(true)
                 .when()
-                .put(properties.getProperty("basepath_edit_match")+"/{gameType}"+"/matches"+"/{matchId}");
+                .put(properties.getProperty("base_uri")+properties.getProperty("basepath_edit_match")+"/{gameType}"+"/matches"+"/{matchId}");
         response
                 .then()
                 .contentType(ContentType.JSON)
@@ -130,7 +131,7 @@ public class MatchesClient {
                 .log().all(true)
                 .log().body(true)
                 .when()
-                .get(properties.getProperty("basepath_edit_match")+"/{gameType}"+"/matches"+"/{matchId}"+"/editDetails");
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_edit_match")+"/{gameType}"+"/matches"+"/{matchId}"+"/editDetails");
         response
                 .then()
                 .contentType(ContentType.JSON)
@@ -149,7 +150,7 @@ public class MatchesClient {
                 .log().all(true)
                 .log().body(true)
                 .when()
-                .get(properties.getProperty("base_uri_dev")+"/v4.0/0/matches/recommended");
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_recommended_matches"));
         response
                 .then()
                 .contentType(ContentType.JSON)

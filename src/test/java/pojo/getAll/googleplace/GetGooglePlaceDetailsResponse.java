@@ -36,6 +36,7 @@ public class GetGooglePlaceDetailsResponse {
         private String label;
 
         private String state;
+        private String locality;
     }
 
     @Getter

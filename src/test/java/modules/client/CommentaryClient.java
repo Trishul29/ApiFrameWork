@@ -18,7 +18,7 @@ public class CommentaryClient {
                 .pathParam("match_id",properties.getProperty("score_card_match_id"))
                 .log().all(true)
                 .when()
-                .get(properties.getProperty("scorecard_basepath")+"/{match_id}"+"/commentary"+"/1");
+                .get(properties.getProperty("base_uri")+properties.getProperty("scorecard_basepath")+"/{match_id}"+"/commentary"+"/1");
         response
                 .then()
                 .contentType(ContentType.JSON)

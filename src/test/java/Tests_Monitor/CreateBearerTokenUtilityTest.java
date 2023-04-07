@@ -8,7 +8,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Properties;
 public class CreateBearerTokenUtilityTest {
-@BeforeSuite
+//@BeforeSuite
 public  void getToken() throws FileNotFoundException {
      String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
 

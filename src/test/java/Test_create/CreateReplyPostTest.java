@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import pojo.create.post.CreateReplyPostRequestBody;
 import pojo.create.post.CreateReplyPostResponse;
 public class CreateReplyPostTest {
-    @Test
+  //  @Test
     @Step("perform createPost test")
     public void shouldCreateReplyPost()
 

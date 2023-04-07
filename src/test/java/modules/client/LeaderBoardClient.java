@@ -22,7 +22,7 @@ public class LeaderBoardClient {
                 .queryParam("page",1)
                 .log().uri()
                 .when()
-                .get(properties.getProperty("basepath_leaderboard"));
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_leaderboard"));
         response
                 .then()
                 .contentType(ContentType.JSON)

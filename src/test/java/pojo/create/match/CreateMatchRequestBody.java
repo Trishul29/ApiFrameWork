@@ -1,5 +1,6 @@
 package pojo.create.match;
 
+import com.github.javafaker.Faker;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -172,12 +173,13 @@ public class CreateMatchRequestBody {
         private String[] managers;
 
         public Builder() {
-            this.totalOvers = 50;
-            this.overPerBowler =10;
+
+            this.totalOvers = Faker.instance().number().numberBetween(1,10);
+            this.overPerBowler =Faker.instance().number().numberBetween(1,20);
             this.tournamentId =null;
             this.ballType =0;
             this.startsAt = "2022-04-22 04:30:00.000";
-            this.teamSize =11;
+            this.teamSize =Faker.instance().number().numberBetween(1,10);
             this.matchType = 0;
             this.managers=new String[]{"625d0fddddc6028c1761dda5"};
         }

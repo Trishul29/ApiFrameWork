@@ -12,19 +12,22 @@ import static org.testng.Assert.*;
 import static org.testng.Assert.assertNotNull;
 
 @Getter
-public class GetAllMatchesResponse {
-
+public class GetMatchesResponse {
     public   String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
-  public   Properties properties= FileUtility.loadProperties(propertyPath);
+    public   Properties properties= FileUtility.loadProperties(propertyPath);
+
+
+
+    String filter =properties.getProperty("filter_matches_tournament");
     String match_Type=properties.getProperty("type_matches");
-  MatchesClient matchesClient=new MatchesClient();
-  Response response=matchesClient.getAllMatches();
+    MatchesClient matchesClient=new MatchesClient();
+    Response response=matchesClient.getAllMatches(filter);
     JsonPath jsonPath = response.body().jsonPath();
 
 
 
 
-  public  void assertGetAllMatch( )
+  public  void assertGetMatches( )
   {
       int statusCode = response.getStatusCode();
       long responseTime =response.timeIn(TimeUnit.SECONDS);
@@ -107,14 +110,5 @@ public class GetAllMatchesResponse {
       }
 
   }
-
-
-
-
-
-
-
-
-
 
 }

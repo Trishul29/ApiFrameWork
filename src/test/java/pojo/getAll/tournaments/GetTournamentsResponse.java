@@ -6,7 +6,7 @@ import static org.testng.Assert.*;
 import static org.testng.Assert.assertNotNull;
 
 @Getter
-public class GetAllTournamentsResponse {
+public class GetTournamentsResponse {
     @Setter
     int statusCode;
     @Setter

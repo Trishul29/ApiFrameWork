@@ -22,7 +22,7 @@ public class SearchClient {
                 .queryParam("page",1)
                 .log().all(true)
                 .when()
-                .get(properties.getProperty("basepath_dev_search"));
+                .get(properties.getProperty("basepath_staging_search"));
         response
                 .then()
                 .contentType(ContentType.JSON)

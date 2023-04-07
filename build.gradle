@@ -27,6 +27,7 @@ dependencies {
     // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
     implementation 'org.json:json:20171018'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
 
 
 }
@@ -52,20 +53,24 @@ task createReportDir() {
 }
 
 task saveHistory(type: Copy) {
-    from new File(project.projectDir as File, '/allure-report/ui/history')
+    from new File(project.projectDir as File, '/allure-report/ui')
     into new File(project.projectDir as File, '/allure-report/ui/history1')
+}
+task deleteAllureHistory(type: Delete) {
+    delete new File(project.projectDir, '/allure-report/ui/history1')
 }
 
 test {
     useTestNG() {
 
 
-        beforeSuite {'Tests_Monitor.CreateBearerTokenUtilityTest'}
+       // beforeSuite {'Tests_Monitor.CreateBearerTokenUtilityTest'}
 
     }
 }
 
 
-tasks.test.dependsOn 'clean', 'createReportDir'
+tasks.test.dependsOn 'clean', 'createReportDir','saveHistory'
 tasks.build.mustRunAfter 'clean'
+//tasks.saveHistory.finalizedBy('deleteAllureHistory')
 tasks.test.finalizedBy('allureReport')

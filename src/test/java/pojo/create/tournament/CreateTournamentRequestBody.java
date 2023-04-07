@@ -44,7 +44,7 @@ public class CreateTournamentRequestBody {
          this.matchType=0;
          this.name="Cricket2022";
          this.totalOvers=0;
-         this.edition="season1";
+         this.edition=null;
          this.description="some description";
          this.noOfPlayers=11;
          this.overPerBowler=0;

@@ -2,11 +2,11 @@ package Tests_Monitor;
 import io.qameta.allure.Step;
 import modules.service.TournamentsService;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pojo.getAll.tournaments.GetAllTournamentsResponse;
-import java.util.Properties;
+import pojo.getAll.tournaments.GetTournamentsResponse;
 
-public class GetAllTournamentsTest {
+public class GetTournamentsTest {
     private TournamentsService tournamentsService;
   //  private  String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
    // private Properties properties;
@@ -16,15 +16,16 @@ public class GetAllTournamentsTest {
     {
         tournamentsService=new TournamentsService();
     }
-    @Test
+    @Test(description = "GetTournament Test For My Tournaments and All Tournaments")
     @Step("{0}")
 
-    public void shouldGetAllTournamentTest()
+
+    public void shouldGetTournamentTest()
     {
 
-       GetAllTournamentsResponse getAllTournamentsResponse=tournamentsService.getAllTournaments();
+       GetTournamentsResponse getTournamentsResponse =tournamentsService.getTournaments("");
 
-       getAllTournamentsResponse.assertGetAllTournamentsResponse();
+       getTournamentsResponse.assertGetAllTournamentsResponse();
 
 
     }

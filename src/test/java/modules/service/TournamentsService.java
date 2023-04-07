@@ -1,12 +1,11 @@
 package modules.service;
-import Tests_Monitor.GetTournamentAggregatedStatTest;
 import modules.client.TournamentsClient;
 import io.restassured.response.Response;
 import pojo.create.tournament.CreateTournamentRequestBody;
 import pojo.create.tournament.CreateTournamentResponse;
 import pojo.get.Tournaments.GetPointsOfTournamentResponse;
 import pojo.get.Tournaments.GetTournamentAggregatedStatResponse;
-import pojo.getAll.tournaments.GetAllTournamentsResponse;
+import pojo.getAll.tournaments.GetTournamentsResponse;
 import pojo.update.tournament.EditTournamentRequestBody;
 import pojo.update.tournament.EditTournamentResponse;
 import util.AllureUtility;
@@ -14,16 +13,16 @@ import util.AllureUtility;
 import java.util.concurrent.TimeUnit;
 
 public class TournamentsService {
-    public GetAllTournamentsResponse getAllTournaments()
+    public GetTournamentsResponse getTournaments(String filter)
     {
-        Response response= new TournamentsClient().getAllTournaments();
+        Response response= new TournamentsClient().getAllTournaments(filter);
         int statusCode=response.statusCode();
       long responseTime=  response.timeIn(TimeUnit.MILLISECONDS);
-      GetAllTournamentsResponse getAllTournamentsResponse = response.as(GetAllTournamentsResponse.class);
-        getAllTournamentsResponse.setStatusCode(statusCode);
-        getAllTournamentsResponse.setResponseTime(responseTime);
+      GetTournamentsResponse getTournamentsResponse = response.as(GetTournamentsResponse.class);
+        getTournamentsResponse.setStatusCode(statusCode);
+        getTournamentsResponse.setResponseTime(responseTime);
         new AllureUtility().getResponseTime(responseTime);
-        return getAllTournamentsResponse;
+        return getTournamentsResponse;
     }
 
     public CreateTournamentResponse createTournament(CreateTournamentRequestBody createTournamentRequestBody)

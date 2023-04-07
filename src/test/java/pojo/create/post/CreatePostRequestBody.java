@@ -1,5 +1,8 @@
 package pojo.create.post;
+import com.github.javafaker.Faker;
 import lombok.Getter;
+
+import java.util.Locale;
 
 @Getter
 public class CreatePostRequestBody {
@@ -23,7 +26,7 @@ public class CreatePostRequestBody {
          public Builder() {
              this.author = "62ef54b4fd4b8b60d8aa0279";
              this.resourceName = "UserSports";
-             this.content = "Create text Post";
+             this.content = Faker.instance(new Locale("en_IND")).esports().game();
          }
 
          public CreatePostRequestBody build( )

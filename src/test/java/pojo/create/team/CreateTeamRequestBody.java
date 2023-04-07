@@ -1,9 +1,14 @@
 package pojo.create.team;
 
+import com.github.javafaker.Faker;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.Locale;
+
 @Getter
 public class CreateTeamRequestBody {
+
     private String name;
     private String shortName;
     private String description;
@@ -55,14 +60,14 @@ public static class Builder {
 
         public Builder()
         {
-       this.name="Nocturn";
-       this.shortName="Noc12";
-       this.description="Nocturn";
-       this.logo="https://dev-myysports-media-bucket.s3.ap-south-1.amazonaws.com/team_logos/Myytake+Chargers.jpg\"";
-       this.banner="https://dev-myysports-media-bucket.s3.ap-south-1.amazonaws.com/team_logos/Myytake+Chargers.jpg\"";
-        this.teamPrimaryColor="883662";
-        this.teamSecondaryColor="883662";
-        this.teamCity="Bhiwandi";
+       this.name= Faker.instance(new Locale("en_IND")).team().name();
+       this.shortName=name.charAt(0)+""+name.charAt(3)+""+name.charAt(5);
+       this.description= Faker.instance(new Locale("en_IND")).lorem().characters();
+       this.logo=Faker.instance().internet().avatar();
+       this.banner=Faker.instance().internet().image();
+        this.teamPrimaryColor=Faker.instance().color().hex();
+        this.teamSecondaryColor=Faker.instance().color().hex();
+        this.teamCity= Faker.instance(new Locale("en_IND")).address().city();
 
         }
         public Builder setLocation(String placeId, double latitude, double longitude, String address) {
