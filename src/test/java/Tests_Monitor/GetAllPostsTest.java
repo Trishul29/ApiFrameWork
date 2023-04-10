@@ -21,8 +21,8 @@ postsService=new PostsService();
     @Test
     @Step("{0}")
     public void shouldGetAllPosts()
-    {
-        GetAllPostResponse getAllPostsResponse = postsService.getAllPost();
+    {//Filter: photos,videos
+        GetAllPostResponse getAllPostsResponse = postsService.getAllPost("");
         getAllPostsResponse.assertGetAllPost();
     }
 

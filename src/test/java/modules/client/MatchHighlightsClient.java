@@ -17,7 +17,7 @@ public class MatchHighlightsClient {
                 .pathParam("matchId",id)
                 .log().uri()
                 .when()
-                .get(properties.getProperty("basepath_highlights")+"/{matchId}"+"/highlights/1");
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_highlights")+"/{matchId}"+"/highlights/1");
         response
                 .then()
                 .contentType(ContentType.JSON)
@@ -34,7 +34,7 @@ public class MatchHighlightsClient {
                 .pathParam("matchId",properties.getProperty("matchid_football"))
                 .log().uri()
                 .when()
-                .get(properties.getProperty("basepath_highlights_football")+"/{matchId}"+"/highlights/1");
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_highlights_football")+"/{matchId}"+"/highlights/1");
         response
                 .then()
                 .contentType(ContentType.JSON)

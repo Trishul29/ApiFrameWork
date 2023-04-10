@@ -22,7 +22,7 @@ public class GetTournamentsTest {
 
     public void shouldGetTournamentTest()
     {
-
+//Filter: live,upcoming,result
        GetTournamentsResponse getTournamentsResponse =tournamentsService.getTournaments("");
 
        getTournamentsResponse.assertGetAllTournamentsResponse();

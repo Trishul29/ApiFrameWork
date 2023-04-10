@@ -17,7 +17,7 @@ public class UsersClient {
                 .queryParam("UserId",uid)
                 .log().uri()
                 .when()
-                .get(properties.getProperty("basepathuser"));
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepathuser"));
         response
                 .then()
                 .contentType(ContentType.JSON)

@@ -11,12 +11,12 @@ public class PostsClient {
     public Properties properties= FileUtility.loadProperties(propertyPath);
     String bearerToken=properties.getProperty("bearerToken");
 
-    public  Response getAll(String Path) {
+    public  Response getAll(String Path,String filter) {
 
 
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
-                .queryParam("page",2)
+                .queryParams("page",2,"filter",filter)
                 .log().all(true)
                 .when()
                 .get(Path);
@@ -38,7 +38,7 @@ public class PostsClient {
                 .body(requestBody)
                 .log().all(true)
                 .when()
-                .post(properties.getProperty("basepath_create_post"));
+                .post(properties.getProperty("base_uri")+properties.getProperty("basepath_create_post"));
         response
                 .then()
                 .contentType(ContentType.JSON)
@@ -56,7 +56,7 @@ public class PostsClient {
                 .body(requestBody)
                 .log().all(true)
                 .when()
-                .post(properties.getProperty("basepath_create_post"));
+                .post(properties.getProperty("base_uri")+properties.getProperty("basepath_create_post"));
         response
                 .then()
                 .contentType(ContentType.JSON)

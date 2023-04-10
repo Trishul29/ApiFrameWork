@@ -20,9 +20,9 @@ public class PostsService {
     public    String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
     Properties properties= FileUtility.loadProperties(propertyPath);
 
-    public  GetAllPostResponse getAllPost() {
+    public  GetAllPostResponse getAllPost(String filter) {
 
-        Response response = new PostsClient().getAll(properties.getProperty("basepath_get_all_post"));
+        Response response = new PostsClient().getAll(properties.getProperty("base_uri")+properties.getProperty("basepath_get_all_post"),filter);
         int statusCode = response.statusCode();
         long responseTime= response.timeIn(TimeUnit.MILLISECONDS);
         GetAllPostResponse getAllPostResponse = response.as(GetAllPostResponse.class);

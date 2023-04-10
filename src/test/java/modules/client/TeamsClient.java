@@ -14,14 +14,12 @@ public class TeamsClient {
     String bearerToken=properties.getProperty("bearerToken");
     public  Response getTeam(String id) {
 
-
-
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
                 .pathParam("TeamId",id)
                 .log().uri()
                 .when()
-                .get(properties.getProperty("basepath")+"/{TeamId}");
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_get_team")+"/{TeamId}");
         response
                 .then()
                 .contentType(ContentType.JSON)
@@ -37,7 +35,7 @@ public class TeamsClient {
                 .queryParam("page",20)
                 .log().uri()
                 .when()
-                .get(properties.getProperty("basepath_get_team"));
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_getall_team"));
         response
                 .then()
                 .contentType(ContentType.JSON)
@@ -55,7 +53,7 @@ public class TeamsClient {
                 .body(requestBody)
                 .log().all(true)
                 .when()
-                .post(properties.getProperty("basepath_create_team"));
+                .post(properties.getProperty("base_uri")+properties.getProperty("basepath_create_team"));
        response
                .then()
                .contentType(ContentType.JSON)

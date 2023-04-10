@@ -47,7 +47,7 @@ public class TournamentsClient {
                 .body(requestBody)
                 .log().all(true)
                 .when()
-                .post(properties.getProperty("basepath_create_tournament"));
+                .post(properties.getProperty("base_uri")+properties.getProperty("basepath_create_tournament"));
         response
                 .then()
 
@@ -64,7 +64,7 @@ public class TournamentsClient {
                 .pathParam("id",id)
                 .log().uri()
                 .when()
-                .get(properties.getProperty("basepath_get_tournament_point")+"/{id}"+"/points");
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_get_tournament_point")+"/{id}"+"/points");
 
         response
                 .then()
@@ -83,7 +83,7 @@ public class TournamentsClient {
                 .body(requestBody)
                 .log().all(true)
                 .when()
-                .put(properties.getProperty("basepath_edit_tournament")+"/{tournament_id}");
+                .put(properties.getProperty("base_uri")+properties.getProperty("basepath_edit_tournament")+"/{tournament_id}");
         response
                 .then()
                 .contentType(ContentType.JSON)

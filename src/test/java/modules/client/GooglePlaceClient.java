@@ -18,7 +18,7 @@ public class GooglePlaceClient {
                 .queryParam("text",properties.getProperty("place_name"))
                 .log().all(true)
               .when()
-              .get(properties.getProperty("base_uri")+properties.getProperty("basepath_google_place_list"));
+              .get(properties.getProperty("base_uri")+properties.getProperty("google_place_type"));
         response
                 .then()
                 .contentType(ContentType.JSON)

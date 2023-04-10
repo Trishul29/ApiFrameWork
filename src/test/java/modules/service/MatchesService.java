@@ -8,6 +8,7 @@ import pojo.get.Match.GetEditMatchDetailsResponse;
 import pojo.get.Match.GetMatchInfoResponse;
 import pojo.get.Match.GetOneMatchStatFootballResponse;
 import pojo.get.Match.GetOneMatch_FootballResponse;
+import pojo.getAll.matches.GetMyyMatchesResponse;
 import pojo.getAll.matches.GetRecommendedMatchesResponse;
 import pojo.update.match.EditMatchRequestBody;
 import pojo.update.match.EditMatchResponse;
@@ -115,6 +116,19 @@ public GetOneMatch_FootballResponse getOneMatchFootball()
 
         return getRecommendedMatchesResponse;
 
+    }
+    public GetMyyMatchesResponse getMyyMatchesUsingRole()
+    {
+        Response response=new MatchesClient().getMyyMatches();
+        int statusCode = response.getStatusCode();
+
+        long responseTime = response.timeIn(TimeUnit.MILLISECONDS);
+        GetMyyMatchesResponse getMyyMatchesResponse=response.as(GetMyyMatchesResponse.class);
+        getMyyMatchesResponse.setStatusCode(statusCode);
+        getMyyMatchesResponse.setResponseTime(responseTime);
+        new AllureUtility().getResponseTime(responseTime);
+
+        return getMyyMatchesResponse;
     }
 
 }

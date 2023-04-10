@@ -20,7 +20,7 @@ public class MatchOfficialsClient {
                 .queryParam("pageNo",1)
                 .log().uri()
                 .when()
-                .get(properties.getProperty("basepath_recommended"));
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_recommended"));
         response
                 .then()
                 .contentType(ContentType.JSON)
