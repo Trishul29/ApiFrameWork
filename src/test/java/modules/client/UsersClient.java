@@ -1,6 +1,7 @@
 package modules.client;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import pojo.update.user.UpdateUserProfileRequestBody;
 import util.FileUtility;
 import java.util.Properties;
 import static io.restassured.RestAssured.given;
@@ -25,4 +26,24 @@ public class UsersClient {
         return response;
 
     }
+    public Response editUser(UpdateUserProfileRequestBody requestBody)
+    {
+
+        Response response=given()
+                .header("Authorization","Bearer "+bearerToken)
+                .pathParam("source","sports")
+                .body(requestBody)
+                .log().all(true)
+                .when()
+                .put(properties.getProperty("base_uri")+properties.getProperty("base_path_edit_user")+"/{source}");
+      response
+              .then()
+             .contentType(ContentType.JSON)
+             .log().body();
+        return response;
+
+
+    }
+
+
 }

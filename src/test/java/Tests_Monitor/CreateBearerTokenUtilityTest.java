@@ -3,12 +3,15 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+
 import java.io.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Properties;
 public class CreateBearerTokenUtilityTest {
-//@BeforeSuite
+
+@Test
 public  void getToken() throws FileNotFoundException {
      String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
 

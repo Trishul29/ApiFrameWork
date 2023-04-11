@@ -64,4 +64,33 @@ public class PostsClient {
         return response;
     }
 
+    public Response likePost() {
+        Response response=given()
+                .contentType(ContentType.JSON)
+                .header("Authorization","Bearer "+bearerToken)
+                .pathParam("postId",properties.getProperty("postid_like_post"))
+                .queryParam("action","like")
+                .log().all(true)
+                .when()
+                .post(properties.getProperty("base_uri")+properties.getProperty("basepath_create_post")+"/{postId}");
+        response
+                .then()
+                .contentType(ContentType.JSON)
+                .log().body(true);
+        return response;
+    }
+
+    public Response getShow() {
+        Response response=given()
+                .header("Authorization","Bearer "+bearerToken)
+                .log().all(true)
+                .when()
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_get_show"));
+        response
+                .then()
+                .contentType(ContentType.JSON)
+                .log().body(true);
+        return response;
+
+    }
 }

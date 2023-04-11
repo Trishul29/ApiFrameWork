@@ -10,7 +10,8 @@ public class CreatePostTest {
     public void shouldCreatePost()
 
     {
-        CreatePostRequestBody createPostRequestBody = new CreatePostRequestBody.Builder().build();
+        //Resource=Tournament,Show,Team
+        CreatePostRequestBody createPostRequestBody = new CreatePostRequestBody.Builder().setResourceName("Tournament").build();
         CreatePostResponse createPostResponse = new PostsService().createPost(createPostRequestBody);
        createPostResponse.assertCreatePostDetails(createPostRequestBody);
     }

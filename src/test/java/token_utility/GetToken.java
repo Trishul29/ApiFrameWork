@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class GetToken {
 
-  //  @Test
+    @Test
     public void getBearerToken()
     {
 

@@ -4,8 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import javax.lang.model.type.NullType;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 @Getter
 public class GetAllPostResponse {
@@ -122,6 +121,7 @@ public class GetAllPostResponse {
         assertTrue(this.getResponseTime()<=2000,"Response Taking More than 2 Seconds");
         assertEquals(this.getStatusCode(),200);
         assertEquals(this.getSuccess(),"true","Success Failure");
+        assertNotNull(this.getData().docs,"No Post present");
     }
 
 

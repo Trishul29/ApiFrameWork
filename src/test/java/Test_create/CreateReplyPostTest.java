@@ -5,12 +5,13 @@ import org.testng.annotations.Test;
 import pojo.create.post.CreateReplyPostRequestBody;
 import pojo.create.post.CreateReplyPostResponse;
 public class CreateReplyPostTest {
-  //  @Test
+   @Test
     @Step("perform createPost test")
     public void shouldCreateReplyPost()
 
     {
-        CreateReplyPostRequestBody createReplyPostRequestBody = new CreateReplyPostRequestBody.Builder().build();
+        //ResourceName:Tournament,Team,Show
+        CreateReplyPostRequestBody createReplyPostRequestBody = new CreateReplyPostRequestBody.Builder().setResourceName("Show").build();
         CreateReplyPostResponse createReplyPostResponse = new PostsService().createReplyPost(createReplyPostRequestBody);
       createReplyPostResponse.assertCreateReplyPostDetails(createReplyPostRequestBody);
     }

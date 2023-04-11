@@ -2,12 +2,10 @@ package modules.service;
 
 import io.qameta.allure.Allure;
 import modules.client.PostsClient;
-import pojo.create.post.CreatePostRequestBody;
-import pojo.create.post.CreatePostResponse;
-import pojo.create.post.CreateReplyPostRequestBody;
-import pojo.create.post.CreateReplyPostResponse;
+import pojo.create.post.*;
 import pojo.getAll.posts.GetAllPostResponse;
 import io.restassured.response.Response;
+import pojo.getAll.posts.GetShowListResponse;
 import util.AllureUtility;
 import util.FileUtility;
 
@@ -55,6 +53,32 @@ return getAllPostResponse;
         createReplyPostResponse.setResponseTime(responseTime);
         new AllureUtility().getResponseTime(responseTime);
         return createReplyPostResponse;
+    }
+
+    public GiveLikeResponse giveLikeToPost()
+    {
+        Response response=new PostsClient().likePost();
+        int statusCode=response.getStatusCode();
+        long responseTime= response.timeIn(TimeUnit.MILLISECONDS);
+        GiveLikeResponse  giveLikeResponse=response.as(GiveLikeResponse.class);
+        giveLikeResponse.setStatusCode(statusCode);
+        giveLikeResponse.setResponseTime(responseTime);
+        new AllureUtility().getResponseTime(responseTime);
+
+        return  giveLikeResponse;
+    }
+
+    public GetShowListResponse getShowList()
+    {
+        Response response=new PostsClient().getShow();
+        int statusCode=response.getStatusCode();
+        long responseTime= response.timeIn(TimeUnit.MILLISECONDS);
+        GetShowListResponse getShowListResponse=response.as(GetShowListResponse.class);
+        getShowListResponse.setStatusCode(statusCode);
+        getShowListResponse.setResponseTime(responseTime);
+        new AllureUtility().getResponseTime(responseTime);
+
+        return  getShowListResponse;
     }
 
 
