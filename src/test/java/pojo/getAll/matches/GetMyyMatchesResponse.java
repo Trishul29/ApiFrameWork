@@ -106,8 +106,10 @@ public class GetMyyMatchesResponse {
     @Getter
     public static class Officials{}
     @Getter
+    @JsonIgnoreProperties(ignoreUnknown = true)
     public static class MatchStatus{
         private String status;
+        private String reason;
     }
     @Getter
     public static class LogoOverlay
@@ -116,7 +118,13 @@ public class GetMyyMatchesResponse {
     {
        assertTrue(this.success,"Success Failure");
        assertNotNull(this.getData(),"No Data present");
+
         assertEquals(this.getStatusCode(),200,"Request Failure");
         assertTrue(this.getResponseTime()<2000,"Response Taking More Than 2 Seconds");
+        List<Data> dataList = this.getData();
+        for(Data data:dataList)
+        {
+            assertNotNull(data.getId());
+        }
     }
 }

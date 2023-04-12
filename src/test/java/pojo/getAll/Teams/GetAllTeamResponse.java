@@ -3,6 +3,8 @@ import lombok.Getter;
 import lombok.Setter;
 import javax.lang.model.type.NullType;
 
+import java.util.List;
+
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
@@ -21,7 +23,7 @@ public class GetAllTeamResponse {
    public static class Data{
       private String hasPrevPage;
 
-      private Docs[] docs;
+      private List<Docs> docs;
 
       private boolean hasNextPage;
 

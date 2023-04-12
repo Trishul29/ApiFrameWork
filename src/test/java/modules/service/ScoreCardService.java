@@ -20,5 +20,6 @@ public class ScoreCardService {
         getMatchScoreCardResponse.setResponseTime(responseTime);
         new AllureUtility().getResponseTime(responseTime);
 
-   return getMatchScoreCardResponse; }
+   return getMatchScoreCardResponse;
+    }
 }
