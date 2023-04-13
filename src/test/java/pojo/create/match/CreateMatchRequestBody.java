@@ -140,10 +140,6 @@ public class CreateMatchRequestBody {
         this.teamOne = builder.teamOne;
         this.teamTwo = builder.teamTwo;
 
-
-
-
-
     }
 
     public static class Builder

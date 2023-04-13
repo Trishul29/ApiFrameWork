@@ -10,7 +10,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 @Getter
-public class GetPlaying11BatsmenResponse {
+public class GetPlaying11Response {
     @Setter
     int statusCode;
     @Setter
@@ -39,7 +39,7 @@ public class GetPlaying11BatsmenResponse {
         private boolean isSubstitute;
 
     }
-    public void assertBatsmenPlaying11()
+    public void assertPlaying11()
     {
         assertTrue(this.getResponseTime()<=2000,"Response Taking More than 2 Seconds");
         assertEquals(this.getStatusCode(),200,"Not able to get Recommended Users");

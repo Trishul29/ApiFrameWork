@@ -7,6 +7,7 @@ import java.util.Properties;
 
 import static io.restassured.RestAssured.given;
 
+
 public class RosterClient {
     public    String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
     public Properties properties= FileUtility.loadProperties(propertyPath);
@@ -27,6 +28,24 @@ public class RosterClient {
                 .log().body();
 
 return response;
+
+    }
+    public Response getBowler(String matchId)
+    {
+        Response response=given()
+                .header("Authorization","Bearer "+bearerToken)
+                .pathParam("matchId",matchId)
+                .queryParam("filter","players")
+                .log().all(true)
+                .when()
+                .get(properties.getProperty("base_uri")+properties.getProperty("toss_basepath")+"/{matchId}"+properties.getProperty("playing_11_bowler_roster"));
+        response
+                .then()
+                .log().all(true)
+               .contentType(ContentType.JSON);
+
+
+        return response;
 
     }
 }

@@ -174,4 +174,19 @@ public class MatchesClient {
 
         return response;
     }
+
+    public Response getCurrentMatchDetails(String matchId) {
+        Response response = given()
+                .header("Authorization","Bearer "+bearerToken)
+                .pathParams("MatchId",matchId)
+                .log().uri()
+                .when()
+                .get(properties.getProperty("base_uri")+properties.getProperty("toss_basepath")+"/{MatchId}"+"/live");
+        response
+                .then()
+                .contentType(ContentType.JSON)
+                .log().body();
+
+        return response;
+    }
 }

@@ -4,10 +4,7 @@ import modules.client.MatchesClient;
 import io.restassured.response.Response;
 import pojo.create.match.CreateMatchRequestBody;
 import pojo.create.match.CreateMatchResponse;
-import pojo.get.Match.GetEditMatchDetailsResponse;
-import pojo.get.Match.GetMatchInfoResponse;
-import pojo.get.Match.GetOneMatchStatFootballResponse;
-import pojo.get.Match.GetOneMatch_FootballResponse;
+import pojo.get.Match.*;
 import pojo.getAll.matches.GetMyyMatchesResponse;
 import pojo.getAll.matches.GetRecommendedMatchesResponse;
 import pojo.update.match.EditMatchRequestBody;
@@ -131,4 +128,17 @@ public GetOneMatch_FootballResponse getOneMatchFootball()
         return getMyyMatchesResponse;
     }
 
+    public GetLiveMatchDetailsResponse getCurrentMatchDetailsService(String matchId) {
+        Response response=new MatchesClient().getCurrentMatchDetails(matchId);
+        int statusCode = response.getStatusCode();
+
+        long responseTime = response.timeIn(TimeUnit.MILLISECONDS);
+        GetLiveMatchDetailsResponse getLiveMatchDetailsResponse=response.as(GetLiveMatchDetailsResponse.class);
+        getLiveMatchDetailsResponse.setStatusCode(statusCode);
+        getLiveMatchDetailsResponse.setResponseTime(responseTime);
+        new AllureUtility().getResponseTime(responseTime);
+
+        return getLiveMatchDetailsResponse;
+
+    }
 }
