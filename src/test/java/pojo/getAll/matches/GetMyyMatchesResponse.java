@@ -110,6 +110,7 @@ public class GetMyyMatchesResponse {
     public static class MatchStatus{
         private String status;
         private String reason;
+        private String description;
     }
     @Getter
     public static class LogoOverlay

@@ -1,4 +1,4 @@
-package pojo.create.scoring;
+package pojo.create.scoring.toss;
 
 import lombok.Getter;
 

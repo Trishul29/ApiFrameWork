@@ -1,7 +1,9 @@
-package pojo.create.match;
+package pojo.create.scoring.registerball;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
+import pojo.create.scoring.registerball.RegisterBallRequestBody;
 
 import java.util.List;
 
@@ -21,6 +23,7 @@ public class RegisterBallResponse {
 
     private String error;
     @Getter
+    @JsonIgnoreProperties(ignoreUnknown = true)
     public static class Data
     {
         private Bowler bowler;
@@ -43,7 +46,7 @@ public class RegisterBallResponse {
 
         private String[] superOver;
 
-        private String dls;
+        private Object dls;
 
         private boolean followOn;
 
@@ -86,6 +89,7 @@ public class RegisterBallResponse {
         private int runs;
         private int maidenOvers;
         private float wickets;
+        private float overs;
     }
     @Getter
     public static class Teams{
@@ -95,7 +99,7 @@ public class RegisterBallResponse {
 
         private boolean winningTeam;
 
-        private boolean isVerified;
+        private String isVerified;
 
         private String name;
 
@@ -139,14 +143,16 @@ public class RegisterBallResponse {
     public static class MatchResultDetails
     {
 
-        private String unspecified;
+        private Object unspecified;
 
-        private String specified;
+        private Object specified;
     }
     @Getter
     public static class MatchStatus
     {
         private String status;
+        private String reason;
+        private String description;
     }
     @Getter
     public static class Striker

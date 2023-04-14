@@ -19,7 +19,6 @@ public class RosterClient {
                 .header("Authorization","Bearer "+bearerToken)
                 .pathParam("matchId",matchId)
                 .queryParam("filter","players")
-                .log().all(true)
                 .when()
                 .get(properties.getProperty("base_uri")+properties.getProperty("toss_basepath")+"/{matchId}"+properties.getProperty("playing_11_batsmen_roster"));
         response
@@ -36,7 +35,6 @@ return response;
                 .header("Authorization","Bearer "+bearerToken)
                 .pathParam("matchId",matchId)
                 .queryParam("filter","players")
-                .log().all(true)
                 .when()
                 .get(properties.getProperty("base_uri")+properties.getProperty("toss_basepath")+"/{matchId}"+properties.getProperty("playing_11_bowler_roster"));
         response
