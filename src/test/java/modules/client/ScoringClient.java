@@ -3,6 +3,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import pojo.create.scoring.batsman.SetCurrentBatsmanRequestBody;
 import pojo.create.scoring.bowler.SetCurrentBowlerRequestBody;
+import pojo.create.scoring.endinning.EndInningRequestBody;
 import pojo.create.scoring.over.SetChangeMatchOverRequestBody;
 import pojo.create.scoring.toss.CreateTossRequestBody;
 import pojo.create.scoring.registerball.RegisterBallRequestBody;
@@ -139,10 +140,23 @@ public class ScoringClient {
     }
 
 
+    public Response endInning(String matchId, EndInningRequestBody requestBody) {
+        Response response=given()
+                .header("Authorization","Bearer "+bearerToken)
+                .contentType(ContentType.JSON)
+                .pathParam("MatchId",matchId)
+                .queryParam("action","end")
+                .body(requestBody)
+                .log().all(true)
+                .when()
+                .post(properties.getProperty("base_uri")+properties.getProperty("toss_basepath")+"/{MatchId}"+"/inning");
+        response
+                .then()
+                .contentType(ContentType.JSON)
+                .log().body();
+        return response;
 
 
-
-
-
-
+    }
 }
+

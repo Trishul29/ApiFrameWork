@@ -8,6 +8,8 @@ import pojo.create.scoring.batsman.SetNewBatsMenRequestBody;
 import pojo.create.scoring.batsman.SetNewBatsMenResponse;
 import pojo.create.scoring.bowler.SetCurrentBowlerRequestBody;
 import pojo.create.scoring.bowler.SetCurrentBowlerResponse;
+import pojo.create.scoring.endinning.EndInningRequestBody;
+import pojo.create.scoring.endinning.EndInningResponse;
 import pojo.create.scoring.over.SetChangeMatchOverRequestBody;
 import pojo.create.scoring.over.SetChangeMatchOverResponse;
 import pojo.create.scoring.registerball.RegisterBallRequestBody;
@@ -104,4 +106,16 @@ public class ScoringService {
     }
 
 
+    public EndInningResponse endInningService(String matchId, EndInningRequestBody endInningRequestBody) {
+        Response response  = new ScoringClient().endInning(matchId,endInningRequestBody);
+        EndInningResponse endInningResponse =response.as(EndInningResponse.class);
+        int statusCode=response.statusCode();
+        long responseTime=  response.timeIn(TimeUnit.MILLISECONDS);
+        endInningResponse.setStatusCode(statusCode);
+        endInningResponse.setResponseTime(responseTime);
+        new AllureUtility().getResponseTime(responseTime);
+        return endInningResponse;
+
+    }
 }
+

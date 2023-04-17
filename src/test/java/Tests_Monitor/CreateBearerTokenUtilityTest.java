@@ -22,7 +22,7 @@ public  void getToken() throws FileNotFoundException {
                 .header("Accept", "application/json")
                 .header("Content-Type", "application/json")
                 .queryParam("key", "AIzaSyAPiKvVLzQf77Cf3IbGJJhsCfQhefPi2p0")
-                .body("{\"email\":\"troops@google.com\",\"password\":\"troops\",\"returnSecureToken\":true}");
+                .body("{\"email\":\"trishul.giri@myysports.com\",\"password\":\"david@29\",\"returnSecureToken\":true}");
 
         Response response = request.post("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword");
         String responseBody = response.getBody().asString();

@@ -64,7 +64,7 @@ test {
     useTestNG() {
 
 
-       // beforeSuite {'Tests_Monitor.CreateBearerTokenUtilityTest'}
+        beforeSuite {'Tests_Monitor.CreateBearerTokenUtilityTest'}
 
     }
 }

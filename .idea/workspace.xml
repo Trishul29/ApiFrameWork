@@ -4,31 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="Added client,service,testcases for GetLiveMatchDetails,RegisterBall">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/batsman/SetCurrentBatsmanRequestBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/batsman/SetCurrentBatsmanResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/batsman/SetNewBatsMenRequestBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/batsman/SetNewBatsMenResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/bowler/SetCurrentBowlerRequestBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/bowler/SetCurrentBowlerResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/over/SetChangeMatchOverRequestBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/over/SetChangeMatchOverResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/registerball/RegisterBallRequestBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/score/StartScoringResponse.java" afterDir="false" />
+    <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="Added client,service,testcases for StartScoring,SetNewBatsMan,SetNewBowler,SetCurrentBowler,SetCurrentBatsman,ChangeMatchOver,">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/endinning/EndInningRequestBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/endinning/EndInningResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spec.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spec.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test_create/CreateMatchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_create/CreateMatchTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests_End_To_End/MatchScoringEndToEndTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_End_To_End/MatchScoringEndToEndTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/MatchesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/MatchesClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/RegisterBallClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/RosterClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/RosterClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Monitor/CreateBearerTokenUtilityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/CreateBearerTokenUtilityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Update/EditMatchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Update/EditMatchTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/ScoringClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/ScoringClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/service/RegisterBallService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/service/RegisterBallService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/modules/service/ScoringService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/service/ScoringService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/match/RegisterBallRequestBody.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/match/RegisterBallResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/registerball/RegisterBallResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/CreateTossRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/toss/CreateTossRequestBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/CreateTossResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/toss/CreateTossResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/matches/GetMyyMatchesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/matches/GetMyyMatchesResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/batsman/SetNewBatsMenRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/batsman/SetNewBatsMenRequestBody.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +97,60 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.MatchScoringEndToEndTest">
+    <configuration name="EditMatchTest.shouldEditMatch" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests_Update.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests_Update" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Update.EditMatchTest" />
+      <option name="METHOD_NAME" value="shouldEditMatch" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetToken.getBearerToken" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="token_utility.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="token_utility" />
+      <option name="MAIN_CLASS_NAME" value="token_utility.GetToken" />
+      <option name="METHOD_NAME" value="getBearerToken" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GlobalSearchTest.shouldGetSearchResults" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests_Monitor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests_Monitor" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GlobalSearchTest" />
+      <option name="METHOD_NAME" value="shouldGetSearchResults" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MatchScoringEndToEndTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyySportsAPIAutoamtion.test" />
       <extension name="coverage">
@@ -126,7 +168,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MatchScoringEndToEndTest.tc_03_getBatsmenFromRoster" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MatchScoringEndToEndTest.tc_01_getMatchIdAndTeamId" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyySportsAPIAutoamtion.test" />
       <extension name="coverage">
         <pattern>
@@ -136,61 +178,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests_End_To_End" />
       <option name="MAIN_CLASS_NAME" value="Tests_End_To_End.MatchScoringEndToEndTest" />
-      <option name="METHOD_NAME" value="tc_03_getBatsmenFromRoster" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MatchScoringEndToEndTest.tc_08_startScoring" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MyySportsAPIAutoamtion.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests_End_To_End.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests_End_To_End" />
-      <option name="MAIN_CLASS_NAME" value="Tests_End_To_End.MatchScoringEndToEndTest" />
-      <option name="METHOD_NAME" value="tc_08_startScoring" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MatchScoringEndToEndTest.tc_09_ShouldGetCurrentMatchDetails" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MyySportsAPIAutoamtion.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests_End_To_End.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests_End_To_End" />
-      <option name="MAIN_CLASS_NAME" value="Tests_End_To_End.MatchScoringEndToEndTest" />
-      <option name="METHOD_NAME" value="tc_09_ShouldGetCurrentMatchDetails" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MatchScoringEndToEndTest.tc_10_shouldRegisterBall" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MyySportsAPIAutoamtion.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests_End_To_End.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests_End_To_End" />
-      <option name="MAIN_CLASS_NAME" value="Tests_End_To_End.MatchScoringEndToEndTest" />
-      <option name="METHOD_NAME" value="tc_10_shouldRegisterBall" />
+      <option name="METHOD_NAME" value="tc_01_getMatchIdAndTeamId" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -201,10 +189,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.MatchScoringEndToEndTest" />
-        <item itemvalue="TestNG.MatchScoringEndToEndTest.tc_09_ShouldGetCurrentMatchDetails" />
-        <item itemvalue="TestNG.MatchScoringEndToEndTest.tc_10_shouldRegisterBall" />
-        <item itemvalue="TestNG.MatchScoringEndToEndTest.tc_03_getBatsmenFromRoster" />
-        <item itemvalue="TestNG.MatchScoringEndToEndTest.tc_08_startScoring" />
+        <item itemvalue="TestNG.MatchScoringEndToEndTest.tc_01_getMatchIdAndTeamId" />
+        <item itemvalue="TestNG.GetToken.getBearerToken" />
+        <item itemvalue="TestNG.EditMatchTest.shouldEditMatch" />
+        <item itemvalue="TestNG.GlobalSearchTest.shouldGetSearchResults" />
       </list>
     </recent_temporary>
   </component>
@@ -350,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681395694136</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added client,service,testcases for StartScoring,SetNewBatsMan,SetNewBowler,SetCurrentBowler,SetCurrentBatsman,ChangeMatchOver,">
+      <created>1681478598403</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1681478598403</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -384,7 +379,8 @@
     <MESSAGE value="Added client,service,testcases for GetAllShowsListTest,LikePostTest,UpdateUserProfileTes and modified CreatePostTest,CreateReplyPost" />
     <MESSAGE value="Added client,service,testcases for MatchScoringEndToEndTest.java" />
     <MESSAGE value="Added client,service,testcases for GetLiveMatchDetails,RegisterBall" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added client,service,testcases for GetLiveMatchDetails,RegisterBall" />
+    <MESSAGE value="Added client,service,testcases for StartScoring,SetNewBatsMan,SetNewBowler,SetCurrentBowler,SetCurrentBatsman,ChangeMatchOver," />
+    <option name="LAST_COMMIT_MESSAGE" value="Added client,service,testcases for StartScoring,SetNewBatsMan,SetNewBowler,SetCurrentBowler,SetCurrentBatsman,ChangeMatchOver," />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -393,6 +389,16 @@
           <url>file://$PROJECT_DIR$/src/test/java/Tests_Monitor/GetMyyMatchesTest.java</url>
           <line>19</line>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/Tests_End_To_End/MatchScoringEndToEndTest.java</url>
+          <line>208</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/Tests_End_To_End/MatchScoringEndToEndTest.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

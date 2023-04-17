@@ -21,8 +21,8 @@ public class SetNewBatsMenRequestBody {
             this.striker = striker;
             return this;
         }
-        public Builder setNonStriker(String nonstriker) {
-            this.nonStriker = nonstriker;
+        public Builder setNonStriker(String nonStriker) {
+            this.nonStriker = nonStriker;
             return this;
         }
         public SetNewBatsMenRequestBody build()
