@@ -39,8 +39,9 @@ return response;
                 .get(properties.getProperty("base_uri")+properties.getProperty("toss_basepath")+"/{matchId}"+properties.getProperty("playing_11_bowler_roster"));
         response
                 .then()
-                .log().all(true)
-               .contentType(ContentType.JSON);
+                .contentType(ContentType.JSON)
+                .log().all(true);
+
 
 
         return response;

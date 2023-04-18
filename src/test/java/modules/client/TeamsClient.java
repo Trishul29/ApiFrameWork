@@ -32,7 +32,7 @@ public class TeamsClient {
 
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
-                .queryParam("page",20)
+                .queryParam("page",2)
                 .log().uri()
                 .when()
                 .get(properties.getProperty("base_uri")+properties.getProperty("basepath_getall_team"));

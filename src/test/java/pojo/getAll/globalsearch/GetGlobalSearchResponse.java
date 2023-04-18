@@ -38,7 +38,8 @@ public class GetGlobalSearchResponse {
 
     }
 @Getter
-@JsonIgnoreProperties(ignoreUnknown = true,value = {"team"})
+@Setter
+@JsonIgnoreProperties(ignoreUnknown = true)
 
     public static class Value{
     private String firstName;
@@ -56,6 +57,16 @@ public class GetGlobalSearchResponse {
     private String profileImage;
 
     private String email;
+    private List<Team> team;
+    private int playerCount;
+
+    private String name;
+    @Getter
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    public static class Team
+    {
+
+    }
 
 
 

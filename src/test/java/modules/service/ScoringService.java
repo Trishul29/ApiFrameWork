@@ -15,6 +15,8 @@ import pojo.create.scoring.over.SetChangeMatchOverResponse;
 import pojo.create.scoring.registerball.RegisterBallRequestBody;
 import pojo.create.scoring.registerball.RegisterBallResponse;
 import pojo.create.scoring.score.StartScoringResponse;
+import pojo.create.scoring.secondinning.StartSecondInningRequestBody;
+import pojo.create.scoring.secondinning.StartSecondInningResponse;
 import pojo.create.scoring.toss.CreateTossRequestBody;
 import pojo.create.scoring.toss.CreateTossResponse;
 import util.AllureUtility;
@@ -65,6 +67,7 @@ public class ScoringService {
         long responseTime=  response.timeIn(TimeUnit.MILLISECONDS);
         setChangeMatchOverResponse.setStatusCode(statusCode);
         setChangeMatchOverResponse.setResponseTime(responseTime);
+
         new AllureUtility().getResponseTime(responseTime);
         return setChangeMatchOverResponse;
     }
@@ -116,6 +119,17 @@ public class ScoringService {
         new AllureUtility().getResponseTime(responseTime);
         return endInningResponse;
 
+    }
+
+    public StartSecondInningResponse ChangeInningService(String matchId, StartSecondInningRequestBody startSecondInningRequestBody) {
+        Response response  = new ScoringClient().changeInning(matchId,startSecondInningRequestBody);
+        StartSecondInningResponse startSecondInningResponse =response.as(StartSecondInningResponse.class);
+        int statusCode=response.statusCode();
+        long responseTime=  response.timeIn(TimeUnit.MILLISECONDS);
+        startSecondInningResponse.setStatusCode(statusCode);
+        startSecondInningResponse.setResponseTime(responseTime);
+        new AllureUtility().getResponseTime(responseTime);
+        return startSecondInningResponse;
     }
 }
 

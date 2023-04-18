@@ -1,9 +1,8 @@
 package pojo.create.scoring.registerball;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
-import pojo.create.scoring.registerball.RegisterBallRequestBody;
+
 
 import java.util.List;
 
@@ -138,6 +137,7 @@ public class RegisterBallResponse {
     {
 
         private MatchResultDetails matchResultDetails;
+        private String result;
     }
     @Getter
     public static class MatchResultDetails
@@ -217,6 +217,14 @@ public static class NonStriker
         assertTrue(this.success,"Success Failure");
         assertEquals(this.getStatusCode(),200);
         assertTrue(this.responseTime<=3000,"Taking More than 3 Seconds");
+       // assertNotNull(this.getData().getMatchResult().result,"Match Result Not present");
 
+    }
+    public void assertMatchEndResult(RegisterBallRequestBody registerBallRequestBody)
+    {
+        assertTrue(this.success,"Success Failure");
+        assertEquals(this.getStatusCode(),200);
+        assertTrue(this.responseTime<=3000,"Taking More than 3 Seconds");
+        assertNotNull(this.getData().getMatchResult().result,"Match Result Not present");
     }
 }
