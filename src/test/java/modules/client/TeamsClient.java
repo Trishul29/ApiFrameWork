@@ -16,10 +16,10 @@ public class TeamsClient {
 
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
-                .pathParam("TeamId",id)
+                .pathParam("teamId",id)
                 .log().uri()
                 .when()
-                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_get_team")+"/{TeamId}");
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_get_team")+"/{teamId}");
         response
                 .then()
                 .contentType(ContentType.JSON)

@@ -15,7 +15,7 @@ public class UsersClient {
 
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
-                .queryParam("UserId",uid)
+                .queryParam("userId",uid)
                 .log().uri()
                 .when()
                 .get(properties.getProperty("base_uri")+properties.getProperty("basepathuser"));

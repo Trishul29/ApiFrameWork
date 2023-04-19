@@ -4,6 +4,9 @@ import com.github.javafaker.Faker;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @Getter
 public class CreateMatchRequestBody {
     private int teamSize;
@@ -169,12 +172,15 @@ public class CreateMatchRequestBody {
         private String[] managers;
 
         public Builder() {
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+            Date date = new Date();
+            String formattedDate = formatter.format(date);
 
             this.totalOvers = Faker.instance().number().numberBetween(1,10);
             this.overPerBowler =Faker.instance().number().numberBetween(1,20);
             this.tournamentId =null;
             this.ballType =0;
-            this.startsAt = "2022-04-22 04:30:00.000";
+            this.startsAt = formattedDate;
             this.teamSize =Faker.instance().number().numberBetween(1,10);
             this.matchType = 0;
             this.managers=new String[]{"625d0fddddc6028c1761dda5"};
