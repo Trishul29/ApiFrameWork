@@ -4,19 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="Added client,service,testcases for tc_00_createMatchTest,setPlayers">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Update/UpdateRosterBeforeTossTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/update/roster/UpdateRosterBeforeMatchRequestBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/update/roster/UpdateRosterBeforeMatchResponse.java" afterDir="false" />
+    <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="Added client,service,testcases for UpdateRosterBeforeTossTest work in progress">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Update/GetTeamPlayerAccordingToGameTypeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Team/GetTeamPlayerAccordingToGameTypeResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spec.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spec.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Monitor/CreateBearerTokenUtilityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/CreateBearerTokenUtilityTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Update/EditMatchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Update/EditMatchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Update/UpdateRosterBeforeTossTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Update/UpdateRosterBeforeTossTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/RosterClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/RosterClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/TeamsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/TeamsClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/UsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/UsersClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/service/RosterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/service/RosterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/match/CreateMatchRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/match/CreateMatchRequestBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/service/TeamsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/service/TeamsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/update/roster/UpdateRosterBeforeMatchRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/update/roster/UpdateRosterBeforeMatchRequestBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/update/roster/UpdateRosterBeforeMatchResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/update/roster/UpdateRosterBeforeMatchResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,24 +94,7 @@
       <recent name="util" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UpdateRosterBeforeTossTest">
-    <configuration name="GetMatchHighlightsTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MyySportsAPIAutoamtion.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests_Monitor.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests_Monitor" />
-      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetMatchHighlightsTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.GetTeamPlayerAccordingToGameTypeTest.shouldGetTeamPlayerAccordingToGameType">
     <configuration name="GetMatchScoreCardTest.shouldGetMatchScoreCard" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyySportsAPIAutoamtion.test" />
       <extension name="coverage">
@@ -143,6 +124,24 @@
       <option name="PACKAGE_NAME" value="Tests_Monitor" />
       <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetPointsOfTournamentTest" />
       <option name="METHOD_NAME" value="shouldGetPointOfTournament" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetTeamPlayerAccordingToGameTypeTest.shouldGetTeamPlayerAccordingToGameType" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests_Update.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests_Update" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Update.GetTeamPlayerAccordingToGameTypeTest" />
+      <option name="METHOD_NAME" value="shouldGetTeamPlayerAccordingToGameType" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -187,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UpdateRosterBeforeTossTest" />
+        <item itemvalue="TestNG.GetTeamPlayerAccordingToGameTypeTest.shouldGetTeamPlayerAccordingToGameType" />
         <item itemvalue="TestNG.UpdateRosterBeforeTossTest.shouldUpdateRosterBeforeToss" />
+        <item itemvalue="TestNG.UpdateRosterBeforeTossTest" />
         <item itemvalue="TestNG.GetMatchScoreCardTest.shouldGetMatchScoreCard" />
         <item itemvalue="TestNG.GetPointsOfTournamentTest.shouldGetPointOfTournament" />
-        <item itemvalue="TestNG.GetMatchHighlightsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -358,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681823740463</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Added client,service,testcases for UpdateRosterBeforeTossTest work in progress">
+      <created>1681911390615</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1681911390615</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -395,7 +401,8 @@
     <MESSAGE value="Added client,service,testcases for StartScoring,SetNewBatsMan,SetNewBowler,SetCurrentBowler,SetCurrentBatsman,ChangeMatchOver," />
     <MESSAGE value="Added client,service,testcases for tc_12_shouldEndInning,tc_13_scoreSecondInning" />
     <MESSAGE value="Added client,service,testcases for tc_00_createMatchTest,setPlayers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added client,service,testcases for tc_00_createMatchTest,setPlayers" />
+    <MESSAGE value="Added client,service,testcases for UpdateRosterBeforeTossTest work in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added client,service,testcases for UpdateRosterBeforeTossTest work in progress" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

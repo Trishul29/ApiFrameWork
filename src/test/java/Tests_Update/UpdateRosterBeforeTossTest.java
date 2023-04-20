@@ -114,16 +114,10 @@ public class UpdateRosterBeforeTossTest {
                 1,
                 false,
                 new UpdateRosterBeforeMatchRequestBody.User(
-                        "Shiva",
-                        "",
-                        true,
-                        "",
-                        new UpdateRosterBeforeMatchRequestBody.Location(""),
-                        "",
-                        "6322e05bd84497d62f9eeee9",
-                        "6322e05bd84497d62f9eeee9",
-                        "",
-                        ""
+                        "642a848f8979bf55baf9b0fb",
+                        "642a848f8979bf55baf9b0fb",
+                        "1"
+
                 )
         ), new UpdateRosterBeforeMatchRequestBody.RosterData(
                 true,
@@ -132,16 +126,9 @@ public class UpdateRosterBeforeTossTest {
                 1,
                 false,
                 new UpdateRosterBeforeMatchRequestBody.User(
-                        "",
-                        "",
-                        true,
-                        "",
-                        new UpdateRosterBeforeMatchRequestBody.Location(""),
-                        "",
-                        "",
-                        "",
-                        "",
-                        ""
+                        "632dd01cae18002d70e0ac97",
+                        "632dd01cae18002d70e0ac97",
+                        "1"
                 )
         ), new UpdateRosterBeforeMatchRequestBody.RosterData(
                 true,
@@ -150,16 +137,10 @@ public class UpdateRosterBeforeTossTest {
                 1,
                 false,
                 new UpdateRosterBeforeMatchRequestBody.User(
-                        "",
-                        "",
-                        false,
-                        "",
-                        new UpdateRosterBeforeMatchRequestBody.Location(""),
-                        "",
-                        "",
-                        "",
-                        "",
-                        ""
+                        "632ab363f6519b0179d00520",
+                        "632ab363f6519b0179d00520",
+                        "1"
+
                 )
         ),
                   new UpdateRosterBeforeMatchRequestBody.RosterData(
@@ -169,16 +150,10 @@ public class UpdateRosterBeforeTossTest {
                         1,
                         false,
                     new UpdateRosterBeforeMatchRequestBody.User(
-                                "",
-                                "",
-                                false,
-                                "",
-                    new UpdateRosterBeforeMatchRequestBody.Location(""),
-                                "",
-                                "",
-                                "",
-                                "",
-                                ""
+                                "632858599f934f7b1359ddd2",
+                                "632858599f934f7b1359ddd2",
+                                "1"
+
                         )
                 )};
     }

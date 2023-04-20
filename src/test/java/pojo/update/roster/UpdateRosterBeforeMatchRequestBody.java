@@ -42,48 +42,48 @@ public class UpdateRosterBeforeMatchRequestBody {
     @Getter
     @Setter
     public static class User {
-        private String firstName;
+       // private String firstName;
 
-        private String lastName;
+      //  private String lastName;
 
-        private boolean isVerified;
+      //  private boolean isVerified;
 
-        private String mobileNumber;
+       // private String mobileNumber;
 
-        private Location location;
+      //  private Location location;
 
-        private String profileImage;
+      //  private String profileImage;
 
         private String _id;
 
         private String id;
 
-        private String email;
+     //   private String email;
 
         private String playingRole;
-        public User(String firstName, String lastName, boolean isVerified, String mobileNumber, Location location, String profileImage, String _id, String id, String email, String playingRole) {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.isVerified = isVerified;
-            this.mobileNumber = mobileNumber;
-            this.location = location;
-            this.profileImage = profileImage;
+        public User(  String _id, String id,  String playingRole) {
+          //  this.firstName = firstName;
+           // this.lastName = lastName;
+           // this.isVerified = isVerified;
+          //  this.mobileNumber = mobileNumber;
+           // this.location = location;
+          //  this.profileImage = profileImage;
             this._id = _id;
             this.id = id;
-            this.email = email;
+          //  this.email = email;
             this.playingRole = playingRole;
         }
     }
 
-    @Getter
-    @Setter
-    public static class Location {
-        private String city;
-
-        public Location(String city) {
-            this.city = city;
-        }
-    }
+//    @Getter
+//    @Setter
+//    public static class Location {
+//        private String city;
+//
+//        public Location(String city) {
+//            this.city = city;
+//        }
+//    }
 
     public UpdateRosterBeforeMatchRequestBody(Builder builder) {
         this.teamId = builder.teamId;
@@ -121,13 +121,6 @@ public class UpdateRosterBeforeMatchRequestBody {
 
     }
 
-    public RosterData[] settingRosterData(List<RosterData> rosterData) {
-        this.rosterData = (RosterData[]) rosterData.toArray();
-        return this.rosterData;
-    }
 
-    public User[] settingUserData(User... users) {
-        return users;
-    }
 
 }

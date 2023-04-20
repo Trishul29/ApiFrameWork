@@ -61,4 +61,22 @@ public class TeamsClient {
                 return response;
     }
 
+    public Response GetTeamPlayerAccordingToGameTypeClient()
+    {
+        Response response = given()
+                .header("Authorization","Bearer "+bearerToken)
+                .queryParam("matchId",properties.getProperty("matchid_getplayeraccordingtogametype"))
+                .pathParam("gameType","0")
+                .pathParam("teamId",properties.getProperty("teamid_getplayeraccordingtogametype"))
+                .log().uri()
+                .when()
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_getall_team")+"/{gameType}"+"/{teamId}"+"/players");
+        response
+                .then()
+                .contentType(ContentType.JSON)
+                .log().body();
+        return response;
+
+    }
+
 }

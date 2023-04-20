@@ -2,9 +2,6 @@ package pojo.update.roster;
 
 import lombok.Getter;
 import lombok.Setter;
-import pojo.update.match.EditMatchRequestBody;
-import pojo.update.match.EditMatchResponse;
-
 import static org.testng.Assert.*;
 import static org.testng.Assert.assertEquals;
 
@@ -34,7 +31,6 @@ public class UpdateRosterBeforeMatchResponse {
         assertNotNull(this.getData().getStatus());
         //assertEquals(this.getData().getMessage(),"Match edited successfully","Message not Present");
     }
-
 
 
 

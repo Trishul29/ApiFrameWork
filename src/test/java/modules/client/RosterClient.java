@@ -52,6 +52,7 @@ return response;
     public Response updateRosterBeforeMatch(UpdateRosterBeforeMatchRequestBody requestBody) {
         Response response=given()
                 .header("Authorization","Bearer "+bearerToken)
+                .contentType(ContentType.JSON)
                 .pathParam("gameType",0)
                 .body(requestBody)
                 .log().all(true)
