@@ -2,6 +2,9 @@ package pojo.create.post;
 
 import lombok.Getter;
 import lombok.Setter;
+import util.FileUtility;
+
+import java.util.Properties;
 
 @Getter
 public class CreateReplyPostRequestBody {
@@ -22,7 +25,8 @@ public class CreateReplyPostRequestBody {
         this.content=builder.content;
     }
     public static class Builder {
-
+        public   String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
+        public Properties properties= FileUtility.loadProperties(propertyPath);
         private String author;
 
         private String parentPost;
@@ -33,10 +37,11 @@ public class CreateReplyPostRequestBody {
 
 
         public Builder() {
-            this.author = "622ce6ad9b5e5ee6c1ebe468";
-            this.parentPost = "63328fa076da953898166b49";
+            this.author =  properties.getProperty("author_id");
+            this.parentPost = properties.getProperty("parentPost_id");
             this.resourceName = "UserSports";
             this.content = "My User reply Post";
+
         }
         public Builder setResourceName(String resourceName)
         {

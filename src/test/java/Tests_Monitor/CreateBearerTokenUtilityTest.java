@@ -4,6 +4,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+import util.DatabaseUtility;
 
 import java.io.*;
 import java.util.LinkedHashMap;
@@ -12,8 +13,11 @@ import java.util.Properties;
 public class CreateBearerTokenUtilityTest {
 
 @Test
-public  void getToken() throws FileNotFoundException {
+public  void getToken() throws IOException {
      String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
+    DatabaseUtility databaseUtility=new DatabaseUtility();
+    databaseUtility.retrieveDataAndStore();
+
 
 
     try {
@@ -45,6 +49,7 @@ public  void getToken() throws FileNotFoundException {
         // Modify the properties
         properties.put("bearerToken", token);
 
+
         // Write the properties back to the file
         try (OutputStream output = new FileOutputStream(propertyPath)) {
             Properties props = new Properties();
@@ -59,8 +64,9 @@ public  void getToken() throws FileNotFoundException {
     finally {
       return;
     }
-    }
-}
+    }}
+
+
 
 
 

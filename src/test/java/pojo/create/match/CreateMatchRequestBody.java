@@ -3,6 +3,7 @@ package pojo.create.match;
 import com.github.javafaker.Faker;
 import lombok.Getter;
 import lombok.Setter;
+import pojo.get.Match.GetEditMatchDetailsResponse;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -176,14 +177,19 @@ public class CreateMatchRequestBody {
             Date date = new Date();
             String formattedDate = formatter.format(date);
 
-            this.totalOvers = Faker.instance().number().numberBetween(1,10);
+            this.totalOvers = Faker.instance().number().numberBetween(5,50);
             this.overPerBowler =Faker.instance().number().numberBetween(1,20);
             this.tournamentId =null;
             this.ballType =0;
             this.startsAt = formattedDate;
-            this.teamSize =Faker.instance().number().numberBetween(1,10);
+            this.teamSize =Faker.instance().number().numberBetween(4,10);
             this.matchType = 0;
-            this.managers=new String[]{"625d0fddddc6028c1761dda5"};
+            // this.managers=new String[]{"625d0fddddc6028c1761dda5"};
+        }
+        public Builder setManager(String manager[])
+        {
+            this.managers=manager;
+            return this;
         }
         public Builder setMatchVenue(Address address,  GroundName groundName,String latitude, String longitude)
         {

@@ -2,6 +2,9 @@ package pojo.update.tournament;
 
 import lombok.Getter;
 import lombok.Setter;
+import util.FileUtility;
+
+import java.util.Properties;
 
 @Getter
 public class EditTournamentRequestBody {
@@ -48,6 +51,8 @@ public class EditTournamentRequestBody {
     }
 
     public static class Builder{
+        public   String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
+        public Properties properties= FileUtility.loadProperties(propertyPath);
         private int gameType;
         private int matchType;
         private String name;
@@ -77,7 +82,7 @@ public class EditTournamentRequestBody {
             this.startsAt="2023-03-28T05:30:00.000+05:30";
             this.endsAt="2023-03-29T05:30:00.000+05:30";
             this.logo="https://d14m4xvjlq5ouf.cloudfront.net/images/TournamentProfile.jpg";
-            this.managers=new String[]{"6422e6a670399f35b4765d3c"};
+            this.managers=new String[]{properties.getProperty("manager_id")};
 
         }
         public Builder setTournamentStatus(String status)

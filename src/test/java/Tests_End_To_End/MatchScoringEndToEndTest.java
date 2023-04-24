@@ -6,6 +6,7 @@ import lombok.Setter;
 import modules.service.*;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pojo.create.match.CreateMatchRequestBody;
 import pojo.create.match.CreateMatchResponse;
@@ -37,15 +38,16 @@ import java.util.*;
 @Getter
 @Setter
 public class MatchScoringEndToEndTest {
+    public String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
+    public Properties properties = FileUtility.loadProperties(propertyPath);
+
     SearchService searchService;
     MatchesService matchesService;
     TeamsService teamsService;
     ScoringService scoringService;
     RosterService rosterService;
-
     RegisterBallService registerBallService;
-    public String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
-    public Properties properties = FileUtility.loadProperties(propertyPath);
+
     String scorer_id = properties.getProperty("scorer_id");
     String manager_id = properties.getProperty("manager_id");
     String streamer_id = properties.getProperty("streamer_id");
@@ -64,7 +66,7 @@ public class MatchScoringEndToEndTest {
     CreateMatchRequestBody.RosterDetails[] rosterDetails1;
 
 
-    @BeforeClass
+    @BeforeTest
     public void beforeClass() {
         searchService = new SearchService();
         matchesService = new MatchesService();
@@ -76,18 +78,17 @@ public class MatchScoringEndToEndTest {
 
     }
 
-    @BeforeMethod
+    @BeforeClass
     public void setPlayers() {
         String team_name_1 = "RAX  Mumbai Indians";
         String team_name_2 = "RAX  Punjab Kings";
         //int count = 0;
         GetGlobalSearchResponse getGlobalSearchResponse = searchService.getSearchByKeyword();
         for (GetGlobalSearchResponse.Data data : getGlobalSearchResponse.getData()) {
-           if (data.getType().equalsIgnoreCase("Team"))
-            {
+            if (data.getType().equalsIgnoreCase("Team")) {
                 for (GetGlobalSearchResponse.Value value : data.getValue()) {
                     if (value.getName().equalsIgnoreCase(team_name_1)) {
-                        System.out.println("name bolte"+value.getName());
+                        System.out.println("name bolte" + value.getName());
                         setTeam_one_id(value.getId());
                     } else if (value.getName().equalsIgnoreCase(team_name_2)) {
                         setTeam_two_id(value.getId());
@@ -112,22 +113,23 @@ public class MatchScoringEndToEndTest {
         rosterDetails1[2] = new CreateMatchRequestBody.RosterDetails(false, false, false, "632ab363f6519b0179d00520");
         rosterDetails1[3] = new CreateMatchRequestBody.RosterDetails(false, false, false, "632858599f934f7b1359ddd2");
         rosterDetails1[4] = new CreateMatchRequestBody.RosterDetails(true, false, false, "6322e05bd84497d62f9eeee9");
+
     }
 
 
     @Test
     public void tc_00_createMatchTest() {
-        CreateMatchRequestBody createMatchRequestBody = new CreateMatchRequestBody.Builder()
-                .setMatchVenue(new CreateMatchRequestBody.Address(Faker.instance().regexify("[A-Z0-9_-]{12}"), Faker.instance(new Locale("en_IND")).address().cityName(), Faker.instance(new Locale("en_IND")).address().country()),
-                        new CreateMatchRequestBody.GroundName(Faker.instance().regexify("[A-Z0-9_-]{20}"), Faker.instance(new Locale("en_IND")).address().streetName()), Faker.instance(new Locale("en_IND")).address().latitude(), Faker.instance(new Locale("en_IND")).address().longitude())
-                .setOfficialsId("6392590e8c49221ec9d39c4c", "639258b6344f460d4a50b030", "642a848f8979bf55baf9b0fb", "642a848f8979bf55baf9b0fb", "6392589fc4e600390fce3821", "639258169ae496b37793785d")
+
+        CreateMatchRequestBody createMatchRequestBody = new CreateMatchRequestBody.Builder().setManager(new String[]{properties.getProperty("manager_id")})
+                .setMatchVenue(new CreateMatchRequestBody.Address(Faker.instance().regexify("[A-Z0-9_-]{12}"), Faker.instance(new Locale("en_IND")).address().city(), Faker.instance(new Locale("en_IND")).address().country()), new CreateMatchRequestBody.GroundName(Faker.instance().regexify("[A-Z0-9_-]{20}"), Faker.instance(new Locale("en_IND")).country().name()), "28.6862738", "77.2217831")
+                .setOfficialsId(properties.getProperty("umpire_id"), properties.getProperty("umpire_id"), properties.getProperty("scorer_id"), "", "", properties.getProperty("streamer_id"))
                 .setTeamOne(getTeam_one_id(), false, rosterDetails)
                 .setTeamTwo(getTeam_two_id(), false, rosterDetails1)
                 .build();
 
         CreateMatchResponse createMatchResponse = new MatchesService().createMatch(createMatchRequestBody);
         //Setting Match Id
-       setMatch_id(createMatchResponse.getData().getMatchId());
+        setMatch_id(createMatchResponse.getData().getMatchId());
         createMatchResponse.assertMatchDetails(createMatchRequestBody);
     }
 
@@ -236,8 +238,8 @@ public class MatchScoringEndToEndTest {
     public void tc_10_shouldRegisterBall_FirstInning() {
         int i = 1;
         while (i <= 6) {
-            int runScored = Faker.instance().number().numberBetween(1,6);
-            System.out.println("faker ke run"+runScored);
+            int runScored = Faker.instance().number().numberBetween(1, 6);
+            System.out.println("faker ke run" + runScored);
             int dismissalType = 0;
             int runtype = 0;
             if (runScored == 4) {
@@ -261,9 +263,9 @@ public class MatchScoringEndToEndTest {
             }
         }
     }
+
     @Test
-    public void tc_11_changeOver()
-    {
+    public void tc_11_changeOver() {
         SetCurrentBowlerRequestBody setCurrentBowlerRequestBody = new SetCurrentBowlerRequestBody.Builder().setBowler(this.getNextBowler()).build();
         SetCurrentBowlerResponse setCurrentBowlerResponse = new ScoringService().setCurrentBowler(this.getMatch_id(), setCurrentBowlerRequestBody);
         SetChangeMatchOverRequestBody setChangeMatchOverRequestBody = new SetChangeMatchOverRequestBody.Builder().setBowler(this.getNextBowler()).build();

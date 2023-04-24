@@ -2,11 +2,15 @@ package pojo.create.post;
 import com.github.javafaker.Faker;
 import lombok.Getter;
 import lombok.Setter;
+import util.FileUtility;
 
 import java.util.Locale;
+import java.util.Properties;
 
 @Getter
 public class CreatePostRequestBody {
+
+
     private String author;
     private String resourceName;
     private String content;
@@ -20,6 +24,8 @@ public class CreatePostRequestBody {
        this.videos=builder.videos;
     }
      public static class Builder {
+         public   String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
+         public Properties properties= FileUtility.loadProperties(propertyPath);
 
          private String author;
 
@@ -29,8 +35,8 @@ public class CreatePostRequestBody {
 
 
          public Builder() {
-             this.author = "62ef54b4fd4b8b60d8aa0279";
-             this.videos=new String[]{"637c7e01238d5418d989f75d"};
+             this.author = properties.getProperty("author_id");
+             this.videos=new String[]{properties.getProperty("videosId")};
              this.content = Faker.instance(new Locale("en_IND")).esports().game();
          }
          public  Builder setResourceName(String resourceName)

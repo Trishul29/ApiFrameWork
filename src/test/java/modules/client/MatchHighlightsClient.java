@@ -11,7 +11,7 @@ public class MatchHighlightsClient {
     String bearerToken=properties.getProperty("bearerToken");
     public Response getHighlights() {
 
-        String id=properties.getProperty("matchId");
+        String id=properties.getProperty("HighlightmatchId");
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
                 .pathParam("matchId",id)

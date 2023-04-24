@@ -5,10 +5,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pojo.create.match.CreateMatchRequestBody;
 import pojo.create.match.CreateMatchResponse;
+import util.FileUtility;
 
 import java.util.Locale;
+import java.util.Properties;
 
 public class CreateMatchTest {
+    public   String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
+    public Properties properties= FileUtility.loadProperties(propertyPath);
 private   CreateMatchRequestBody.RosterDetails[] rosterDetails;
 private   CreateMatchRequestBody.RosterDetails[] rosterDetails1;
     @BeforeMethod
@@ -29,12 +33,12 @@ private   CreateMatchRequestBody.RosterDetails[] rosterDetails1;
 
     {
 
-        CreateMatchRequestBody createMatchRequestBody = new CreateMatchRequestBody.Builder()
+        CreateMatchRequestBody createMatchRequestBody = new CreateMatchRequestBody.Builder().setManager(new String[]{properties.getProperty("manager_id")})
             .setMatchVenue(new CreateMatchRequestBody.Address(Faker.instance().regexify("[A-Z0-9_-]{12}"), Faker.instance(new Locale("en_IND")).address().city(), Faker.instance(new Locale("en_IND")).address().country()),
                     new CreateMatchRequestBody.GroundName(Faker.instance().regexify("[A-Z0-9_-]{20}"),Faker.instance(new Locale("en_IND")).country().name()),"28.6862738","77.2217831")
-                .setOfficialsId("6392590e8c49221ec9d39c4c","639258b6344f460d4a50b030","639315474d92fd1e0846a1fd","6392592ac4e600390fce3834","6392589fc4e600390fce3821","639258169ae496b37793785d")
-                .setTeamOne("639fffad75e9ab0280d666f0",false,rosterDetails)
-                .setTeamTwo("63931a341017665e80fe1722",false,rosterDetails1)
+                .setOfficialsId(properties.getProperty("umpire_id"),properties.getProperty("umpire_id"),properties.getProperty("scorer_id"),"","",properties.getProperty("streamer_id"))
+                .setTeamOne(properties.getProperty("create_match_teamone_id"),false,rosterDetails)
+                .setTeamTwo(properties.getProperty("create_match_teamtwo_id"),false,rosterDetails1)
                 .build();
 
        CreateMatchResponse createMatchResponse = new MatchesService().createMatch(createMatchRequestBody);

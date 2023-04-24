@@ -2,6 +2,9 @@ package pojo.update.match;
 
 import lombok.Getter;
 import lombok.Setter;
+import util.FileUtility;
+
+import java.util.Properties;
 
 @Getter
 public class EditMatchRequestBody {
@@ -151,6 +154,8 @@ public class EditMatchRequestBody {
 
     public static class Builder
     {
+        public   String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
+        public Properties properties= FileUtility.loadProperties(propertyPath);
         private int teamSize;
 
         private int matchType;
@@ -180,13 +185,13 @@ public class EditMatchRequestBody {
         public Builder() {
             this.totalOvers = 20;
             this.overPerBowler =10;
-            this.tournamentId ="6332ea6e7923eb6c8f7d3394";
+            this.tournamentId =    properties.getProperty("editmatch_tournament_id");//"6332ea6e7923eb6c8f7d3394";
             this.ballType =0;
             this.startsAt = "2022-04-22 04:30:00.000Z";
             this.teamSize =7;
             this.matchType = 1;
-            this.managers=new String[]{"631b4356cc56c8da09e3f764"};
-            this.roundId="6332ea787923eb6c8f7d33a8";
+            this.managers=new String[]{properties.getProperty("manager_id")};
+            this.roundId=properties.getProperty("roundId");//"6332ea787923eb6c8f7d33a8";
         }
         public Builder setMatchVenue(Address address, GroundName groundName, String latitude, String longitude)
         {

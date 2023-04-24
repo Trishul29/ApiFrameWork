@@ -5,108 +5,22 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pojo.update.roster.UpdateRosterBeforeMatchRequestBody;
 import pojo.update.roster.UpdateRosterBeforeMatchResponse;
+import util.FileUtility;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Properties;
 
 public class UpdateRosterBeforeTossTest {
     RosterService rosterService;
     UpdateRosterBeforeMatchRequestBody.RosterData[] rosterDataArray;
-   // UpdateRosterBeforeMatchRequestBody obj = new UpdateRosterBeforeMatchRequestBody();
+    public   String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
+    public Properties properties= FileUtility.loadProperties(propertyPath);
 
     @BeforeClass
     public void beforeClass() {
         rosterService = new RosterService();
-//        List<UpdateRosterBeforeMatchRequestBody.RosterData> data = new ArrayList<>();
-//
-//        UpdateRosterBeforeMatchRequestBody.User user_1 = new UpdateRosterBeforeMatchRequestBody.User(
-//                "",
-//                "",
-//                "",
-//                "",
-//                new UpdateRosterBeforeMatchRequestBody.Location(""),
-//                "",
-//                "",
-//                "",
-//                "",
-//                ""
-//        );
-//        UpdateRosterBeforeMatchRequestBody.User user_2 = new UpdateRosterBeforeMatchRequestBody.User(
-//                "",
-//                "",
-//                "",
-//                "",
-//                new UpdateRosterBeforeMatchRequestBody.Location(""),
-//                "",
-//                "",
-//                "",
-//                "",
-//                ""
-//        );
-//        UpdateRosterBeforeMatchRequestBody.User user_3 = new UpdateRosterBeforeMatchRequestBody.User(
-//                "",
-//                "",
-//                "",
-//                "",
-//                new UpdateRosterBeforeMatchRequestBody.Location(""),
-//                "",
-//                "",
-//                "",
-//                "",
-//                ""
-//        );
-//        UpdateRosterBeforeMatchRequestBody.User user_3 = new UpdateRosterBeforeMatchRequestBody.User(
-//                "",
-//                "",
-//                "",
-//                "",
-//                new UpdateRosterBeforeMatchRequestBody.Location(""),
-//                "",
-//                "",
-//                "",
-//                "",
-//                ""
-//        );
-//        UpdateRosterBeforeMatchRequestBody.User user_4 = new UpdateRosterBeforeMatchRequestBody.User(
-//                "",
-//                "",
-//                "",
-//                "",
-//                new UpdateRosterBeforeMatchRequestBody.Location(""),
-//                "",
-//                "",
-//                "",
-//                "",
-//                ""
-//        );
-//        UpdateRosterBeforeMatchRequestBody.User user_5 = new UpdateRosterBeforeMatchRequestBody.User(
-//                "",
-//                "",
-//                "",
-//                "",
-//                new UpdateRosterBeforeMatchRequestBody.Location(""),
-//                "",
-//                "",
-//                "",
-//                "",
-//                ""
-//        );
-//
-//        UpdateRosterBeforeMatchRequestBody.User[] userList = obj.settingUserData(user_1, user_2, user_3, user_4, user_5);
-//
-//        for (int i = 0; i < 6; i++) {
-//            UpdateRosterBeforeMatchRequestBody.RosterData roster = new UpdateRosterBeforeMatchRequestBody.RosterData(
-//                    true,
-//                    false,
-//                    true,
-//                    1,
-//                    false,
-//                    userList[i]
-//            );
-//            data.add(roster);
-//        }
-//        rosterDataArray = obj.settingRosterData(data);
         rosterDataArray = new UpdateRosterBeforeMatchRequestBody.RosterData[]{new UpdateRosterBeforeMatchRequestBody.RosterData(
                 true,
                 false,
@@ -161,8 +75,8 @@ public class UpdateRosterBeforeTossTest {
     @Test
     public void shouldUpdateRosterBeforeToss() {
         UpdateRosterBeforeMatchRequestBody updateRosterBeforeMatchRequestBody = new UpdateRosterBeforeMatchRequestBody.Builder()
-                .setMatchId("643fd84bfbf49862d9a39ae2")
-                .setTeamId("643e6a92eb1d6ea1587e43c7")
+                .setMatchId(properties.getProperty("matchid_getplayeraccordingtogametype"))
+                .setTeamId(properties.getProperty("teamid_getplayeraccordingtogametype"))
                 .setRosterData(rosterDataArray)
                 .build();
         UpdateRosterBeforeMatchResponse updateRosterBeforeMatchResponse = rosterService.updateRosterBeforeMatchService(updateRosterBeforeMatchRequestBody);

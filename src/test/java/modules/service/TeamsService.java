@@ -15,9 +15,7 @@ import java.util.concurrent.TimeUnit;
 import static org.testng.Reporter.log;
 
 public class TeamsService {
-
-
-    public GetTeamResponse getTeamById(String id) {
+        public GetTeamResponse getTeamById(String id) {
         Response response = new TeamsClient().getTeam(id);
         long responseTime = response.timeIn(TimeUnit.MILLISECONDS);
         int statusCode = response.statusCode();
