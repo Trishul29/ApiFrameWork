@@ -5,6 +5,8 @@ import pojo.create.tournament.CreateTournamentRequestBody;
 import pojo.create.tournament.CreateTournamentResponse;
 import pojo.get.Tournaments.GetPointsOfTournamentResponse;
 import pojo.get.Tournaments.GetTournamentAggregatedStatResponse;
+import pojo.get.Tournaments.GetTournamentLeaderBoardFilterListResponse;
+import pojo.get.Tournaments.GetTournamentLeaderBoardResponse;
 import pojo.getAll.tournaments.GetTournamentsResponse;
 import pojo.update.tournament.EditTournamentRequestBody;
 import pojo.update.tournament.EditTournamentResponse;
@@ -74,6 +76,29 @@ public class TournamentsService {
         new AllureUtility().getResponseTime(responseTime);
         return getTournamentAggregatedStatResponse;
 
+    }
+    public GetTournamentLeaderBoardFilterListResponse getTournamentLeaderBoardFilterListService()
+    {
+        Response response= new TournamentsClient().getTournamentFilterList();
+        GetTournamentLeaderBoardFilterListResponse getTournamentLeaderBoardFilterListResponse=response.as(GetTournamentLeaderBoardFilterListResponse.class);
+        int statusCode=response.getStatusCode();
+        long responseTime= response.timeIn(TimeUnit.MILLISECONDS);
+        getTournamentLeaderBoardFilterListResponse.setStatusCode(statusCode);
+        getTournamentLeaderBoardFilterListResponse.setResponseTime(responseTime);
+        new AllureUtility().getResponseTime(responseTime);
+        return getTournamentLeaderBoardFilterListResponse;
+    }
+
+    public GetTournamentLeaderBoardResponse getTournamentLeaderBoardResponseService(String filter, String subFilter)
+    {
+        Response response= new TournamentsClient().getTournamentLeaderBoard(filter,subFilter);
+        GetTournamentLeaderBoardResponse getTournamentLeaderBoardResponse=response.as(GetTournamentLeaderBoardResponse.class);
+        int statusCode=response.getStatusCode();
+        long responseTime= response.timeIn(TimeUnit.MILLISECONDS);
+        getTournamentLeaderBoardResponse.setStatusCode(statusCode);
+        getTournamentLeaderBoardResponse.setResponseTime(responseTime);
+        new AllureUtility().getResponseTime(responseTime);
+        return getTournamentLeaderBoardResponse;
     }
 
 }

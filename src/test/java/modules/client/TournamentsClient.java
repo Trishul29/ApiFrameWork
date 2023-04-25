@@ -107,6 +107,37 @@ public class TournamentsClient {
 
     }
 
+    public Response getTournamentFilterList()
+    {
+        Response response=given()
+                .header("Authorization",bearerToken)
+               .queryParam("filter",properties.getProperty("tournament_leaderboard_filter"))
+                .log().uri()
+                .when()
+                .get(properties.getProperty("base_uri")+"/v3.0/0/tournament-leaderboard-filter");
+        response
+                .then()
+                .log().body(true)
+                .contentType(ContentType.JSON);
+        return response;
 
+    }
+
+
+    public Response getTournamentLeaderBoard(String filter, String subFilter) {
+        Response response=given()
+                .header("Authorization",bearerToken)
+                .queryParams("filter",filter,"subFilter", subFilter,"page",1)
+                .pathParam("id",properties.getProperty("tournament_leaderboard_id"))
+                .log().uri()
+                .when()
+                .get(properties.getProperty("base_uri")+"/v3.0/0/tournament-leaderboard"+"/{id}");
+        response
+                .then()
+                .log().body(true)
+                .contentType(ContentType.JSON);
+        return response;
+
+    }
 }
 

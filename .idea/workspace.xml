@@ -4,23 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="Added client,service,testcases for UpdateRosterBeforeTossTest ,GetTeamPlayerAccordingToGameTypeTest">
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/DatabaseUtility.java" afterDir="false" />
+    <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="Added class DatabaseUtility.java and work in progress">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetTournamentLeaderBoardFilterListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetTournamentLeaderBoardTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Tournaments/GetTournamentLeaderBoardFilterListResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Tournaments/GetTournamentLeaderBoardResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spec.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spec.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Test_create/CreateMatchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_create/CreateMatchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_End_To_End/MatchScoringEndToEndTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_End_To_End/MatchScoringEndToEndTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Monitor/CreateBearerTokenUtilityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/CreateBearerTokenUtilityTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Update/EditMatchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Update/EditMatchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Update/UpdateRosterBeforeTossTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Update/UpdateRosterBeforeTossTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/MatchHighlightsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/MatchHighlightsClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/service/TeamsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/service/TeamsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/match/CreateMatchRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/match/CreateMatchRequestBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/post/CreatePostRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/post/CreatePostRequestBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/post/CreateReplyPostRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/post/CreateReplyPostRequestBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/update/match/EditMatchRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/update/match/EditMatchRequestBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/update/tournament/EditTournamentRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/update/tournament/EditTournamentRequestBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/DatabaseUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/DatabaseUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/TournamentsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/TournamentsClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/service/TournamentsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/service/TournamentsService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,28 +93,7 @@
       <recent name="util" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DatabaseUtility.retrieveData">
-    <configuration name="MyySportsAPIAutoamtion [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="TestNG.GetTournamentLeaderBoardTest.shouldGetTournamentLeaderBoard">
     <configuration name="DatabaseUtility" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MyySportsAPIAutoamtion.main" />
       <extension name="coverage">
@@ -153,16 +125,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MatchScoringEndToEndTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetTournamentLeaderBoardFilterListTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyySportsAPIAutoamtion.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Tests_End_To_End.*" />
+          <option name="PATTERN" value="Tests_Monitor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Tests_End_To_End" />
-      <option name="MAIN_CLASS_NAME" value="Tests_End_To_End.MatchScoringEndToEndTest" />
+      <option name="PACKAGE_NAME" value="Tests_Monitor" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetTournamentLeaderBoardFilterListTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -170,17 +142,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MatchScoringEndToEndTest.tc_00_createMatchTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetTournamentLeaderBoardFilterListTest.shouldGetTournamentLeaderBoardFilterList" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyySportsAPIAutoamtion.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Tests_End_To_End.*" />
+          <option name="PATTERN" value="Tests_Monitor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Tests_End_To_End" />
-      <option name="MAIN_CLASS_NAME" value="Tests_End_To_End.MatchScoringEndToEndTest" />
-      <option name="METHOD_NAME" value="tc_00_createMatchTest" />
+      <option name="PACKAGE_NAME" value="Tests_Monitor" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetTournamentLeaderBoardFilterListTest" />
+      <option name="METHOD_NAME" value="shouldGetTournamentLeaderBoardFilterList" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetTournamentLeaderBoardTest.shouldGetTournamentLeaderBoard" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests_Monitor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests_Monitor" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetTournamentLeaderBoardTest" />
+      <option name="METHOD_NAME" value="shouldGetTournamentLeaderBoard" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -190,11 +180,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GetTournamentLeaderBoardTest.shouldGetTournamentLeaderBoard" />
+        <item itemvalue="TestNG.GetTournamentLeaderBoardFilterListTest" />
+        <item itemvalue="TestNG.GetTournamentLeaderBoardFilterListTest.shouldGetTournamentLeaderBoardFilterList" />
         <item itemvalue="JUnit.DatabaseUtility.retrieveData" />
         <item itemvalue="JUnit.DatabaseUtility" />
-        <item itemvalue="TestNG.MatchScoringEndToEndTest" />
-        <item itemvalue="TestNG.MatchScoringEndToEndTest.tc_00_createMatchTest" />
-        <item itemvalue="Gradle.MyySportsAPIAutoamtion [dependencies]" />
       </list>
     </recent_temporary>
   </component>
@@ -375,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681999920283</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Added class DatabaseUtility.java and work in progress">
+      <created>1682343640575</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1682343640575</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -414,7 +411,8 @@
     <MESSAGE value="Added client,service,testcases for tc_00_createMatchTest,setPlayers" />
     <MESSAGE value="Added client,service,testcases for UpdateRosterBeforeTossTest work in progress" />
     <MESSAGE value="Added client,service,testcases for UpdateRosterBeforeTossTest ,GetTeamPlayerAccordingToGameTypeTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added client,service,testcases for UpdateRosterBeforeTossTest ,GetTeamPlayerAccordingToGameTypeTest" />
+    <MESSAGE value="Added class DatabaseUtility.java and work in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added class DatabaseUtility.java and work in progress" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
