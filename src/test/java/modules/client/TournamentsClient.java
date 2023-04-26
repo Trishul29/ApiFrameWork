@@ -27,7 +27,7 @@ public class TournamentsClient {
 
                 .log().uri()
                 .when()
-                .get(properties.getProperty("basepath_tournaments")+"/{gameType}"+"/tournament");
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_tournaments")+"/{gameType}"+"/tournament");
 
         response
                 .then()

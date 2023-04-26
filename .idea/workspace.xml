@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="Added class DatabaseUtility.java and work in progress">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetTournamentLeaderBoardFilterListTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetTournamentLeaderBoardTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Tournaments/GetTournamentLeaderBoardFilterListResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Tournaments/GetTournamentLeaderBoardResponse.java" afterDir="false" />
+    <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="Added client,service,testcases for GetTournamentLeaderBoardFilterListTest,GetTournamentLeaderBoardTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spec.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spec.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/DatabaseUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/DatabaseUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetTournamentLeaderBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetTournamentLeaderBoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Update/EditMatchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Update/EditMatchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/MatchHighlightsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/MatchHighlightsClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/TournamentsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/TournamentsClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/service/TournamentsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/service/TournamentsService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,22 +91,7 @@
       <recent name="util" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GetTournamentLeaderBoardTest.shouldGetTournamentLeaderBoard">
-    <configuration name="DatabaseUtility" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyySportsAPIAutoamtion.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="util" />
-      <option name="MAIN_CLASS_NAME" value="util.DatabaseUtility" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.GetTournamentLeaderBoardTest">
     <configuration name="DatabaseUtility.retrieveData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MyySportsAPIAutoamtion.main" />
       <extension name="coverage">
@@ -160,6 +143,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GetTournamentLeaderBoardTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests_Monitor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests_Monitor" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetTournamentLeaderBoardTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GetTournamentLeaderBoardTest.shouldGetTournamentLeaderBoard" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyySportsAPIAutoamtion.test" />
       <extension name="coverage">
@@ -180,11 +180,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GetTournamentLeaderBoardTest" />
         <item itemvalue="TestNG.GetTournamentLeaderBoardTest.shouldGetTournamentLeaderBoard" />
         <item itemvalue="TestNG.GetTournamentLeaderBoardFilterListTest" />
         <item itemvalue="TestNG.GetTournamentLeaderBoardFilterListTest.shouldGetTournamentLeaderBoardFilterList" />
         <item itemvalue="JUnit.DatabaseUtility.retrieveData" />
-        <item itemvalue="JUnit.DatabaseUtility" />
       </list>
     </recent_temporary>
   </component>
@@ -372,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682343640575</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Added client,service,testcases for GetTournamentLeaderBoardFilterListTest,GetTournamentLeaderBoardTest">
+      <created>1682433277897</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1682433277898</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -387,7 +394,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Three testCases Added recommendedusers ,getalltournaments,getallhighlights" />
     <MESSAGE value="Two  testCases Added for leaderboard ,GetAllmatches" />
     <MESSAGE value="Two  testCases Added for leaderboard ,GetAllmatches and functionality added for reporting using allure report" />
     <MESSAGE value="Added Test Case for CreateTeamTest, made changes in build.gradle by adding allure dependancy" />
@@ -412,7 +418,8 @@
     <MESSAGE value="Added client,service,testcases for UpdateRosterBeforeTossTest work in progress" />
     <MESSAGE value="Added client,service,testcases for UpdateRosterBeforeTossTest ,GetTeamPlayerAccordingToGameTypeTest" />
     <MESSAGE value="Added class DatabaseUtility.java and work in progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added class DatabaseUtility.java and work in progress" />
+    <MESSAGE value="Added client,service,testcases for GetTournamentLeaderBoardFilterListTest,GetTournamentLeaderBoardTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added client,service,testcases for GetTournamentLeaderBoardFilterListTest,GetTournamentLeaderBoardTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -444,7 +451,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/util/DatabaseUtility.java</url>
-          <line>133</line>
+          <line>213</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>

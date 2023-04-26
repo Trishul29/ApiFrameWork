@@ -11,10 +11,10 @@ public class MatchHighlightsClient {
     String bearerToken=properties.getProperty("bearerToken");
     public Response getHighlights() {
 
-        String id=properties.getProperty("HighlightmatchId");
+
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
-                .pathParam("matchId",id)
+                .pathParam("matchId",properties.getProperty("HighlightmatchId"))
                 .log().uri()
                 .when()
                 .get(properties.getProperty("base_uri")+properties.getProperty("basepath_highlights")+"/{matchId}"+"/highlights/1");
