@@ -11,9 +11,9 @@ import java.util.concurrent.TimeUnit;
 import static org.testng.Assert.assertNotNull;
 
 public class LeaderBoardService {
-    public GetAllPlayerLeaderBoardResponse getLeaderBoard()
+    public GetAllPlayerLeaderBoardResponse getLeaderBoard(String leaderBoardType,String matchType,String dateTyp)
     {
-        Response response= new LeaderBoardClient().getBoard();
+        Response response= new LeaderBoardClient().getBoard(leaderBoardType,matchType,dateTyp);
         int statusCode=response.statusCode();
         long responseTime=  response.timeIn(TimeUnit.MILLISECONDS);
         GetAllPlayerLeaderBoardResponse getAllPlayerLeaderBoardResponse = response.as(GetAllPlayerLeaderBoardResponse.class);

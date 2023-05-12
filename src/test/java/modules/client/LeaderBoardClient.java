@@ -11,14 +11,14 @@ public class LeaderBoardClient {
     public Properties properties= FileUtility.loadProperties(propertyPath);
     String bearerToken=properties.getProperty("bearerToken");
 
-    public Response getBoard() {
+    public Response getBoard(String leaderBoardType,String matchType,String dateType) {
 
 
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
-                .queryParam("matchType",properties.getProperty("matchType"))
-                .queryParam("dateType",properties.getProperty("dateType"))
-                .queryParam("leaderBoardType",properties.getProperty("leaderBoardType"))
+                .queryParam("matchType",matchType)
+                .queryParam("dateType",dateType)
+                .queryParam("leaderboardType",leaderBoardType)
                 .queryParam("page",1)
                 .log().uri()
                 .when()

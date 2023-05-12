@@ -211,6 +211,7 @@ public static class MatchStatus
     private String profileImage;
 
     private String id;
+    private String isSuperSub;
 
     private int bowlingPlayingStatus;
 }

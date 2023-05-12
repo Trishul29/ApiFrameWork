@@ -5,11 +5,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pojo.update.roster.UpdateRosterBeforeMatchRequestBody;
 import pojo.update.roster.UpdateRosterBeforeMatchResponse;
+import util.DatabaseUtility;
 import util.FileUtility;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Properties;
 
 public class UpdateRosterBeforeTossTest {
@@ -28,8 +26,8 @@ public class UpdateRosterBeforeTossTest {
                 1,
                 false,
                 new UpdateRosterBeforeMatchRequestBody.User(
-                        "642a848f8979bf55baf9b0fb",
-                        "642a848f8979bf55baf9b0fb",
+                        properties.getProperty("editMatchPlayer_1"),
+                        properties.getProperty("editMatchPlayer_1") ,
                         "1"
 
                 )
@@ -40,8 +38,8 @@ public class UpdateRosterBeforeTossTest {
                 1,
                 false,
                 new UpdateRosterBeforeMatchRequestBody.User(
-                        "632dd01cae18002d70e0ac97",
-                        "632dd01cae18002d70e0ac97",
+                        properties.getProperty("editMatchPlayer_2"),
+                        properties.getProperty("editMatchPlayer_2"),
                         "1"
                 )
         ), new UpdateRosterBeforeMatchRequestBody.RosterData(
@@ -51,8 +49,8 @@ public class UpdateRosterBeforeTossTest {
                 1,
                 false,
                 new UpdateRosterBeforeMatchRequestBody.User(
-                        "632ab363f6519b0179d00520",
-                        "632ab363f6519b0179d00520",
+                        properties.getProperty("editMatchPlayer_3"),
+                        properties.getProperty("editMatchPlayer_3"),
                         "1"
 
                 )
@@ -64,8 +62,8 @@ public class UpdateRosterBeforeTossTest {
                         1,
                         false,
                     new UpdateRosterBeforeMatchRequestBody.User(
-                                "632858599f934f7b1359ddd2",
-                                "632858599f934f7b1359ddd2",
+                            properties.getProperty("editMatchPlayer_4"),
+                            properties.getProperty("editMatchPlayer_4"),
                                 "1"
 
                         )

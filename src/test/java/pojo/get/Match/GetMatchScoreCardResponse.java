@@ -48,6 +48,7 @@ public class GetMatchScoreCardResponse {
         private String yetToBat;
 
         private ExtraDetails extraDetails;
+        private String inningId;
     }
 
     @Setter

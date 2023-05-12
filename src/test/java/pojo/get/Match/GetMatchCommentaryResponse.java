@@ -48,6 +48,7 @@ public class GetMatchCommentaryResponse {
     public static class Docs
     {
         private float over;
+        private String[] audioClips;
 
         private String fillColor;
 

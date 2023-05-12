@@ -2,10 +2,14 @@ package modules.service;
 
 import io.qameta.allure.Allure;
 import modules.client.TeamsClient;
+import modules.client.TournamentsClient;
 import pojo.create.team.CreateTeamRequestBody;
 import pojo.create.team.CreateTeamResponse;
+import pojo.get.Team.GetTeamLeaderBoardFilterResponse;
+import pojo.get.Team.GetTeamLeaderBoardResponse;
 import pojo.get.Team.GetTeamPlayerAccordingToGameTypeResponse;
 import pojo.get.Team.GetTeamResponse;
+import pojo.get.Tournaments.GetTournamentLeaderBoardFilterListResponse;
 import pojo.getAll.Teams.GetAllTeamResponse;
 import io.restassured.response.Response;
 import util.AllureUtility;
@@ -15,7 +19,9 @@ import java.util.concurrent.TimeUnit;
 import static org.testng.Reporter.log;
 
 public class TeamsService {
-        public GetTeamResponse getTeamById(String id) {
+
+
+    public GetTeamResponse getTeamById(String id) {
         Response response = new TeamsClient().getTeam(id);
         long responseTime = response.timeIn(TimeUnit.MILLISECONDS);
         int statusCode = response.statusCode();
@@ -57,6 +63,33 @@ public class TeamsService {
         getTeamPlayerAccordingToGameTypeResponse.setResponseTime(responseTime);
         new AllureUtility().getResponseTime(responseTime);
         return getTeamPlayerAccordingToGameTypeResponse;
+    }
+
+    public GetTeamLeaderBoardFilterResponse getTeamLeaderBoardFilterResponseService()
+    {
+        Response response= new TeamsClient().getTeamLeaderBoardFilterList();
+        GetTeamLeaderBoardFilterResponse getTeamLeaderBoardFilterResponse=response.as(GetTeamLeaderBoardFilterResponse.class);
+        int statusCode=response.getStatusCode();
+        long responseTime= response.timeIn(TimeUnit.MILLISECONDS);
+        getTeamLeaderBoardFilterResponse.setStatusCode(statusCode);
+        getTeamLeaderBoardFilterResponse.setResponseTime(responseTime);
+        new AllureUtility().getResponseTime(responseTime);
+        return getTeamLeaderBoardFilterResponse;
+    }
+
+    public GetTeamLeaderBoardResponse getTeamLeaderBoardService(String filter,String subFilter)
+    {
+        Response response= new TeamsClient().getTeamLeaderBoard(filter,subFilter);
+        GetTeamLeaderBoardResponse getTeamLeaderBoardResponse=response.as(GetTeamLeaderBoardResponse.class);
+        int statusCode=response.getStatusCode();
+        long responseTime= response.timeIn(TimeUnit.MILLISECONDS);
+        getTeamLeaderBoardResponse.setStatusCode(statusCode);
+        getTeamLeaderBoardResponse.setResponseTime(responseTime);
+        new AllureUtility().getResponseTime(responseTime);
+        return getTeamLeaderBoardResponse;
+
+
+
     }
 
 

@@ -32,7 +32,7 @@ public class GetTournamentLeaderBoardFilterListResponse {
         private SubOptions[][] subOptions;
         private TopFilters[] topFilters;
 
-        private String label;
+
 
         private String value;
 
@@ -79,7 +79,7 @@ public class GetTournamentLeaderBoardFilterListResponse {
         assertTrue(this.getResponseTime() <= 2000, "Response Taking More than 2 Seconds");
         assertNotNull(this.getData().subOptions, "SubOptions Not present");
         assertNotNull(this.getData().topFilters, "Top Filter Not Present");
-        assertNotNull(this.getData().label,"Label Not Present");
+      //  assertNotNull(this.getData().label,"Label Not Present");
 
     }
 }

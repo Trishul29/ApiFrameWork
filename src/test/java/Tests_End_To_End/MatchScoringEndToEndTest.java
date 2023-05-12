@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import modules.service.*;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pojo.create.match.CreateMatchRequestBody;
@@ -51,8 +51,10 @@ public class MatchScoringEndToEndTest {
     String scorer_id = properties.getProperty("scorer_id");
     String manager_id = properties.getProperty("manager_id");
     String streamer_id = properties.getProperty("streamer_id");
-    String team_one_id;
-    String team_two_id;
+    @Setter
+    String team_one_id="";
+    @Setter
+    String team_two_id="";
     String match_id = "";
     String striker;
     String nonStriker;
@@ -80,39 +82,42 @@ public class MatchScoringEndToEndTest {
 
     @BeforeClass
     public void setPlayers() {
-        String team_name_1 = "RAX  Mumbai Indians";
-        String team_name_2 = "RAX  Punjab Kings";
+        String team_name_1 = "RAX Punjab Kings";
+        String team_name_2 = "RAX Mumbai Indians";
         //int count = 0;
         GetGlobalSearchResponse getGlobalSearchResponse = searchService.getSearchByKeyword();
         for (GetGlobalSearchResponse.Data data : getGlobalSearchResponse.getData()) {
-            if (data.getType().equalsIgnoreCase("Team")) {
+
+            if (data.getType().equalsIgnoreCase("team")) {
+
                 for (GetGlobalSearchResponse.Value value : data.getValue()) {
+
                     if (value.getName().equalsIgnoreCase(team_name_1)) {
                         System.out.println("name bolte" + value.getName());
-                        setTeam_one_id(value.getId());
+                        this.setTeam_one_id(value.getId());
                     } else if (value.getName().equalsIgnoreCase(team_name_2)) {
-                        setTeam_two_id(value.getId());
+                        this.setTeam_two_id(value.getId());
                     }
                 }
-                System.out.println("team one is:" + this.getTeam_one_id());
+                System.out.println("team one is:" + getTeam_one_id());
                 System.out.println("team two is:" + getTeam_two_id());
             }
         }
 
 
-        rosterDetails = new CreateMatchRequestBody.RosterDetails[5];
-        rosterDetails[0] = new CreateMatchRequestBody.RosterDetails(true, true, false, "63e1e87967ba4538fe6ce781");
-        rosterDetails[1] = new CreateMatchRequestBody.RosterDetails(false, false, false, "63abee254bcab7a88a1327d6");
-        rosterDetails[2] = new CreateMatchRequestBody.RosterDetails(false, false, false, "6332e8197923eb6c8f7d3227");
-        rosterDetails[3] = new CreateMatchRequestBody.RosterDetails(false, false, false, "6324886fa80dbc05defc8086");
-        rosterDetails[4] = new CreateMatchRequestBody.RosterDetails(false, false, false, "6332c52f7923eb6c8f7d2112");
+        rosterDetails = new CreateMatchRequestBody.RosterDetails[4];
+        rosterDetails[0] = new CreateMatchRequestBody.RosterDetails(true, true, false, properties.getProperty("rosterplayer_1"));
+        rosterDetails[1] = new CreateMatchRequestBody.RosterDetails(false, false, false, properties.getProperty("rosterplayer_2"));
+        rosterDetails[2] = new CreateMatchRequestBody.RosterDetails(false, false, false, properties.getProperty("rosterplayer_3"));
+        rosterDetails[3] = new CreateMatchRequestBody.RosterDetails(false, false, false, properties.getProperty("rosterplayer_4"));
+       // rosterDetails[4] = new CreateMatchRequestBody.RosterDetails(false, false, false, properties.getProperty("rosterPlayer_1"));
 
-        rosterDetails1 = new CreateMatchRequestBody.RosterDetails[5];
-        rosterDetails1[0] = new CreateMatchRequestBody.RosterDetails(false, true, false, "632dd01cae18002d70e0ac97");
-        rosterDetails1[1] = new CreateMatchRequestBody.RosterDetails(false, false, false, "642a848f8979bf55baf9b0fb");
-        rosterDetails1[2] = new CreateMatchRequestBody.RosterDetails(false, false, false, "632ab363f6519b0179d00520");
-        rosterDetails1[3] = new CreateMatchRequestBody.RosterDetails(false, false, false, "632858599f934f7b1359ddd2");
-        rosterDetails1[4] = new CreateMatchRequestBody.RosterDetails(true, false, false, "6322e05bd84497d62f9eeee9");
+        rosterDetails1 = new CreateMatchRequestBody.RosterDetails[4];
+        rosterDetails1[0] = new CreateMatchRequestBody.RosterDetails(false, true, false, properties.getProperty("roster_1_player_1"));
+        rosterDetails1[1] = new CreateMatchRequestBody.RosterDetails(false, false, false,  properties.getProperty("roster_1_player_2"));
+        rosterDetails1[2] = new CreateMatchRequestBody.RosterDetails(false, false, false,  properties.getProperty("roster_1_player_3"));
+        rosterDetails1[3] = new CreateMatchRequestBody.RosterDetails(false, false, false,  properties.getProperty("roster_1_player_4"));
+      //  rosterDetails1[4] = new CreateMatchRequestBody.RosterDetails(true, false, false, "6322e05bd84497d62f9eeee9");
 
     }
 
@@ -133,35 +138,36 @@ public class MatchScoringEndToEndTest {
         createMatchResponse.assertMatchDetails(createMatchRequestBody);
     }
 
-    @Test(enabled = false)
-    public void tc_01_getMatchIdAndTeamId() {
-
-        GetMyyMatchesResponse getMyyMatchesResponse = matchesService.getMyyMatchesUsingRole();
-        List<GetMyyMatchesResponse.Data> dataList = getMyyMatchesResponse.getData();
-        Optional<GetMyyMatchesResponse.Data> optionalMatch = dataList.stream().filter(data -> data.getTeamOne().getShortName().equalsIgnoreCase("TEAM") && data.getTeamTwo().getShortName().equalsIgnoreCase("TLP")).findFirst();
-
-
-        if (optionalMatch.isPresent()) {
-            GetMyyMatchesResponse.Data match = optionalMatch.get();
-
-            this.setMatch_id(match.getId());
-            this.setTeam_one_id(match.getTeamOne().getId());
-            this.setTeam_two_id(match.getTeamTwo().getId());
-
-            System.out.println("Match id is Hello:" + this.match_id);
-            System.out.println("Team id1:" + this.getTeam_one_id());
-            System.out.println("Team id2:" + this.getTeam_two_id());
-        }
-
-
-        getMyyMatchesResponse.assertMyyMatches();
-
-    }
+//    @Test(enabled = false)
+//    public void tc_01_getMatchIdAndTeamId() {
+//
+//        GetMyyMatchesResponse getMyyMatchesResponse = matchesService.getMyyMatchesUsingRole();
+//        List<GetMyyMatchesResponse.Data> dataList = getMyyMatchesResponse.getData();
+//        Optional<GetMyyMatchesResponse.Data> optionalMatch = dataList.stream().filter(data -> data.getTeamOne().getShortName().equalsIgnoreCase("TEAM") && data.getTeamTwo().getShortName().equalsIgnoreCase("TLP")).findFirst();
+//
+//
+//        if (optionalMatch.isPresent()) {
+//            GetMyyMatchesResponse.Data match = optionalMatch.get();
+//
+//            this.setMatch_id(match.getId());
+//            this.setTeam_one_id(match.getTeamOne().getId());
+//            this.setTeam_two_id(match.getTeamTwo().getId());
+//
+//            System.out.println("Match id is Hello:" + this.match_id);
+//            System.out.println("Team id1:" + this.getTeam_one_id());
+//            System.out.println("Team id2:" + this.getTeam_two_id());
+//        }
+//
+//
+//        getMyyMatchesResponse.assertMyyMatches();
+//
+//    }
 
 
     @Test
     public void tc_02_createToss() {
         System.out.println("Match id is Hello:" + this.getMatch_id());
+        System.out.println("t1:" + getTeam_one_id() + "t2: " + getTeam_two_id());
         CreateTossRequestBody createTossRequestBody = new CreateTossRequestBody.Builder().setCallingTeam(this.getTeam_one_id()).setBattingTeam(this.getTeam_one_id()).setBowlingTeam(this.getTeam_two_id()).build();
         CreateTossResponse createTossResponse = new ScoringService().createTossService(this.getMatch_id(), createTossRequestBody);
         createTossResponse.assertCreateTossResponse();
@@ -172,6 +178,7 @@ public class MatchScoringEndToEndTest {
     public void tc_03_getBatsmenFromRoster() {
         GetPlaying11Response getPlaying11Response = rosterService.getPlayingBatsmen(getMatch_id());
         int playingBatsman = getPlaying11Response.getData().size();
+        System.out.println("team batsmen size:"+playingBatsman);
         int i = 2;
         while (i != playingBatsman) {
             this.setNewBatsMan(getPlaying11Response.getData().get(i).getId());
@@ -300,6 +307,7 @@ public class MatchScoringEndToEndTest {
 
     @Test
     public void tc_15_scoreSecondInning() {
+
 //Get Stiker ,non striker
         GetPlaying11Response getPlaying11Response = rosterService.getPlayingBatsmen(getMatch_id());
         int playingBatsman = getPlaying11Response.getData().size();
@@ -331,6 +339,7 @@ public class MatchScoringEndToEndTest {
 
         //start scoring
         StartScoringResponse startScoringResponse = new ScoringService().startScoringService(getMatch_id());
+        startScoringResponse.assertStartScoringResponse();
 
         //register ball second inning
         int ballNo = 1;
@@ -340,7 +349,11 @@ public class MatchScoringEndToEndTest {
 
         while (ballNo != 5) {
             RegisterBallRequestBody registerBallRequestBody = new RegisterBallRequestBody.Builder().setRunScored(runScored).setRunType(runtype).setDismissalDetails(dismissalType).build();
+
             RegisterBallResponse registerBallResponse = scoringService.registerBall(getMatch_id(), registerBallRequestBody);
+            if (registerBallResponse.getData().getMatchStatus().getStatus().equalsIgnoreCase("end")) {
+                break;
+            }
             registerBallResponse.assertRegisterBallResponse(registerBallRequestBody);
             ballNo++;
 

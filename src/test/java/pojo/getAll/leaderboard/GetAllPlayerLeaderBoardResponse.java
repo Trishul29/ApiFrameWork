@@ -3,6 +3,8 @@ package pojo.getAll.leaderboard;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 import static org.testng.Assert.*;
 
 @Getter
@@ -16,15 +18,15 @@ public class GetAllPlayerLeaderBoardResponse {
     private String success;
 
     private String error;
-    
+
 
     @Getter
-    public static class  Data{
+    public static class Data {
 
 
         private String hasPrevPage;
 
-        private Docs[] docs;
+        private List<Docs> docs;
 
         private String hasNextPage;
 
@@ -43,8 +45,9 @@ public class GetAllPlayerLeaderBoardResponse {
         private String totalDocs;
 
     }
-@Getter
-    public static class Docs{
+
+    @Getter
+    public static class Docs {
         private String strikeRate;
 
         private String economy;
@@ -58,14 +61,14 @@ public class GetAllPlayerLeaderBoardResponse {
         private String wickets;
 
         private String runs;
-        private  float average;
-        private  int fours;
-        private  int sixes;
+        private float average;
+        private int fours;
+        private int sixes;
 
     }
+
     @Getter
-    public static class  User
-    {
+    public static class User {
         private String firstName;
 
         private String lastName;
@@ -82,21 +85,38 @@ public class GetAllPlayerLeaderBoardResponse {
 
     }
 
-    
-        public void assertLeaderBoardResponse() {
 
-        assertTrue(this.getResponseTime()<3000,"Response Taking More than 3 Seconds");
-        assertEquals(this.getSuccess(),"true","Success Failure");
-        assertEquals(this.getStatusCode(),200,"Request Unsuccessfull");
-        assertNotNull(this.getData().getDocs()[0].getUser().getFirstName());
-        assertNotNull(this.getData().getDocs()[0].getMatches());
-        assertNotNull(this.getData().getDocs()[0].getRuns());
-        assertNotNull(this.getData().getDocs()[0].getStrikeRate());
+    public void assertLeaderBoardResponseForBatting() {
 
-        for(int i=0; i< this.getData().getDocs().length;i++)
-        {
-            assertNotNull(this.getData().getDocs()[i].getUser().get_id());
+        assertTrue(this.getResponseTime() < 3000, "Response Taking More than 3 Seconds");
+        assertEquals(this.getSuccess(), "true", "Success Failure");
+        assertEquals(this.getStatusCode(), 200, "Request Unsuccessfull");
+        System.out.println(this.getData().getDocs().size()+":size");
+        assertTrue(this.getData().getDocs().size()!=0);
+
+        for (Docs doc : this.getData().getDocs()) {
+            assertNotNull(doc.getUser().get_id(), "User not present ");
+            assertNotNull(doc.getUser().getFirstName(), "first Name not present");
+            assertNotNull(doc.getStrikeRate(), "Strike rate Not present");
+            assertNotNull(doc.getRuns(), "Runs of batsman not present");
         }
+
+
+    }
+    public void assertLeaderBoardResponseForBowling() {
+
+        assertTrue(this.getResponseTime() < 3000, "Response Taking More than 3 Seconds");
+        assertEquals(this.getSuccess(), "true", "Success Failure");
+        assertEquals(this.getStatusCode(), 200, "Request Unsuccessfull");
+
+        for (Docs doc : this.getData().getDocs()) {
+            assertNotNull(doc.getUser().get_id(), "User not present ");
+            assertNotNull(doc.getUser().getFirstName(), "first Name not present");
+            assertNotNull(doc.getWickets(), "Wickets not present Not present");
+            assertNotNull(doc.getOvers(), "Overs  not present");
+            assertNotNull(doc.getEconomy(),"Economy Not Present");
+        }
+
 
     }
 

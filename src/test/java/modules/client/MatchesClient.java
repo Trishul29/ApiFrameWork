@@ -106,13 +106,12 @@ public class MatchesClient {
 
         Response response=given()
                 .header("Authorization",bearerToken)
-                .pathParams("gameType","0","matchId",properties.getProperty("matchid_edit_match"))
+                .pathParams("gameType","0","id",properties.getProperty("matchid_edit_match"))
                 .contentType(ContentType.JSON)
                 .body(editMatchRequestBody)
                 .log().all(true)
-                .log().body(true)
                 .when()
-                .put(properties.getProperty("base_uri")+properties.getProperty("basepath_edit_match")+"/{gameType}"+"/matches"+"/{matchId}");
+                .put(properties.getProperty("base_uri")+properties.getProperty("basepath_edit_match")+"/{gameType}"+"/matches"+"/{id}");
         response
                 .then()
                 .contentType(ContentType.JSON)

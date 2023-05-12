@@ -28,6 +28,7 @@ public class ScoringClient {
                 .contentType(ContentType.JSON)
                 .pathParam("matchId",matchId)
                 .body(createTossRequestBody)
+                .log().body(true)
                 .when()
                 .post(properties.getProperty("base_uri")+properties.getProperty("toss_basepath")+"/{matchId}"+"/toss");
         response

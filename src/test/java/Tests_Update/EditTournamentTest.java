@@ -16,7 +16,7 @@ TournamentsService tournamentsService;
 tournamentsService=new TournamentsService();
 
     }
-   // @Test
+    @Test
     public void shouldEditTournament()
     {
         EditTournamentRequestBody editTournamentRequestBody=new EditTournamentRequestBody.Builder().setTournamentStatus("pending").build();

@@ -79,4 +79,36 @@ public class TeamsClient {
 
     }
 
+    public Response getTeamLeaderBoardFilterList()
+    {
+        Response response=given()
+                .header("Authorization",bearerToken)
+                .queryParam("filter",properties.getProperty("team_leaderboard_filter"))
+                .queryParam("id",properties.getProperty("teamleaderboard_teamid"))
+                .log().uri()
+                .when()
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_teamleaderboard_filter"));
+        response
+                .then()
+                .log().body(true)
+                .contentType(ContentType.JSON);
+        return response;
+
+    }
+
+
+    public Response getTeamLeaderBoard(String filter,String subFilter) {
+        Response response=given()
+                .header("Authorization",bearerToken)
+                .queryParams("filter",filter,"subFilter", subFilter,"page",1,"year",2023)
+                .pathParam("id",properties.getProperty("teamleaderboard_teamid"))
+                .log().uri()
+                .when()
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_teamleaderboard")+"/{id}");
+        response
+                .then()
+                .log().body(true)
+                .contentType(ContentType.JSON);
+        return response;
+    }
 }
