@@ -1,4 +1,5 @@
 package pojo.getAll.Teams;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import javax.lang.model.type.NullType;
@@ -9,6 +10,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 @Getter
+@JsonIgnoreProperties("timestamp")
 public class GetAllTeamResponse {
    @Setter
    int statusCode;

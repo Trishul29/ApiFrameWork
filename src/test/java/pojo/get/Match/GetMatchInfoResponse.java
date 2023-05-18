@@ -1,5 +1,6 @@
 package pojo.get.Match;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import org.testng.IReporter;
@@ -7,6 +8,7 @@ import org.testng.IReporter;
 import static org.testng.Assert.*;
 
 @Getter
+@JsonIgnoreProperties("timestamp")
 public class GetMatchInfoResponse {
     @Setter
     int statusCode;

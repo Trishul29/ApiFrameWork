@@ -8,6 +8,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 @Getter
+@JsonIgnoreProperties("timestamp")
 
 public class EndInningResponse {
     @Setter

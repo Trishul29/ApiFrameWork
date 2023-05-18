@@ -1,5 +1,6 @@
 package pojo.getAll.posts;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import javax.lang.model.type.NullType;
@@ -7,6 +8,7 @@ import javax.lang.model.type.NullType;
 import static org.testng.Assert.*;
 
 @Getter
+@JsonIgnoreProperties("timestamp")
 public class GetAllPostResponse {
     @Setter
     int statusCode;

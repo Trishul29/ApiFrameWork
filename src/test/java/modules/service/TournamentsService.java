@@ -52,6 +52,18 @@ public class TournamentsService {
         return getPointsOfTournamentResponse;
     }
 
+    public GetPointsOfTournamentResponse getTournamentRunQuotient()
+    {
+        Response response=new TournamentsClient().getRunQuotient();
+        int statusCode=response.getStatusCode();
+        long responseTime= response.timeIn(TimeUnit.MILLISECONDS);
+        GetPointsOfTournamentResponse getPointsOfTournamentResponse  = response.as(GetPointsOfTournamentResponse.class);
+        getPointsOfTournamentResponse.setStatusCode(statusCode);
+        getPointsOfTournamentResponse.setResponseTime(responseTime);
+        new AllureUtility().getResponseTime(responseTime);
+        return getPointsOfTournamentResponse;
+    }
+
     public EditTournamentResponse editTournament(EditTournamentRequestBody editTournamentRequestBody)
     {
 

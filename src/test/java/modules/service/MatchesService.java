@@ -114,9 +114,9 @@ public GetOneMatch_FootballResponse getOneMatchFootball()
         return getRecommendedMatchesResponse;
 
     }
-    public GetMyyMatchesResponse getMyyMatchesUsingRole()
+    public GetMyyMatchesResponse getMyyMatchesUsingRole(String role,String type)
     {
-        Response response=new MatchesClient().getMyyMatches();
+        Response response=new MatchesClient().getMyyMatches(role, type);
         int statusCode = response.getStatusCode();
 
         long responseTime = response.timeIn(TimeUnit.MILLISECONDS);

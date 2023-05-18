@@ -13,7 +13,7 @@ public class GetTournamentLeaderBoardFilterListTest {
        tournamentsService=new TournamentsService();
 
     }
-   // @Test
+    @Test
     public void shouldGetTournamentLeaderBoardFilterList()
     {
 

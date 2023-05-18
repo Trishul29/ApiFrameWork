@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class GetToken {
 
-    @Test
+    @Test(enabled = false)
     public void getBearerToken() {
 // Staging fire base key:  AIzaSyC80_Ysidh_cG1DVXL3uzUT3m_2Oy5tQDk
 // dev firebase key: AIzaSyAPiKvVLzQf77Cf3IbGJJhsCfQhefPi2p0

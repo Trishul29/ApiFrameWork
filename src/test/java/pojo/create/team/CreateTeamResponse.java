@@ -1,5 +1,6 @@
 package pojo.create.team;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,6 +9,7 @@ import static org.testng.Assert.*;
 import static org.testng.Assert.assertEquals;
 
 @Getter
+@JsonIgnoreProperties("timestamp")
 public class
 CreateTeamResponse {
     @Setter

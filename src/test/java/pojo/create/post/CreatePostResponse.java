@@ -1,9 +1,11 @@
 package pojo.create.post;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 @Getter
+@JsonIgnoreProperties("timestamp")
 public class CreatePostResponse {
     @Setter
     int statusCode;

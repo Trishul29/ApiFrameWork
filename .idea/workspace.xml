@@ -4,43 +4,62 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="Added DatabaseUtility.java methods forv players , matchid,tournamentId">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetTeamLeaderBoardFilterListTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetTeamLeaderBoardTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/Test_Utility/FilterUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/Test_Utility/RankCacheUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/a0Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Team/GetTeamLeaderBoardFilterResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Team/GetTeamLeaderBoardResponse.java" afterDir="false" />
+    <list default="true" id="5c9b7764-5b54-4a02-af13-c95ae4c3224c" name="Changes" comment="Added GetTeamLeaderBoardFilterListTest, GetTeamLeaderBoardTest, FilterUtility.java, RankCacheUtility.java">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetOneTournamentTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spec.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spec.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/DatabaseUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/DatabaseUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/spectemp.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/spectemp.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Test_create/CreateMatchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_create/CreateMatchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_End_To_End/MatchScoringEndToEndTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_End_To_End/MatchScoringEndToEndTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Monitor/CreateBearerTokenUtilityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/CreateBearerTokenUtilityTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetLeaderBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetLeaderBoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetMyyMatchesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetMyyMatchesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetPointsOfTournamentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetPointsOfTournamentTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetTournamentLeaderBoardFilterListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetTournamentLeaderBoardFilterListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetTournamentLeaderBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetTournamentLeaderBoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetTournamentsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Monitor/GetTournamentsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Update/EditMatchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Update/EditMatchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Update/EditTournamentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Update/EditTournamentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Update/UpdateRosterBeforeTossTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Update/UpdateRosterBeforeTossTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/LeaderBoardClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/LeaderBoardClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests_Update/UpdateUserProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests_Update/UpdateUserProfileTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/MatchesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/MatchesClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/ScoringClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/ScoringClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/TeamsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/TeamsClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/service/LeaderBoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/service/LeaderBoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/service/TeamsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/service/TeamsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/match/CreateMatchRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/match/CreateMatchRequestBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/client/TournamentsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/client/TournamentsClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/service/MatchesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/service/MatchesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/service/TournamentsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/service/TournamentsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/plain_json_response/GetHighlightResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/plain_json_response/GetHighlightResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/plain_json_response/GetMatchesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/plain_json_response/GetMatchesResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/match/CreateMatchResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/match/CreateMatchResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/post/CreatePostResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/post/CreatePostResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/post/CreateReplyPostResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/post/CreateReplyPostResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/post/GiveLikeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/post/GiveLikeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/endinning/EndInningResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/endinning/EndInningResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/registerball/RegisterBallResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/registerball/RegisterBallResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/toss/CreateTossResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/scoring/toss/CreateTossResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/team/CreateTeamResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/team/CreateTeamResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/create/tournament/CreateTournamentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/create/tournament/CreateTournamentResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/Match/GetEditMatchDetailsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Match/GetEditMatchDetailsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/Match/GetLiveMatchDetailsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Match/GetLiveMatchDetailsResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/Match/GetMatchCommentaryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Match/GetMatchCommentaryResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/Match/GetMatchInfoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Match/GetMatchInfoResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/Match/GetMatchScoreCardResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Match/GetMatchScoreCardResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/Match/GetOneMatchStatFootballResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Match/GetOneMatchStatFootballResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/Match/GetOneMatch_FootballResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Match/GetOneMatch_FootballResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/Team/GetTeamLeaderBoardFilterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Team/GetTeamLeaderBoardFilterResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/Team/GetTeamLeaderBoardResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Team/GetTeamLeaderBoardResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/Team/GetTeamPlayerAccordingToGameTypeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Team/GetTeamPlayerAccordingToGameTypeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/Team/GetTeamResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Team/GetTeamResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/Tournaments/GetPointsOfTournamentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Tournaments/GetPointsOfTournamentResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/Tournaments/GetTournamentAggregatedStatResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Tournaments/GetTournamentAggregatedStatResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/Tournaments/GetTournamentLeaderBoardFilterListResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Tournaments/GetTournamentLeaderBoardFilterListResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/Tournaments/GetTournamentLeaderBoardResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/Tournaments/GetTournamentLeaderBoardResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/get/user/GetUserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/get/user/GetUserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/Teams/GetAllTeamResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/Teams/GetAllTeamResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/globalsearch/GetGlobalSearchResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/globalsearch/GetGlobalSearchResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/googleplace/GetGooglePlaceDetailsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/googleplace/GetGooglePlaceDetailsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/googleplace/GetGooglePlaceListResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/googleplace/GetGooglePlaceListResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/leaderboard/GetAllPlayerLeaderBoardResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/leaderboard/GetAllPlayerLeaderBoardResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/update/match/EditMatchRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/update/match/EditMatchRequestBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/matches/GetMyyMatchesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/matches/GetMyyMatchesResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/matches/GetRecommendedMatchesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/matches/GetRecommendedMatchesResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/posts/GetAllPostResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/posts/GetAllPostResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/posts/GetShowListResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/posts/GetShowListResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/recommendedusers/GetRecommendedUsersResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/recommendedusers/GetRecommendedUsersResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/rosterdetaills/GetPlaying11Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/rosterdetaills/GetPlaying11Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/getAll/tournaments/GetTournamentsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/getAll/tournaments/GetTournamentsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/update/match/EditMatchResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/update/match/EditMatchResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/update/roster/UpdateRosterBeforeMatchResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/update/roster/UpdateRosterBeforeMatchResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/update/tournament/EditTournamentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/update/tournament/EditTournamentResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/update/user/UpdateUserProfileResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/update/user/UpdateUserProfileResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/token_utility/GetToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/token_utility/GetToken.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,24 +140,8 @@
       <recent name="util" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CreateBearerTokenUtilityTest.getToken">
-    <configuration name="DatabaseUtility.setDbEnvironment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyySportsAPIAutoamtion.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="util" />
-      <option name="MAIN_CLASS_NAME" value="util.DatabaseUtility" />
-      <option name="METHOD_NAME" value="setDbEnvironment" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreateBearerTokenUtilityTest.getToken" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.GetPointsOfTournamentTest.shouldGetRunQuotientOfTournament">
+    <configuration name="GetMyyMatchesTest.shouldGetMyyMatchesUsingRole" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyySportsAPIAutoamtion.test" />
       <extension name="coverage">
         <pattern>
@@ -147,8 +150,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests_Monitor" />
-      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.CreateBearerTokenUtilityTest" />
-      <option name="METHOD_NAME" value="getToken" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetMyyMatchesTest" />
+      <option name="METHOD_NAME" value="shouldGetMyyMatchesUsingRole" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -156,7 +159,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetLeaderBoardTest.shouldGetLeaderBoardTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetPointsOfTournamentTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyySportsAPIAutoamtion.test" />
       <extension name="coverage">
         <pattern>
@@ -165,25 +168,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests_Monitor" />
-      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetLeaderBoardTest" />
-      <option name="METHOD_NAME" value="shouldGetLeaderBoardTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetTeamLeaderBoardTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MyySportsAPIAutoamtion.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests_Monitor.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests_Monitor" />
-      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetTeamLeaderBoardTest" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetPointsOfTournamentTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -191,7 +176,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetTournamentLeaderBoardTest.shouldGetTournamentLeaderBoard" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetPointsOfTournamentTest.shouldGetPointOfTournament" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyySportsAPIAutoamtion.test" />
       <extension name="coverage">
         <pattern>
@@ -200,8 +185,44 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests_Monitor" />
-      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetTournamentLeaderBoardTest" />
-      <option name="METHOD_NAME" value="shouldGetTournamentLeaderBoard" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetPointsOfTournamentTest" />
+      <option name="METHOD_NAME" value="shouldGetPointOfTournament" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetPointsOfTournamentTest.shouldGetRunQuotientOfTournament" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests_Monitor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests_Monitor" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetPointsOfTournamentTest" />
+      <option name="METHOD_NAME" value="shouldGetRunQuotientOfTournament" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetRecommendedMatchesTest.shouldGetRecommendedMatches" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyySportsAPIAutoamtion.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests_Monitor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests_Monitor" />
+      <option name="MAIN_CLASS_NAME" value="Tests_Monitor.GetRecommendedMatchesTest" />
+      <option name="METHOD_NAME" value="shouldGetRecommendedMatches" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -211,11 +232,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CreateBearerTokenUtilityTest.getToken" />
-        <item itemvalue="TestNG.GetLeaderBoardTest.shouldGetLeaderBoardTest" />
-        <item itemvalue="TestNG.GetTeamLeaderBoardTest" />
-        <item itemvalue="TestNG.GetTournamentLeaderBoardTest.shouldGetTournamentLeaderBoard" />
-        <item itemvalue="JUnit.DatabaseUtility.setDbEnvironment" />
+        <item itemvalue="TestNG.GetPointsOfTournamentTest.shouldGetRunQuotientOfTournament" />
+        <item itemvalue="TestNG.GetMyyMatchesTest.shouldGetMyyMatchesUsingRole" />
+        <item itemvalue="TestNG.GetPointsOfTournamentTest" />
+        <item itemvalue="TestNG.GetPointsOfTournamentTest.shouldGetPointOfTournament" />
+        <item itemvalue="TestNG.GetRecommendedMatchesTest.shouldGetRecommendedMatches" />
       </list>
     </recent_temporary>
   </component>
@@ -417,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682516842507</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Added GetTeamLeaderBoardFilterListTest, GetTeamLeaderBoardTest, FilterUtility.java, RankCacheUtility.java">
+      <created>1683894003523</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1683894003523</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -432,7 +460,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Two  testCases Added for leaderboard ,GetAllmatches and functionality added for reporting using allure report" />
     <MESSAGE value="Added Test Case for CreateTeamTest, made changes in build.gradle by adding allure dependancy" />
     <MESSAGE value="Added Test Case,service, pojo,client  for CreateMatchTest" />
     <MESSAGE value="Added testcases,services,client for CreatePost,createReplypost,CreateTournament" />
@@ -457,14 +484,15 @@
     <MESSAGE value="Added class DatabaseUtility.java and work in progress" />
     <MESSAGE value="Added client,service,testcases for GetTournamentLeaderBoardFilterListTest,GetTournamentLeaderBoardTest" />
     <MESSAGE value="Added DatabaseUtility.java methods forv players , matchid,tournamentId" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added DatabaseUtility.java methods forv players , matchid,tournamentId" />
+    <MESSAGE value="Added GetTeamLeaderBoardFilterListTest, GetTeamLeaderBoardTest, FilterUtility.java, RankCacheUtility.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added GetTeamLeaderBoardFilterListTest, GetTeamLeaderBoardTest, FilterUtility.java, RankCacheUtility.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/Tests_Monitor/GetMyyMatchesTest.java</url>
-          <line>19</line>
+          <line>33</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -489,22 +517,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/util/DatabaseUtility.java</url>
-          <line>416</line>
+          <line>409</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/util/DatabaseUtility.java</url>
-          <line>547</line>
+          <line>553</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/util/DatabaseUtility.java</url>
-          <line>415</line>
+          <line>408</line>
           <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/util/DatabaseUtility.java</url>
-          <line>197</line>
+          <line>190</line>
           <option name="timeStamp" value="73" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">

@@ -1,5 +1,6 @@
 package pojo.getAll.googleplace;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,7 +9,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 @Getter
-
+@JsonIgnoreProperties("timestamp")
 public class GetGooglePlaceDetailsResponse {
     @Setter
     int statusCode;

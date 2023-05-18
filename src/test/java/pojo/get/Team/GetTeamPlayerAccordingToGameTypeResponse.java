@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 import static org.testng.Assert.*;
 
 @Getter
+@JsonIgnoreProperties("timestamp")
 public class GetTeamPlayerAccordingToGameTypeResponse {
     @Setter
     int statusCode;

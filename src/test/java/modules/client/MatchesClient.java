@@ -157,12 +157,13 @@ public class MatchesClient {
         return response;
 
     }
-    public Response getMyyMatches() {
+    public Response getMyyMatches(String role, String type) {
 
 
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
-                .queryParams("role",properties.getProperty("role_myymatches"))
+                .queryParams("role",role)
+                .queryParam("type",type)
                 .log().uri()
                 .when()
                 .get(properties.getProperty("base_uri")+properties.getProperty("basepath_get_myymatches"));

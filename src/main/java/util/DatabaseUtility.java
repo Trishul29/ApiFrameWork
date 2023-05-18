@@ -19,10 +19,7 @@ import org.junit.Test;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 
 @Setter
 @Getter
@@ -45,21 +42,17 @@ public class DatabaseUtility {
     String id_edit_tournament;
     String tournament_leaderboard_id;
     List<String> playerIds = new ArrayList<>();
-
     public List<String> getPlayerIds() {
         return playerIds;
     }
-
     String roundId;
     String parentPostId;
-
     public String teamOneId;
     public String teamTwoId;
     private List<String> playersTeamOne = new ArrayList<>();
     List<String> playersTeamTwo = new ArrayList<>();
     public String rosterID;
     public String rosterID1;
-
     String videosId;
     String player_1;
     String rosterPlayer_1;
@@ -90,9 +83,9 @@ public class DatabaseUtility {
 
     // String connectionString
     //myysports-staging_string=mongodb+srv\://myysports-admin\:JU6k7mg4TUECNMoz@myysports-internal.qihe3.mongodb.net/myysports-staging?retryWrites\=true&w\=majority
-
-    public void setDbEnvironment(String connectionString) throws IOException {
-        ConnectionString connString = new ConnectionString(connectionString);
+   // @Test
+    public void setDbEnvironment() throws IOException {
+        ConnectionString connString = new ConnectionString("mongodb+srv://admin:vgOE3nS6GFPU34Hv@staging.e08qv.mongodb.net/myysports-staging");
 
         // Create the client settings
         settings = MongoClientSettings.builder()
@@ -112,7 +105,7 @@ public class DatabaseUtility {
 
     public void retrieveDataAndStore() throws IOException {
         try {
-            retrieveTeamsWithFourOrMorePlayersForCreateMatchApi(mongoClient);
+            retrieveTeamsWithMoreThanFourPlayersForCreateMatchApi(mongoClient);
             this.userId = retrieveUserId(mongoClient);
             this.teamId = retrieveTeamId(mongoClient);
             this.highlightmatchId = retrieveHighlightmatchId(mongoClient);
@@ -441,21 +434,34 @@ public class DatabaseUtility {
         return tId.toString();
     }
 
-    private void retrieveTeamsWithFourOrMorePlayersForCreateMatchApi(MongoClient mongoClient) {
+    private void retrieveTeamsWithMoreThanFourPlayersForCreateMatchApi(MongoClient mongoClient) {
         MongoCollection<Document> rosterCollection = mongoClient.getDatabase("myysports-staging").getCollection("rosters");
 
-        // Create a filter to retrieve only the documents where the size of the players array is five or more
-        Bson filter = Filters.size("players", 4);
 
-        // Query the collection to find all documents that match the filter and sort by createdAt in descending order
-        List<Document> rosters = rosterCollection.find(filter).sort(new Document("createdAt", -1)).into(new ArrayList<>());
+        // Create a query to retrieve only the documents where the size of the players array is greater than 4
+        Document query = new Document("$expr", new Document("$gt", Arrays.asList(new Document("$size", "$players"), 4)));
 
-        // Extract the value of the _id field from the first two result documents
-        teamOneId = rosters.get(0).getString("team");
 
-        teamTwoId = rosters.get(1).getString("team");
+        // Query the collection to find all documents that match the query and sort by createdAt in descending order
+        List<Document> rosters = rosterCollection.find(query).into(new ArrayList<>());
+
+        if (!rosters.isEmpty()) {
+            teamOneId = rosters.get(0).get("team").toString();
+
+            if (rosters.size() > 1) {
+                teamTwoId = rosters.get(1).get("team").toString();
+            } else {
+
+                teamTwoId = ""; // Example: Assigning an empty string as default value
+            }
+        } else {
+
+            teamOneId = "";
+            teamTwoId = "";
+        }
 
     }
+
 
 
     private List<String> retrievePlayersTeamOneFromRosterForCreateMatchApi(MongoClient mongoClient, String teamOneId) {

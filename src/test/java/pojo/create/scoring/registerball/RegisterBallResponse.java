@@ -10,6 +10,7 @@ import static org.testng.Assert.*;
 import static org.testng.Assert.assertTrue;
 
 @Getter
+@JsonIgnoreProperties("timestamp")
 public class RegisterBallResponse {
     @Setter
     int statusCode;

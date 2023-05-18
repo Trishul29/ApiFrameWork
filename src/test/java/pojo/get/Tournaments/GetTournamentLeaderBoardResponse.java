@@ -1,5 +1,6 @@
 package pojo.get.Tournaments;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import pojo.get.Team.GetTeamPlayerAccordingToGameTypeResponse;
@@ -10,6 +11,7 @@ import static org.testng.Assert.*;
 import static org.testng.Assert.assertNotNull;
 
 @Getter
+@JsonIgnoreProperties("timestamp")
 public class GetTournamentLeaderBoardResponse {
     @Setter
     int statusCode;

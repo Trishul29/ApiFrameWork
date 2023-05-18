@@ -1,5 +1,6 @@
 package pojo.get.Tournaments;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,6 +11,7 @@ import java.util.List;
 import static org.testng.Assert.*;
 
 @Getter
+@JsonIgnoreProperties("timestamp")
 public class GetTournamentLeaderBoardFilterListResponse {
 
     @Setter

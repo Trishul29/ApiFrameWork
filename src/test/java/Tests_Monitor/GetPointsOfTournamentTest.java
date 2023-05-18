@@ -23,4 +23,11 @@ public class GetPointsOfTournamentTest {
         getPointsOfTournamentResponse.assertGetPointsOfTournament();
 
     }
+
+    @Test
+    public  void shouldGetRunQuotientOfTournament()
+    {
+        GetPointsOfTournamentResponse getPointsOfTournamentResponse= tournamentsService.getTournamentRunQuotient();
+        getPointsOfTournamentResponse.assertRunQuotient();
+    }
 }

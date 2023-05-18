@@ -1,11 +1,13 @@
 package pojo.create.match;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
 import static org.testng.Assert.*;
 
 @Getter
+@JsonIgnoreProperties("timestamp")
 public class CreateMatchResponse {
     @Setter
     int statusCode;

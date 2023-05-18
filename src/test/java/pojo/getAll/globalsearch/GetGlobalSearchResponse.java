@@ -9,7 +9,7 @@ import java.util.List;
 import static org.testng.Assert.*;
 
 @Getter
-
+@JsonIgnoreProperties("timestamp")
 public class GetGlobalSearchResponse {
     @Setter
     int statusCode;

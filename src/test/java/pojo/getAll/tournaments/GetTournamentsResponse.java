@@ -1,4 +1,5 @@
 package pojo.getAll.tournaments;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -6,6 +7,7 @@ import static org.testng.Assert.*;
 import static org.testng.Assert.assertNotNull;
 
 @Getter
+@JsonIgnoreProperties("timestamp")
 public class GetTournamentsResponse {
     @Setter
     int statusCode;

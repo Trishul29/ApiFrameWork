@@ -1,11 +1,13 @@
 package pojo.update.roster;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import static org.testng.Assert.*;
 import static org.testng.Assert.assertEquals;
 
 @Getter
+@JsonIgnoreProperties("timestamp")
 public class UpdateRosterBeforeMatchResponse {
     @Setter
     int  statusCode;

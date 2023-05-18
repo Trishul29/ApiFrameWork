@@ -10,6 +10,8 @@ import static org.testng.Assert.*;
 
 @Getter
 @JsonIgnoreProperties(ignoreUnknown = true)
+
+
 public class GetShowListResponse {
     @Setter
     int statusCode;

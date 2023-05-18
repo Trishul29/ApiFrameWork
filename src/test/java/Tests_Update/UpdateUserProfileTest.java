@@ -8,17 +8,17 @@ import pojo.update.user.UpdateUserProfileResponse;
 
 public class UpdateUserProfileTest {
     UsersService usersService;
+
     @BeforeClass
-    public void beforeClass()
-    {
-usersService=new UsersService();
+    public void beforeClass() {
+        usersService = new UsersService();
     }
+
     @Test
-    public void shouldEditUserProfile()
-    {
-        UpdateUserProfileRequestBody updateUserProfileRequestBody=new UpdateUserProfileRequestBody.Builder().build();
+    public void shouldEditUserProfile() {
+        UpdateUserProfileRequestBody updateUserProfileRequestBody = new UpdateUserProfileRequestBody.Builder().build();
         UpdateUserProfileResponse updateUserProfileResponse = usersService.updateUserDetails(updateUserProfileRequestBody);
-updateUserProfileResponse.assertEditUserProfile(updateUserProfileRequestBody);
+        updateUserProfileResponse.assertEditUserProfile(updateUserProfileRequestBody);
     }
 
 }

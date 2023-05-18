@@ -7,6 +7,7 @@ import java.util.List;
 import static org.testng.Assert.*;
 
 @Getter
+@JsonIgnoreProperties("timestamp")
 public class GetMyyMatchesResponse {
     @Setter
     int statusCode;
@@ -17,10 +18,12 @@ public class GetMyyMatchesResponse {
     private boolean success;
 
     private String error;
+    private String tournamentName;
 
     @Getter
     @JsonIgnoreProperties(ignoreUnknown = true,value = {"link","isWagonWheelEnabled","matchVenue","logoOverlay","showScoreTicker","officials","mvp","currentViewers","multiDayDetails"})
     public static class Data{
+
         private String matchType;
 
         private String link;
@@ -41,7 +44,7 @@ public class GetMyyMatchesResponse {
 
         private MatchStatus matchStatus;
 
-        private String tournamentName;
+
 
         private String isLive;
 
@@ -123,6 +126,7 @@ public class GetMyyMatchesResponse {
         assertEquals(this.getStatusCode(),200,"Request Failure");
         assertTrue(this.getResponseTime()<2000,"Response Taking More Than 2 Seconds");
         List<Data> dataList = this.getData();
+       assertTrue( dataList.size()!=0,"data not presnet");
         for(Data data:dataList)
         {
             assertNotNull(data.getId());

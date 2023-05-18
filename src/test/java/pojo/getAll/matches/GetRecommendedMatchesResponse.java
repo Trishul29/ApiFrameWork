@@ -1,5 +1,6 @@
 package pojo.getAll.matches;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,6 +11,7 @@ import static org.testng.Assert.assertTrue;
 
 @Getter
 @Setter
+@JsonIgnoreProperties("timestamp")
 public class GetRecommendedMatchesResponse {
     int statusCode;
     long responseTime;

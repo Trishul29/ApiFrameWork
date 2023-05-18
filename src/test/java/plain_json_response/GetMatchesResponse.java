@@ -1,4 +1,5 @@
 package plain_json_response;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.qameta.allure.Allure;
 import modules.client.MatchesClient;
 import io.restassured.path.json.JsonPath;
@@ -12,6 +13,7 @@ import static org.testng.Assert.*;
 import static org.testng.Assert.assertNotNull;
 
 @Getter
+@JsonIgnoreProperties("timestamp")
 public class GetMatchesResponse {
     public   String propertyPath = System.getProperty("user.dir") + "//src//main//java//spec.properties";
     public   Properties properties= FileUtility.loadProperties(propertyPath);

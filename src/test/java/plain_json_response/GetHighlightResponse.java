@@ -1,4 +1,5 @@
 package plain_json_response;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import modules.client.MatchHighlightsClient;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -10,6 +11,7 @@ import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertTrue;
 
 @Getter
+@JsonIgnoreProperties("timestamp")
 public class GetHighlightResponse {
 
     MatchHighlightsClient matchHighlightsClient=new MatchHighlightsClient();

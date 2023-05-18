@@ -58,10 +58,10 @@ public class TournamentsClient {
 
     public Response getPoints() {
 
-        String id=properties.getProperty("id_tournament_point");
+
         Response response = given()
                 .header("Authorization","Bearer "+bearerToken)
-                .pathParam("id",id)
+                .pathParam("id",properties.getProperty("id_tournament_point"))
                 .log().uri()
                 .when()
                 .get(properties.getProperty("base_uri")+properties.getProperty("basepath_get_tournament_point")+"/{id}"+"/points");
@@ -136,6 +136,24 @@ public class TournamentsClient {
                 .then()
                 .log().body(true)
                 .contentType(ContentType.JSON);
+        return response;
+
+    }
+
+    public Response getRunQuotient() {
+
+
+        Response response = given()
+                .header("Authorization","Bearer "+bearerToken)
+                .pathParam("id",properties.getProperty("multiday_tournament"))
+                .log().uri()
+                .when()
+                .get(properties.getProperty("base_uri")+properties.getProperty("basepath_get_tournament_point")+"/{id}"+"/points");
+
+        response
+                .then()
+                .contentType(ContentType.JSON)
+                .log().body();
         return response;
 
     }
